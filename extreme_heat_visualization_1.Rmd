@@ -1,0 +1,95 @@
+---
+title: "Extreme Heat in US"
+author: "Yupeng Yang"
+date: "`r Sys.Date()`"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+library(ggplot2)
+library(dplyr)
+library(ggmap)
+library(maps)
+library(mapdata)
+library(RColorBrewer)
+```
+
+```{r}
+us.data <- read.csv("us_extreme_heat_wgbt28.CSV")
+head(us.data)
+```
+
+```{r}
+us.data <- us.data[us.data$GCPNT_LON > -130,]
+```
+
+```{r}
+plot.data <- us.data
+laterr <- rnorm(length(us.data$GCPNT_LAT), 0, 0.09)
+lonerr <- rnorm(length(us.data$GCPNT_LON), 0, 0.09)
+plot.data$GCPNT_LAT <- plot.data$GCPNT_LAT + laterr
+plot.data$GCPNT_LON <- plot.data$GCPNT_LON + lonerr
+```
+
+
+```{r}
+usa <- map_data("usa")
+states <- map_data("state")
+counties <- map_data("county")
+
+ggplot() +
+  geom_polygon(
+    data = usa,
+    aes(x = long, y = lat, group = group),
+    color = "red"
+  ) +
+  geom_polygon(
+    data = states,
+    aes(x = long, y = lat, group = group),
+    color = "blue",
+    fill = "yellow"
+  ) + 
+  geom_point(
+    data = us.data,
+    aes(x = GCPNT_LON, y = GCPNT_LAT), 
+    color = "red",
+    size = 0.5
+  )
+#ggsave("heat_wave_dist.png", device="png", dpi=300)
+```
+
+```{r}
+states <- map_data("state")
+counties <- map_data("county")
+
+ca_df <- subset(states, region == "california")
+ca_county <- subset(counties, region == "california")
+
+ggplot(data = ca_df, 
+  mapping = aes(x=long, y=lat, group=group))+
+  coord_fixed(1.3)+
+  geom_polygon(color = "black", fill = "gray")+
+  geom_polygon(
+    data = ca_county, 
+    fill = NA, 
+    color = "white"
+)+
+  geom_polygon(
+    color = "black", 
+    fill = NA
+  )+
+  geom_point(data = us.data,
+             mapping = aes(x = GCPNT_LON, y = GCPNT_LAT, group=NA, fill=avg_temp))+
+  xlim(c(-125,-112))+
+  ylim(c(32, 43))
+
+```
+
+```{r}
+states
+```
+
