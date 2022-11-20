@@ -1,0 +1,79 @@
+---
+title: "STATS_506_Project"
+author: "Yu Lin"
+date: "11/7/2022"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+
+# Match the station within counties
+```{r}
+library(measurements)
+library(stringr)
+
+CA_monitoring_station <- read.csv("CA_monitoring_station.csv")
+
+str_transform <- function(str){
+  str <- str_replace_all(str, "°", "")
+  str <- str_replace_all(str, "\'", "")
+  str <- str_replace_all(str, "\"", "")
+  return(str)
+}
+
+lat_org <- str_transform(CA_monitoring_station$Latitude)
+long_org <-  str_transform(CA_monitoring_station$Longitude)
+
+lat <- as.numeric(conv_unit(lat_org, from = "deg_min_sec", to = "dec_deg"))
+long <- as.numeric( conv_unit(long_org, from = "deg_min_sec", to = "dec_deg"))
+```
+
+
+```{r}
+library(sf)
+aoi_boundary_HARV <- read_sf("CA_Counties_TIGER2016.shp")
+long_lat <- data.frame("name"=CA_monitoring_station$name,
+                       "code"=CA_monitoring_station$code,
+                       "long"=-1*long,
+                       "lat"=lat)
+
+# transform coordinate !!!
+aoi_boundary_HARV$geometry <- st_transform(aoi_boundary_HARV$geometry, 4326)
+```
+
+```{r}
+# Plot a overview map
+library(ggplot2)
+ggplot()+
+  geom_sf(data=aoi_boundary_HARV$geometry)+
+  geom_point(aes(-long, lat))
+```
+
+```{r}
+library(tidyverse)
+# You can put other useful columns in the long_lat data frame as well.
+sta_sf <- long_lat %>%
+  mutate_at(vars(long, lat), as.numeric) %>%   # coordinates must be numeric
+  st_as_sf(
+    coords = c("long", "lat"),
+    agr = "constant",
+    crs = 4326,
+    stringsAsFactors = FALSE,
+    remove = TRUE
+    )
+
+(station_in_county <- st_join(sta_sf, aoi_boundary_HARV, join = st_within))
+```
+
+```{r}
+unique(station_in_county$NAME)
+unique(aoi_boundary_HARV$NAME)
+```
+
+
