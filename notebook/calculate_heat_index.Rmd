@@ -1,0 +1,72 @@
+---
+title: "STATS_506_Project"
+author: "Yu Lin"
+date: "11/7/2022"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Daily Urban Heat Index Maximum Estimates
+
+## 1. Methodology: 
+Apart from the counts of heat waves defined above, we also want to take into account the intensity of heat waves. To compare days with heat waves to days without extreme temperature, we also reused the heat intensity formula for heat waves to quantify the intensity for days without extreme temperature. To calculate this heat intensity, we crawled daily minimum relative humidity and maximum temperature for each county from Specific temp. Data in California https://wrcc.dri.edu/wraws/ccaF.html.
+
+$$
+\begin{split}
+HI_{max} = \frac{(0.5\times(T_{max}+61.0+(T_{max}-68.0)\times1.2)+(0.094RH_{min}))+T_{max}}{2}
+\end{split}
+$$
+
+
+## 2. Calculation
+```{r, warning=FALSE}
+file_name <- 'Slate_to_La.csv'
+data <- read.csv(file_name)
+
+T_max <- data$Air_Temperature_max
+RH_min <- data$Relative_Humidity_min
+HI_max <- ((0.5*(T_max+61.0+(T_max-68.0)*1.2)+(0.094*RH_min))+T_max)/2
+WBGT_max <- -0.0034*HI_max^2 + 0.96*HI_max-34
+
+library(dplyr)
+data <- data %>%
+  mutate(HI_max = HI_max,
+         WBGT_max = WBGT_max)
+```
+
+### 2.1 Data Manipulation
+
+We want to construct 4 features:
+
+1) Monthly average WGBT_max in each station
+
+2) Duration of heat wave in each station by month (WGBT_max >28)
+
+3) Monthly maximum WGBT_max in each station
+
+4) Monthly average WGBT_max in each station for heat wave (WGBT_max > 28)
+```{r, warning=FALSE}
+data_month <- data %>% 
+  group_by(Year, Month, Location) %>%
+  summarise(
+    avg_WBGT_max_monthly = mean(WBGT_max,na.rm=TRUE),
+    max_WBGT_max_monthly = max(WBGT_max,na.rm=TRUE)
+  )
+
+data_month_heat_wave <- data %>% 
+  group_by(Year, Month, Location) %>%
+  filter(WBGT_max>28) %>%
+  summarise(
+    duration_heat_wave_monthly = n(),
+    avg_heat_waves_WBGT_max_monthly = mean(WBGT_max)
+  )
+
+data_month <- left_join(data_month, data_month_heat_wave, by=c("Year","Month","Location"))
+```
+
+
