@@ -1,0 +1,115 @@
+---
+title: "STATS_506_Project"
+author: "Yu Lin"
+date: "11/7/2022"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Daily Urban Heat Index Maximum Estimates
+
+## 1. Methodology: 
+Apart from the counts of heat waves defined above, we also want to take into account the intensity of heat waves. To compare days with heat waves to days without extreme temperature, we also reused the heat intensity formula for heat waves to quantify the intensity for days without extreme temperature. To calculate this heat intensity, we crawled daily minimum relative humidity and maximum temperature for each county from Specific temp. Data in California https://wrcc.dri.edu/wraws/ccaF.html.
+
+$$
+HI_{max} = \frac{(0.5\times(T_{max}+61.0+(T_{max}-68.0)\times1.2)+(0.094RH_{min}))+T_{max}}{2}
+$$
+
+
+## 2. Calculation
+```{r}
+# list all the name of the station daily temperature and relative humidity files 
+file_names <- c("2011_0_100.csv","2011_101_200.csv","2011_201_300.csv",
+                "2011_301_400.csv","2011_401_500.csv","2011_501_555.csv",
+                "2012_0_185.csv","2012_185_370.csv","2012_370_555.csv",
+                "2013_0_185.csv","2013_185_336.csv","2013_336_555.csv",
+                "2014_0_190.csv","2014_190_380.csv","2014_380_555.csv",
+                "2015_0_185.csv","2015_185_310.csv","2015_310_435.csv","2015_435_555.csv")
+```
+
+```{r, warning=FALSE}
+# construct a new data frame to record all the temperature data
+df <- data.frame(matrix(ncol=8,nrow=0))
+colnames(df) <- c("Station_name", "Year", "Month", "Date",
+                  "Air_Temperature_max", "Relative_Humidity_min", "HI_max", "WBGT_max")
+
+HI_WBGT_cal <- function(file_name){
+  data <- read.csv(file_name, header=FALSE)
+  colnames(data) <- c("Station_name", "Year", "Month", "Date", "Air_Temperature_max", "Relative_Humidity_min")
+  
+  T_max <- as.numeric(data$Air_Temperature_max)
+  RH_min <- as.numeric(data$Relative_Humidity_min)
+  HI_max <- ((0.5*(T_max+61.0+(T_max-68.0)*1.2)+(0.094*RH_min))+T_max)/2
+  WBGT_max <- -0.0034*HI_max^2 + 0.96*HI_max-34
+  
+  library(dplyr)
+  data <- data %>%
+    mutate(HI_max = HI_max,
+           WBGT_max = WBGT_max)
+  
+  # merge all the csv into one dataframe
+  df <- rbind(df, data)
+  return(df)
+}
+
+for (file_name in file_names) {df <- HI_WBGT_cal(file_name)}
+```
+
+## 2. Write the merged data into RMDBS and store it as a csv
+```{r}
+# write.csv(df,"TEMP_HUM_HI_WBGT_2011_2015.csv", row.names = FALSE)
+library(RMySQL)
+mysqlconnection = dbConnect(RMySQL::MySQL(),
+                            dbname='506_project',
+                            host='35.2.205.222',
+                            port=3306,
+                            user='linyu',
+                            password='123456',
+ )
+
+dbWriteTable(mysqlconnection, name="TEMP_HUM_HI_WBGT_2011_2015", value=df, row.names = FALSE, overwrite=TRUE)
+```
+
+
+## 3. Data Manipulation
+
+We want to construct 4 features:
+
+1) Monthly average WGBT_max in each station
+
+2) Duration of heat wave in each station by month (WGBT_max >28)
+
+3) Monthly maximum WGBT_max in each station
+
+4) Monthly average WGBT_max in each station for heat wave (WGBT_max > 28)
+```{r, warning=FALSE}
+data_month <- df %>% 
+  group_by(Year, Month, Station_name) %>%
+  summarise(
+    avg_WBGT_max_monthly = mean(WBGT_max,na.rm=TRUE),
+    max_WBGT_max_monthly = max(WBGT_max,na.rm=TRUE)
+  )
+
+data_month_heat_wave <- df %>% 
+  group_by(Year, Month, Station_name) %>%
+  filter(WBGT_max>28) %>%
+  summarise(
+    duration_heat_wave_monthly = ifelse(is.na(n())==TRUE,0,n()),
+    avg_heat_waves_WBGT_max_monthly = mean(WBGT_max,na.rm=TRUE)
+  )
+
+data_month <- left_join(data_month, data_month_heat_wave, by=c("Year","Month","Station_name"))
+```
+
+
+## 4. Write the processed data into RMDBS and store it as a csv
+```{r}
+#write.csv(data_month,"processed_HI_WBGT_2011_2015.csv", row.names = FALSE)
+#dbWriteTable(mysqlconnection, name="processed_HI_WBGT_2011_2015", value=data_month, row.names = FALSE, overwrite=TRUE)
+```
+
