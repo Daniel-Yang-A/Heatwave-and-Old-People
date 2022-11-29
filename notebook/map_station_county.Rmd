@@ -19,7 +19,14 @@ library(measurements)
 library(stringr)
 
 CA_monitoring_station <- read.csv("CA_monitoring_station.csv")
-
+# overkill the repetitions
+CA_monitoring_station <-  
+  CA_monitoring_station %>% 
+  group_by(name) %>%
+  summarize(code = min(code, na.rm = TRUE),
+         Longitude = min(Longitude, na.rm = TRUE),
+         Latitude = min(Latitude, na.rm = TRUE))
+  
 str_transform <- function(str){
   str <- str_replace_all(str, "°", "")
   str <- str_replace_all(str, "\'", "")
@@ -33,7 +40,6 @@ long_org <-  str_transform(CA_monitoring_station$Longitude)
 lat <- as.numeric(conv_unit(lat_org, from = "deg_min_sec", to = "dec_deg"))
 long <- as.numeric( conv_unit(long_org, from = "deg_min_sec", to = "dec_deg"))
 ```
-
 
 ```{r}
 library(sf)
@@ -72,8 +78,32 @@ sta_sf <- long_lat %>%
 ```
 
 ```{r}
-unique(station_in_county$NAME)
-unique(aoi_boundary_HARV$NAME)
+# unique(station_in_county$NAME)
+# unique(aoi_boundary_HARV$NAME)
+# 
+# length(unique(station_in_county$name))
+# length(station_in_county$name)
+# length(unique(sta_sf$name))
+# length(sta_sf$name)
 ```
 
+
+```{r}
+HI_WBGT_2011_2015 <- read.csv("processed_HI_WBGT_2011_2015.csv")
+county_station_HI_WBGT_2011_2015 <- 
+  left_join(HI_WBGT_2011_2015, station_in_county, by=c("Station_name"="name"))
+
+countywise_HI_WBGT_2011_2015 <- county_station_HI_WBGT_2011_2015 %>%
+  group_by(Year, Month, NAME) %>%
+  summarize(avg_WBGT_max_monthly = mean(avg_WBGT_max_monthly,na.rm=TRUE),
+            max_WBGT_max_monthly = max(max_WBGT_max_monthly,na.rm=TRUE),
+            duration_heat_wave_monthly = mean(duration_heat_wave_monthly, na.rm=TRUE),
+            avg_heat_waves_WBGT_max_monthly = mean(avg_heat_waves_WBGT_max_monthly,na.rm=TRUE))
+```
+
+## 4. Write the processed data into RMDBS and store it as a csv
+```{r}
+write.csv(countywise_HI_WBGT_2011_2015,"countywise_HI_WBGT_2011_2015.csv", row.names = FALSE)
+#dbWriteTable(mysqlconnection, name="processed_HI_WBGT_2011_2015", value=data_month, row.names = FALSE, overwrite=TRUE)
+```
 
