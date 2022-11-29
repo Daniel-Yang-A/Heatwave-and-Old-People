@@ -1,0 +1,3481 @@
+"county","year","month","death"
+"Alameda",2011,1,631
+"Alameda",2011,2,0
+"Alameda",2011,3,22
+"Alameda",2011,4,175
+"Alameda",2011,5,12
+"Alameda",2011,6,0
+"Alameda",2011,7,536
+"Alameda",2011,8,0
+"Alameda",2011,9,72
+"Alameda",2011,10,427
+"Alameda",2011,11,0
+"Alameda",2011,12,68
+"Alpine",2011,1,47
+"Alpine",2011,2,0
+"Alpine",2011,3,306
+"Alpine",2011,4,43
+"Alpine",2011,5,24
+"Alpine",2011,6,0
+"Alpine",2011,7,4088
+"Alpine",2011,8,28
+"Alpine",2011,9,141
+"Alpine",2011,10,0
+"Alpine",2011,11,54
+"Alpine",2011,12,65
+"Amador",2011,1,0
+"Amador",2011,2,0
+"Amador",2011,3,150
+"Amador",2011,4,82
+"Amador",2011,5,74
+"Amador",2011,6,1307
+"Amador",2011,7,231
+"Amador",2011,8,0
+"Amador",2011,9,926
+"Amador",2011,10,669
+"Amador",2011,11,0
+"Amador",2011,12,794
+"Butte",2011,1,1417
+"Butte",2011,2,367
+"Butte",2011,3,251
+"Butte",2011,4,166
+"Butte",2011,5,352
+"Butte",2011,6,201
+"Butte",2011,7,668
+"Butte",2011,8,106
+"Butte",2011,9,127
+"Butte",2011,10,0
+"Butte",2011,11,17
+"Butte",2011,12,176
+"Calaveras",2011,1,319
+"Calaveras",2011,2,277
+"Calaveras",2011,3,28
+"Calaveras",2011,4,22
+"Calaveras",2011,5,0
+"Calaveras",2011,6,159
+"Calaveras",2011,7,35
+"Calaveras",2011,8,347
+"Calaveras",2011,9,53
+"Calaveras",2011,10,37
+"Calaveras",2011,11,530
+"Calaveras",2011,12,0
+"Colusa",2011,1,17
+"Colusa",2011,2,157
+"Colusa",2011,3,0
+"Colusa",2011,4,0
+"Colusa",2011,5,514
+"Colusa",2011,6,0
+"Colusa",2011,7,62
+"Colusa",2011,8,368
+"Colusa",2011,9,0
+"Colusa",2011,10,47
+"Colusa",2011,11,36
+"Colusa",2011,12,0
+"Contra Costa",2011,1,315
+"Contra Costa",2011,2,11
+"Contra Costa",2011,3,22
+"Contra Costa",2011,4,0
+"Contra Costa",2011,5,3657
+"Contra Costa",2011,6,40
+"Contra Costa",2011,7,122
+"Contra Costa",2011,8,0
+"Contra Costa",2011,9,22
+"Contra Costa",2011,10,55
+"Contra Costa",2011,11,0
+"Contra Costa",2011,12,0
+"Del Norte",2011,1,153
+"Del Norte",2011,2,63
+"Del Norte",2011,3,56
+"Del Norte",2011,4,1188
+"Del Norte",2011,5,218
+"Del Norte",2011,6,0
+"Del Norte",2011,7,929
+"Del Norte",2011,8,626
+"Del Norte",2011,9,0
+"Del Norte",2011,10,727
+"Del Norte",2011,11,1350
+"Del Norte",2011,12,363
+"El Dorado",2011,1,291
+"El Dorado",2011,2,134
+"El Dorado",2011,3,300
+"El Dorado",2011,4,155
+"El Dorado",2011,5,622
+"El Dorado",2011,6,135
+"El Dorado",2011,7,126
+"El Dorado",2011,8,0
+"El Dorado",2011,9,22
+"El Dorado",2011,10,159
+"El Dorado",2011,11,239
+"El Dorado",2011,12,228
+"Fresno",2011,1,29
+"Fresno",2011,2,15
+"Fresno",2011,3,0
+"Fresno",2011,4,146
+"Fresno",2011,5,28
+"Fresno",2011,6,347
+"Fresno",2011,7,55
+"Fresno",2011,8,45
+"Fresno",2011,9,578
+"Fresno",2011,10,0
+"Fresno",2011,11,11
+"Fresno",2011,12,170
+"Glenn",2011,1,0
+"Glenn",2011,2,0
+"Glenn",2011,3,535
+"Glenn",2011,4,0
+"Glenn",2011,5,64
+"Glenn",2011,6,402
+"Glenn",2011,7,0
+"Glenn",2011,8,72
+"Glenn",2011,9,70
+"Glenn",2011,10,0
+"Glenn",2011,11,324
+"Glenn",2011,12,38
+"Humboldt",2011,1,25
+"Humboldt",2011,2,0
+"Humboldt",2011,3,3945
+"Humboldt",2011,4,51
+"Humboldt",2011,5,152
+"Humboldt",2011,6,0
+"Humboldt",2011,7,37
+"Humboldt",2011,8,70
+"Humboldt",2011,9,0
+"Humboldt",2011,10,0
+"Humboldt",2011,11,154
+"Humboldt",2011,12,95
+"Imperial",2011,1,87
+"Imperial",2011,2,1318
+"Imperial",2011,3,262
+"Imperial",2011,4,0
+"Imperial",2011,5,952
+"Imperial",2011,6,720
+"Imperial",2011,7,0
+"Imperial",2011,8,806
+"Imperial",2011,9,1375
+"Imperial",2011,10,394
+"Imperial",2011,11,309
+"Imperial",2011,12,167
+"Inyo",2011,1,319
+"Inyo",2011,2,205
+"Inyo",2011,3,634
+"Inyo",2011,4,124
+"Inyo",2011,5,161
+"Inyo",2011,6,0
+"Inyo",2011,7,13
+"Inyo",2011,8,169
+"Inyo",2011,9,271
+"Inyo",2011,10,227
+"Inyo",2011,11,31
+"Inyo",2011,12,13
+"Kern",2011,1,0
+"Kern",2011,2,164
+"Kern",2011,3,33
+"Kern",2011,4,332
+"Kern",2011,5,60
+"Kern",2011,6,46
+"Kern",2011,7,532
+"Kern",2011,8,0
+"Kern",2011,9,27
+"Kern",2011,10,149
+"Kern",2011,11,0
+"Kern",2011,12,0
+"Kings",2011,1,429
+"Kings",2011,2,0
+"Kings",2011,3,52
+"Kings",2011,4,357
+"Kings",2011,5,0
+"Kings",2011,6,64
+"Kings",2011,7,48
+"Kings",2011,8,0
+"Kings",2011,9,309
+"Kings",2011,10,12
+"Kings",2011,11,42
+"Kings",2011,12,0
+"Lake",2011,1,3568
+"Lake",2011,2,36
+"Lake",2011,3,143
+"Lake",2011,4,0
+"Lake",2011,5,60
+"Lake",2011,6,67
+"Lake",2011,7,0
+"Lake",2011,8,0
+"Lake",2011,9,141
+"Lake",2011,10,88
+"Lake",2011,11,69
+"Lake",2011,12,1220
+"Lassen",2011,1,231
+"Lassen",2011,2,0
+"Lassen",2011,3,865
+"Lassen",2011,4,627
+"Lassen",2011,5,0
+"Lassen",2011,6,689
+"Lassen",2011,7,1177
+"Lassen",2011,8,341
+"Lassen",2011,9,303
+"Lassen",2011,10,109
+"Lassen",2011,11,316
+"Lassen",2011,12,189
+"Los Angeles",2011,1,643
+"Los Angeles",2011,2,97
+"Los Angeles",2011,3,133
+"Los Angeles",2011,4,0
+"Los Angeles",2011,5,12
+"Los Angeles",2011,6,160
+"Los Angeles",2011,7,245
+"Los Angeles",2011,8,242
+"Los Angeles",2011,9,27
+"Los Angeles",2011,10,11
+"Los Angeles",2011,11,0
+"Los Angeles",2011,12,161
+"Madera",2011,1,30
+"Madera",2011,2,295
+"Madera",2011,3,63
+"Madera",2011,4,27
+"Madera",2011,5,563
+"Madera",2011,6,0
+"Madera",2011,7,13
+"Madera",2011,8,142
+"Madera",2011,9,0
+"Madera",2011,10,0
+"Madera",2011,11,476
+"Madera",2011,12,0
+"Marin",2011,1,66
+"Marin",2011,2,391
+"Marin",2011,3,0
+"Marin",2011,4,73
+"Marin",2011,5,27
+"Marin",2011,6,0
+"Marin",2011,7,269
+"Marin",2011,8,30
+"Marin",2011,9,41
+"Marin",2011,10,0
+"Marin",2011,11,3392
+"Marin",2011,12,58
+"Mariposa",2011,1,127
+"Mariposa",2011,2,0
+"Mariposa",2011,3,37
+"Mariposa",2011,4,62
+"Mariposa",2011,5,0
+"Mariposa",2011,6,0
+"Mariposa",2011,7,137
+"Mariposa",2011,8,68
+"Mariposa",2011,9,54
+"Mariposa",2011,10,1207
+"Mariposa",2011,11,214
+"Mariposa",2011,12,0
+"Mendocino",2011,1,854
+"Mendocino",2011,2,608
+"Mendocino",2011,3,0
+"Mendocino",2011,4,665
+"Mendocino",2011,5,1275
+"Mendocino",2011,6,355
+"Mendocino",2011,7,265
+"Mendocino",2011,8,144
+"Mendocino",2011,9,307
+"Mendocino",2011,10,205
+"Mendocino",2011,11,640
+"Mendocino",2011,12,85
+"Merced",2011,1,113
+"Merced",2011,2,0
+"Merced",2011,3,13
+"Merced",2011,4,165
+"Merced",2011,5,255
+"Merced",2011,6,253
+"Merced",2011,7,26
+"Merced",2011,8,0
+"Merced",2011,9,0
+"Merced",2011,10,157
+"Merced",2011,11,32
+"Merced",2011,12,308
+"Modoc",2011,1,52
+"Modoc",2011,2,29
+"Modoc",2011,3,529
+"Modoc",2011,4,0
+"Modoc",2011,5,11
+"Modoc",2011,6,126
+"Modoc",2011,7,0
+"Modoc",2011,8,0
+"Modoc",2011,9,436
+"Modoc",2011,10,0
+"Modoc",2011,11,47
+"Modoc",2011,12,338
+"Mono",2011,1,0
+"Mono",2011,2,68
+"Mono",2011,3,39
+"Mono",2011,4,0
+"Mono",2011,5,264
+"Mono",2011,6,34
+"Mono",2011,7,13
+"Mono",2011,8,0
+"Mono",2011,9,3271
+"Mono",2011,10,14
+"Mono",2011,11,129
+"Mono",2011,12,0
+"Monterey",2011,1,26
+"Monterey",2011,2,73
+"Monterey",2011,3,0
+"Monterey",2011,4,0
+"Monterey",2011,5,122
+"Monterey",2011,6,71
+"Monterey",2011,7,22
+"Monterey",2011,8,1136
+"Monterey",2011,9,211
+"Monterey",2011,10,0
+"Monterey",2011,11,766
+"Monterey",2011,12,608
+"Napa",2011,1,0
+"Napa",2011,2,732
+"Napa",2011,3,1214
+"Napa",2011,4,317
+"Napa",2011,5,253
+"Napa",2011,6,144
+"Napa",2011,7,290
+"Napa",2011,8,188
+"Napa",2011,9,593
+"Napa",2011,10,89
+"Napa",2011,11,151
+"Napa",2011,12,0
+"Nevada",2011,1,0
+"Nevada",2011,2,163
+"Nevada",2011,3,238
+"Nevada",2011,4,256
+"Nevada",2011,5,15
+"Nevada",2011,6,31
+"Nevada",2011,7,0
+"Nevada",2011,8,165
+"Nevada",2011,9,34
+"Nevada",2011,10,305
+"Nevada",2011,11,57
+"Nevada",2011,12,35
+"Orange",2011,1,462
+"Orange",2011,2,0
+"Orange",2011,3,11
+"Orange",2011,4,129
+"Orange",2011,5,0
+"Orange",2011,6,0
+"Orange",2011,7,427
+"Orange",2011,8,12
+"Orange",2011,9,68
+"Orange",2011,10,343
+"Orange",2011,11,0
+"Orange",2011,12,62
+"Placer",2011,1,32
+"Placer",2011,2,0
+"Placer",2011,3,260
+"Placer",2011,4,28
+"Placer",2011,5,13
+"Placer",2011,6,0
+"Placer",2011,7,3354
+"Placer",2011,8,31
+"Placer",2011,9,116
+"Placer",2011,10,0
+"Placer",2011,11,26
+"Placer",2011,12,46
+"Plumas",2011,1,0
+"Plumas",2011,2,0
+"Plumas",2011,3,126
+"Plumas",2011,4,87
+"Plumas",2011,5,49
+"Plumas",2011,6,1122
+"Plumas",2011,7,209
+"Plumas",2011,8,0
+"Plumas",2011,9,797
+"Plumas",2011,10,598
+"Plumas",2011,11,0
+"Plumas",2011,12,659
+"Riverside",2011,1,1163
+"Riverside",2011,2,280
+"Riverside",2011,3,225
+"Riverside",2011,4,121
+"Riverside",2011,5,292
+"Riverside",2011,6,179
+"Riverside",2011,7,545
+"Riverside",2011,8,91
+"Riverside",2011,9,131
+"Riverside",2011,10,0
+"Riverside",2011,11,17
+"Riverside",2011,12,141
+"Sacramento",2011,1,235
+"Sacramento",2011,2,232
+"Sacramento",2011,3,15
+"Sacramento",2011,4,28
+"Sacramento",2011,5,0
+"Sacramento",2011,6,148
+"Sacramento",2011,7,23
+"Sacramento",2011,8,268
+"Sacramento",2011,9,54
+"Sacramento",2011,10,11
+"Sacramento",2011,11,501
+"Sacramento",2011,12,0
+"San Benito",2011,1,0
+"San Benito",2011,2,134
+"San Benito",2011,3,0
+"San Benito",2011,4,0
+"San Benito",2011,5,387
+"San Benito",2011,6,0
+"San Benito",2011,7,45
+"San Benito",2011,8,346
+"San Benito",2011,9,0
+"San Benito",2011,10,65
+"San Benito",2011,11,42
+"San Benito",2011,12,0
+"San Bernardino",2011,1,245
+"San Bernardino",2011,2,17
+"San Bernardino",2011,3,26
+"San Bernardino",2011,4,0
+"San Bernardino",2011,5,3347
+"San Bernardino",2011,6,13
+"San Bernardino",2011,7,117
+"San Bernardino",2011,8,0
+"San Bernardino",2011,9,39
+"San Bernardino",2011,10,64
+"San Bernardino",2011,11,0
+"San Bernardino",2011,12,0
+"San Diego",2011,1,154
+"San Diego",2011,2,73
+"San Diego",2011,3,51
+"San Diego",2011,4,1064
+"San Diego",2011,5,200
+"San Diego",2011,6,0
+"San Diego",2011,7,846
+"San Diego",2011,8,609
+"San Diego",2011,9,0
+"San Diego",2011,10,636
+"San Diego",2011,11,1199
+"San Diego",2011,12,297
+"San Francisco",2011,1,238
+"San Francisco",2011,2,151
+"San Francisco",2011,3,228
+"San Francisco",2011,4,199
+"San Francisco",2011,5,560
+"San Francisco",2011,6,89
+"San Francisco",2011,7,110
+"San Francisco",2011,8,0
+"San Francisco",2011,9,14
+"San Francisco",2011,10,152
+"San Francisco",2011,11,215
+"San Francisco",2011,12,223
+"San Joaquin",2011,1,0
+"San Joaquin",2011,2,11
+"San Joaquin",2011,3,0
+"San Joaquin",2011,4,143
+"San Joaquin",2011,5,26
+"San Joaquin",2011,6,251
+"San Joaquin",2011,7,48
+"San Joaquin",2011,8,27
+"San Joaquin",2011,9,492
+"San Joaquin",2011,10,0
+"San Joaquin",2011,11,0
+"San Joaquin",2011,12,111
+"San Luis Obispo",2011,1,0
+"San Luis Obispo",2011,2,0
+"San Luis Obispo",2011,3,415
+"San Luis Obispo",2011,4,0
+"San Luis Obispo",2011,5,65
+"San Luis Obispo",2011,6,366
+"San Luis Obispo",2011,7,0
+"San Luis Obispo",2011,8,46
+"San Luis Obispo",2011,9,30
+"San Luis Obispo",2011,10,0
+"San Luis Obispo",2011,11,240
+"San Luis Obispo",2011,12,38
+"San Mateo",2011,1,0
+"San Mateo",2011,2,0
+"San Mateo",2011,3,3136
+"San Mateo",2011,4,43
+"San Mateo",2011,5,126
+"San Mateo",2011,6,0
+"San Mateo",2011,7,28
+"San Mateo",2011,8,73
+"San Mateo",2011,9,0
+"San Mateo",2011,10,0
+"San Mateo",2011,11,154
+"San Mateo",2011,12,72
+"Santa Barbara",2011,1,65
+"Santa Barbara",2011,2,1062
+"Santa Barbara",2011,3,195
+"Santa Barbara",2011,4,0
+"Santa Barbara",2011,5,792
+"Santa Barbara",2011,6,629
+"Santa Barbara",2011,7,0
+"Santa Barbara",2011,8,585
+"Santa Barbara",2011,9,1188
+"Santa Barbara",2011,10,316
+"Santa Barbara",2011,11,218
+"Santa Barbara",2011,12,150
+"Santa Clara",2011,1,281
+"Santa Clara",2011,2,188
+"Santa Clara",2011,3,536
+"Santa Clara",2011,4,89
+"Santa Clara",2011,5,121
+"Santa Clara",2011,6,0
+"Santa Clara",2011,7,25
+"Santa Clara",2011,8,139
+"Santa Clara",2011,9,259
+"Santa Clara",2011,10,216
+"Santa Clara",2011,11,32
+"Santa Clara",2011,12,0
+"Santa Cruz",2011,1,0
+"Santa Cruz",2011,2,141
+"Santa Cruz",2011,3,28
+"Santa Cruz",2011,4,281
+"Santa Cruz",2011,5,65
+"Santa Cruz",2011,6,28
+"Santa Cruz",2011,7,548
+"Santa Cruz",2011,8,0
+"Santa Cruz",2011,9,12
+"Santa Cruz",2011,10,140
+"Santa Cruz",2011,11,12
+"Santa Cruz",2011,12,0
+"Shasta",2011,1,389
+"Shasta",2011,2,0
+"Shasta",2011,3,70
+"Shasta",2011,4,363
+"Shasta",2011,5,0
+"Shasta",2011,6,83
+"Shasta",2011,7,32
+"Shasta",2011,8,0
+"Shasta",2011,9,261
+"Shasta",2011,10,16
+"Shasta",2011,11,25
+"Shasta",2011,12,0
+"Sierra",2011,1,3363
+"Sierra",2011,2,51
+"Sierra",2011,3,132
+"Sierra",2011,4,0
+"Sierra",2011,5,31
+"Sierra",2011,6,63
+"Sierra",2011,7,0
+"Sierra",2011,8,0
+"Sierra",2011,9,135
+"Sierra",2011,10,73
+"Sierra",2011,11,60
+"Sierra",2011,12,1156
+"Siskiyou",2011,1,187
+"Siskiyou",2011,2,0
+"Siskiyou",2011,3,816
+"Siskiyou",2011,4,614
+"Siskiyou",2011,5,0
+"Siskiyou",2011,6,684
+"Siskiyou",2011,7,1192
+"Siskiyou",2011,8,296
+"Siskiyou",2011,9,256
+"Siskiyou",2011,10,142
+"Siskiyou",2011,11,309
+"Siskiyou",2011,12,166
+"Solano",2011,1,585
+"Solano",2011,2,91
+"Solano",2011,3,133
+"Solano",2011,4,0
+"Solano",2011,5,14
+"Solano",2011,6,142
+"Solano",2011,7,212
+"Solano",2011,8,230
+"Solano",2011,9,15
+"Solano",2011,10,0
+"Solano",2011,11,0
+"Solano",2011,12,146
+"Sonoma",2011,1,17
+"Sonoma",2011,2,253
+"Sonoma",2011,3,49
+"Sonoma",2011,4,26
+"Sonoma",2011,5,517
+"Sonoma",2011,6,0
+"Sonoma",2011,7,0
+"Sonoma",2011,8,159
+"Sonoma",2011,9,0
+"Sonoma",2011,10,0
+"Sonoma",2011,11,415
+"Sonoma",2011,12,0
+"Stanislaus",2011,1,78
+"Stanislaus",2011,2,407
+"Stanislaus",2011,3,0
+"Stanislaus",2011,4,77
+"Stanislaus",2011,5,12
+"Stanislaus",2011,6,0
+"Stanislaus",2011,7,268
+"Stanislaus",2011,8,44
+"Stanislaus",2011,9,14
+"Stanislaus",2011,10,0
+"Stanislaus",2011,11,3425
+"Stanislaus",2011,12,50
+"Sutter",2011,1,127
+"Sutter",2011,2,0
+"Sutter",2011,3,28
+"Sutter",2011,4,81
+"Sutter",2011,5,0
+"Sutter",2011,6,0
+"Sutter",2011,7,132
+"Sutter",2011,8,72
+"Sutter",2011,9,32
+"Sutter",2011,10,1109
+"Sutter",2011,11,203
+"Sutter",2011,12,0
+"Tehama",2011,1,854
+"Tehama",2011,2,662
+"Tehama",2011,3,0
+"Tehama",2011,4,702
+"Tehama",2011,5,1236
+"Tehama",2011,6,373
+"Tehama",2011,7,267
+"Tehama",2011,8,149
+"Tehama",2011,9,303
+"Tehama",2011,10,185
+"Tehama",2011,11,574
+"Tehama",2011,12,100
+"Trinity",2011,1,144
+"Trinity",2011,2,0
+"Trinity",2011,3,14
+"Trinity",2011,4,152
+"Trinity",2011,5,260
+"Trinity",2011,6,277
+"Trinity",2011,7,26
+"Trinity",2011,8,13
+"Trinity",2011,9,0
+"Trinity",2011,10,136
+"Trinity",2011,11,0
+"Trinity",2011,12,315
+"Tulare",2011,1,60
+"Tulare",2011,2,35
+"Tulare",2011,3,600
+"Tulare",2011,4,0
+"Tulare",2011,5,30
+"Tulare",2011,6,155
+"Tulare",2011,7,11
+"Tulare",2011,8,0
+"Tulare",2011,9,470
+"Tulare",2011,10,0
+"Tulare",2011,11,67
+"Tulare",2011,12,407
+"Tuolumne",2011,1,0
+"Tuolumne",2011,2,67
+"Tuolumne",2011,3,51
+"Tuolumne",2011,4,0
+"Tuolumne",2011,5,320
+"Tuolumne",2011,6,38
+"Tuolumne",2011,7,43
+"Tuolumne",2011,8,0
+"Tuolumne",2011,9,3962
+"Tuolumne",2011,10,53
+"Tuolumne",2011,11,158
+"Tuolumne",2011,12,0
+"Ventura",2011,1,34
+"Ventura",2011,2,62
+"Ventura",2011,3,0
+"Ventura",2011,4,0
+"Ventura",2011,5,134
+"Ventura",2011,6,86
+"Ventura",2011,7,54
+"Ventura",2011,8,1280
+"Ventura",2011,9,264
+"Ventura",2011,10,0
+"Ventura",2011,11,916
+"Ventura",2011,12,684
+"Yolo",2011,1,0
+"Yolo",2011,2,762
+"Yolo",2011,3,1448
+"Yolo",2011,4,349
+"Yolo",2011,5,289
+"Yolo",2011,6,169
+"Yolo",2011,7,360
+"Yolo",2011,8,201
+"Yolo",2011,9,704
+"Yolo",2011,10,108
+"Yolo",2011,11,148
+"Yolo",2011,12,0
+"Yuba",2011,1,0
+"Yuba",2011,2,170
+"Yuba",2011,3,272
+"Yuba",2011,4,252
+"Yuba",2011,5,34
+"Yuba",2011,6,24
+"Yuba",2011,7,0
+"Yuba",2011,8,165
+"Yuba",2011,9,33
+"Yuba",2011,10,332
+"Yuba",2011,11,62
+"Yuba",2011,12,43
+"Alameda",2012,1,666
+"Alameda",2012,2,0
+"Alameda",2012,3,15
+"Alameda",2012,4,161
+"Alameda",2012,5,0
+"Alameda",2012,6,0
+"Alameda",2012,7,527
+"Alameda",2012,8,0
+"Alameda",2012,9,79
+"Alameda",2012,10,436
+"Alameda",2012,11,0
+"Alameda",2012,12,64
+"Alpine",2012,1,57
+"Alpine",2012,2,11
+"Alpine",2012,3,315
+"Alpine",2012,4,30
+"Alpine",2012,5,31
+"Alpine",2012,6,0
+"Alpine",2012,7,3943
+"Alpine",2012,8,36
+"Alpine",2012,9,146
+"Alpine",2012,10,0
+"Alpine",2012,11,32
+"Alpine",2012,12,86
+"Amador",2012,1,0
+"Amador",2012,2,0
+"Amador",2012,3,156
+"Amador",2012,4,83
+"Amador",2012,5,52
+"Amador",2012,6,1326
+"Amador",2012,7,224
+"Amador",2012,8,0
+"Amador",2012,9,991
+"Amador",2012,10,728
+"Amador",2012,11,0
+"Amador",2012,12,781
+"Butte",2012,1,1398
+"Butte",2012,2,359
+"Butte",2012,3,324
+"Butte",2012,4,155
+"Butte",2012,5,322
+"Butte",2012,6,187
+"Butte",2012,7,723
+"Butte",2012,8,122
+"Butte",2012,9,159
+"Butte",2012,10,0
+"Butte",2012,11,12
+"Butte",2012,12,175
+"Calaveras",2012,1,275
+"Calaveras",2012,2,280
+"Calaveras",2012,3,27
+"Calaveras",2012,4,13
+"Calaveras",2012,5,0
+"Calaveras",2012,6,181
+"Calaveras",2012,7,35
+"Calaveras",2012,8,319
+"Calaveras",2012,9,68
+"Calaveras",2012,10,39
+"Calaveras",2012,11,599
+"Calaveras",2012,12,0
+"Colusa",2012,1,13
+"Colusa",2012,2,142
+"Colusa",2012,3,0
+"Colusa",2012,4,0
+"Colusa",2012,5,487
+"Colusa",2012,6,0
+"Colusa",2012,7,82
+"Colusa",2012,8,425
+"Colusa",2012,9,0
+"Colusa",2012,10,89
+"Colusa",2012,11,46
+"Colusa",2012,12,0
+"Contra Costa",2012,1,258
+"Contra Costa",2012,2,23
+"Contra Costa",2012,3,28
+"Contra Costa",2012,4,0
+"Contra Costa",2012,5,3648
+"Contra Costa",2012,6,30
+"Contra Costa",2012,7,125
+"Contra Costa",2012,8,0
+"Contra Costa",2012,9,33
+"Contra Costa",2012,10,64
+"Contra Costa",2012,11,0
+"Contra Costa",2012,12,0
+"Del Norte",2012,1,154
+"Del Norte",2012,2,58
+"Del Norte",2012,3,74
+"Del Norte",2012,4,1247
+"Del Norte",2012,5,240
+"Del Norte",2012,6,0
+"Del Norte",2012,7,886
+"Del Norte",2012,8,654
+"Del Norte",2012,9,0
+"Del Norte",2012,10,738
+"Del Norte",2012,11,1283
+"Del Norte",2012,12,348
+"El Dorado",2012,1,288
+"El Dorado",2012,2,121
+"El Dorado",2012,3,324
+"El Dorado",2012,4,196
+"El Dorado",2012,5,671
+"El Dorado",2012,6,95
+"El Dorado",2012,7,121
+"El Dorado",2012,8,0
+"El Dorado",2012,9,0
+"El Dorado",2012,10,197
+"El Dorado",2012,11,261
+"El Dorado",2012,12,243
+"Fresno",2012,1,41
+"Fresno",2012,2,12
+"Fresno",2012,3,0
+"Fresno",2012,4,178
+"Fresno",2012,5,22
+"Fresno",2012,6,305
+"Fresno",2012,7,79
+"Fresno",2012,8,35
+"Fresno",2012,9,645
+"Fresno",2012,10,0
+"Fresno",2012,11,0
+"Fresno",2012,12,156
+"Glenn",2012,1,0
+"Glenn",2012,2,0
+"Glenn",2012,3,461
+"Glenn",2012,4,0
+"Glenn",2012,5,81
+"Glenn",2012,6,441
+"Glenn",2012,7,0
+"Glenn",2012,8,82
+"Glenn",2012,9,39
+"Glenn",2012,10,0
+"Glenn",2012,11,292
+"Glenn",2012,12,29
+"Humboldt",2012,1,35
+"Humboldt",2012,2,0
+"Humboldt",2012,3,3985
+"Humboldt",2012,4,46
+"Humboldt",2012,5,135
+"Humboldt",2012,6,0
+"Humboldt",2012,7,48
+"Humboldt",2012,8,74
+"Humboldt",2012,9,0
+"Humboldt",2012,10,0
+"Humboldt",2012,11,167
+"Humboldt",2012,12,64
+"Imperial",2012,1,44
+"Imperial",2012,2,1313
+"Imperial",2012,3,223
+"Imperial",2012,4,0
+"Imperial",2012,5,932
+"Imperial",2012,6,733
+"Imperial",2012,7,0
+"Imperial",2012,8,771
+"Imperial",2012,9,1302
+"Imperial",2012,10,369
+"Imperial",2012,11,343
+"Imperial",2012,12,159
+"Inyo",2012,1,316
+"Inyo",2012,2,215
+"Inyo",2012,3,745
+"Inyo",2012,4,101
+"Inyo",2012,5,140
+"Inyo",2012,6,0
+"Inyo",2012,7,16
+"Inyo",2012,8,192
+"Inyo",2012,9,285
+"Inyo",2012,10,284
+"Inyo",2012,11,24
+"Inyo",2012,12,25
+"Kern",2012,1,0
+"Kern",2012,2,139
+"Kern",2012,3,19
+"Kern",2012,4,369
+"Kern",2012,5,69
+"Kern",2012,6,28
+"Kern",2012,7,530
+"Kern",2012,8,0
+"Kern",2012,9,0
+"Kern",2012,10,178
+"Kern",2012,11,0
+"Kern",2012,12,0
+"Kings",2012,1,478
+"Kings",2012,2,0
+"Kings",2012,3,48
+"Kings",2012,4,377
+"Kings",2012,5,0
+"Kings",2012,6,81
+"Kings",2012,7,36
+"Kings",2012,8,0
+"Kings",2012,9,281
+"Kings",2012,10,25
+"Kings",2012,11,28
+"Kings",2012,12,0
+"Lake",2012,1,3602
+"Lake",2012,2,31
+"Lake",2012,3,123
+"Lake",2012,4,0
+"Lake",2012,5,35
+"Lake",2012,6,72
+"Lake",2012,7,0
+"Lake",2012,8,0
+"Lake",2012,9,140
+"Lake",2012,10,79
+"Lake",2012,11,55
+"Lake",2012,12,1247
+"Lassen",2012,1,207
+"Lassen",2012,2,0
+"Lassen",2012,3,872
+"Lassen",2012,4,667
+"Lassen",2012,5,0
+"Lassen",2012,6,717
+"Lassen",2012,7,1317
+"Lassen",2012,8,351
+"Lassen",2012,9,269
+"Lassen",2012,10,151
+"Lassen",2012,11,334
+"Lassen",2012,12,193
+"Los Angeles",2012,1,606
+"Los Angeles",2012,2,81
+"Los Angeles",2012,3,136
+"Los Angeles",2012,4,0
+"Los Angeles",2012,5,0
+"Los Angeles",2012,6,183
+"Los Angeles",2012,7,247
+"Los Angeles",2012,8,263
+"Los Angeles",2012,9,11
+"Los Angeles",2012,10,11
+"Los Angeles",2012,11,0
+"Los Angeles",2012,12,162
+"Madera",2012,1,42
+"Madera",2012,2,346
+"Madera",2012,3,69
+"Madera",2012,4,43
+"Madera",2012,5,567
+"Madera",2012,6,0
+"Madera",2012,7,14
+"Madera",2012,8,163
+"Madera",2012,9,11
+"Madera",2012,10,0
+"Madera",2012,11,462
+"Madera",2012,12,0
+"Marin",2012,1,82
+"Marin",2012,2,358
+"Marin",2012,3,0
+"Marin",2012,4,75
+"Marin",2012,5,34
+"Marin",2012,6,0
+"Marin",2012,7,272
+"Marin",2012,8,30
+"Marin",2012,9,35
+"Marin",2012,10,0
+"Marin",2012,11,3377
+"Marin",2012,12,42
+"Mariposa",2012,1,139
+"Mariposa",2012,2,0
+"Mariposa",2012,3,53
+"Mariposa",2012,4,71
+"Mariposa",2012,5,0
+"Mariposa",2012,6,0
+"Mariposa",2012,7,128
+"Mariposa",2012,8,69
+"Mariposa",2012,9,55
+"Mariposa",2012,10,1122
+"Mariposa",2012,11,189
+"Mariposa",2012,12,0
+"Mendocino",2012,1,861
+"Mendocino",2012,2,638
+"Mendocino",2012,3,11
+"Mendocino",2012,4,679
+"Mendocino",2012,5,1292
+"Mendocino",2012,6,326
+"Mendocino",2012,7,288
+"Mendocino",2012,8,125
+"Mendocino",2012,9,302
+"Mendocino",2012,10,188
+"Mendocino",2012,11,636
+"Mendocino",2012,12,105
+"Merced",2012,1,121
+"Merced",2012,2,0
+"Merced",2012,3,28
+"Merced",2012,4,162
+"Merced",2012,5,245
+"Merced",2012,6,254
+"Merced",2012,7,24
+"Merced",2012,8,26
+"Merced",2012,9,0
+"Merced",2012,10,147
+"Merced",2012,11,36
+"Merced",2012,12,306
+"Modoc",2012,1,51
+"Modoc",2012,2,0
+"Modoc",2012,3,510
+"Modoc",2012,4,0
+"Modoc",2012,5,12
+"Modoc",2012,6,145
+"Modoc",2012,7,0
+"Modoc",2012,8,0
+"Modoc",2012,9,420
+"Modoc",2012,10,0
+"Modoc",2012,11,61
+"Modoc",2012,12,334
+"Mono",2012,1,0
+"Mono",2012,2,69
+"Mono",2012,3,45
+"Mono",2012,4,0
+"Mono",2012,5,259
+"Mono",2012,6,31
+"Mono",2012,7,31
+"Mono",2012,8,0
+"Mono",2012,9,3190
+"Mono",2012,10,32
+"Mono",2012,11,127
+"Mono",2012,12,0
+"Monterey",2012,1,34
+"Monterey",2012,2,64
+"Monterey",2012,3,0
+"Monterey",2012,4,0
+"Monterey",2012,5,125
+"Monterey",2012,6,84
+"Monterey",2012,7,48
+"Monterey",2012,8,1100
+"Monterey",2012,9,229
+"Monterey",2012,10,0
+"Monterey",2012,11,753
+"Monterey",2012,12,596
+"Napa",2012,1,0
+"Napa",2012,2,687
+"Napa",2012,3,1177
+"Napa",2012,4,344
+"Napa",2012,5,258
+"Napa",2012,6,144
+"Napa",2012,7,329
+"Napa",2012,8,164
+"Napa",2012,9,606
+"Napa",2012,10,93
+"Napa",2012,11,129
+"Napa",2012,12,0
+"Nevada",2012,1,15
+"Nevada",2012,2,164
+"Nevada",2012,3,231
+"Nevada",2012,4,246
+"Nevada",2012,5,0
+"Nevada",2012,6,12
+"Nevada",2012,7,0
+"Nevada",2012,8,149
+"Nevada",2012,9,20
+"Nevada",2012,10,297
+"Nevada",2012,11,59
+"Nevada",2012,12,0
+"Orange",2012,1,513
+"Orange",2012,2,0
+"Orange",2012,3,13
+"Orange",2012,4,111
+"Orange",2012,5,0
+"Orange",2012,6,0
+"Orange",2012,7,440
+"Orange",2012,8,0
+"Orange",2012,9,79
+"Orange",2012,10,356
+"Orange",2012,11,0
+"Orange",2012,12,76
+"Placer",2012,1,16
+"Placer",2012,2,0
+"Placer",2012,3,273
+"Placer",2012,4,38
+"Placer",2012,5,30
+"Placer",2012,6,0
+"Placer",2012,7,3321
+"Placer",2012,8,38
+"Placer",2012,9,116
+"Placer",2012,10,0
+"Placer",2012,11,48
+"Placer",2012,12,77
+"Plumas",2012,1,0
+"Plumas",2012,2,0
+"Plumas",2012,3,135
+"Plumas",2012,4,76
+"Plumas",2012,5,51
+"Plumas",2012,6,1210
+"Plumas",2012,7,200
+"Plumas",2012,8,0
+"Plumas",2012,9,792
+"Plumas",2012,10,585
+"Plumas",2012,11,0
+"Plumas",2012,12,660
+"Riverside",2012,1,1153
+"Riverside",2012,2,297
+"Riverside",2012,3,270
+"Riverside",2012,4,123
+"Riverside",2012,5,283
+"Riverside",2012,6,193
+"Riverside",2012,7,585
+"Riverside",2012,8,80
+"Riverside",2012,9,128
+"Riverside",2012,10,0
+"Riverside",2012,11,13
+"Riverside",2012,12,156
+"Sacramento",2012,1,225
+"Sacramento",2012,2,224
+"Sacramento",2012,3,32
+"Sacramento",2012,4,26
+"Sacramento",2012,5,0
+"Sacramento",2012,6,131
+"Sacramento",2012,7,19
+"Sacramento",2012,8,280
+"Sacramento",2012,9,64
+"Sacramento",2012,10,36
+"Sacramento",2012,11,519
+"Sacramento",2012,12,0
+"San Benito",2012,1,0
+"San Benito",2012,2,146
+"San Benito",2012,3,15
+"San Benito",2012,4,0
+"San Benito",2012,5,521
+"San Benito",2012,6,0
+"San Benito",2012,7,49
+"San Benito",2012,8,364
+"San Benito",2012,9,0
+"San Benito",2012,10,62
+"San Benito",2012,11,26
+"San Benito",2012,12,0
+"San Bernardino",2012,1,249
+"San Bernardino",2012,2,0
+"San Bernardino",2012,3,24
+"San Bernardino",2012,4,0
+"San Bernardino",2012,5,3360
+"San Bernardino",2012,6,13
+"San Bernardino",2012,7,126
+"San Bernardino",2012,8,0
+"San Bernardino",2012,9,29
+"San Bernardino",2012,10,66
+"San Bernardino",2012,11,0
+"San Bernardino",2012,12,0
+"San Diego",2012,1,137
+"San Diego",2012,2,73
+"San Diego",2012,3,59
+"San Diego",2012,4,1233
+"San Diego",2012,5,200
+"San Diego",2012,6,0
+"San Diego",2012,7,798
+"San Diego",2012,8,550
+"San Diego",2012,9,12
+"San Diego",2012,10,721
+"San Diego",2012,11,1297
+"San Diego",2012,12,346
+"San Francisco",2012,1,276
+"San Francisco",2012,2,118
+"San Francisco",2012,3,288
+"San Francisco",2012,4,173
+"San Francisco",2012,5,574
+"San Francisco",2012,6,95
+"San Francisco",2012,7,141
+"San Francisco",2012,8,0
+"San Francisco",2012,9,0
+"San Francisco",2012,10,139
+"San Francisco",2012,11,238
+"San Francisco",2012,12,228
+"San Joaquin",2012,1,26
+"San Joaquin",2012,2,13
+"San Joaquin",2012,3,0
+"San Joaquin",2012,4,151
+"San Joaquin",2012,5,18
+"San Joaquin",2012,6,306
+"San Joaquin",2012,7,73
+"San Joaquin",2012,8,24
+"San Joaquin",2012,9,489
+"San Joaquin",2012,10,0
+"San Joaquin",2012,11,11
+"San Joaquin",2012,12,136
+"San Luis Obispo",2012,1,0
+"San Luis Obispo",2012,2,0
+"San Luis Obispo",2012,3,414
+"San Luis Obispo",2012,4,0
+"San Luis Obispo",2012,5,52
+"San Luis Obispo",2012,6,343
+"San Luis Obispo",2012,7,0
+"San Luis Obispo",2012,8,69
+"San Luis Obispo",2012,9,29
+"San Luis Obispo",2012,10,0
+"San Luis Obispo",2012,11,250
+"San Luis Obispo",2012,12,16
+"San Mateo",2012,1,26
+"San Mateo",2012,2,0
+"San Mateo",2012,3,3207
+"San Mateo",2012,4,11
+"San Mateo",2012,5,115
+"San Mateo",2012,6,0
+"San Mateo",2012,7,29
+"San Mateo",2012,8,61
+"San Mateo",2012,9,0
+"San Mateo",2012,10,0
+"San Mateo",2012,11,102
+"San Mateo",2012,12,73
+"Santa Barbara",2012,1,44
+"Santa Barbara",2012,2,1148
+"Santa Barbara",2012,3,192
+"Santa Barbara",2012,4,0
+"Santa Barbara",2012,5,836
+"Santa Barbara",2012,6,618
+"Santa Barbara",2012,7,0
+"Santa Barbara",2012,8,691
+"Santa Barbara",2012,9,1186
+"Santa Barbara",2012,10,303
+"Santa Barbara",2012,11,233
+"Santa Barbara",2012,12,125
+"Santa Clara",2012,1,291
+"Santa Clara",2012,2,186
+"Santa Clara",2012,3,507
+"Santa Clara",2012,4,108
+"Santa Clara",2012,5,144
+"Santa Clara",2012,6,0
+"Santa Clara",2012,7,0
+"Santa Clara",2012,8,137
+"Santa Clara",2012,9,221
+"Santa Clara",2012,10,213
+"Santa Clara",2012,11,32
+"Santa Clara",2012,12,40
+"Santa Cruz",2012,1,0
+"Santa Cruz",2012,2,145
+"Santa Cruz",2012,3,28
+"Santa Cruz",2012,4,274
+"Santa Cruz",2012,5,40
+"Santa Cruz",2012,6,42
+"Santa Cruz",2012,7,524
+"Santa Cruz",2012,8,0
+"Santa Cruz",2012,9,0
+"Santa Cruz",2012,10,156
+"Santa Cruz",2012,11,0
+"Santa Cruz",2012,12,0
+"Shasta",2012,1,473
+"Shasta",2012,2,0
+"Shasta",2012,3,66
+"Shasta",2012,4,362
+"Shasta",2012,5,0
+"Shasta",2012,6,61
+"Shasta",2012,7,34
+"Shasta",2012,8,0
+"Shasta",2012,9,293
+"Shasta",2012,10,50
+"Shasta",2012,11,31
+"Shasta",2012,12,0
+"Sierra",2012,1,3475
+"Sierra",2012,2,41
+"Sierra",2012,3,111
+"Sierra",2012,4,0
+"Sierra",2012,5,20
+"Sierra",2012,6,71
+"Sierra",2012,7,0
+"Sierra",2012,8,0
+"Sierra",2012,9,141
+"Sierra",2012,10,85
+"Sierra",2012,11,49
+"Sierra",2012,12,1159
+"Siskiyou",2012,1,198
+"Siskiyou",2012,2,0
+"Siskiyou",2012,3,834
+"Siskiyou",2012,4,644
+"Siskiyou",2012,5,0
+"Siskiyou",2012,6,670
+"Siskiyou",2012,7,1265
+"Siskiyou",2012,8,288
+"Siskiyou",2012,9,248
+"Siskiyou",2012,10,149
+"Siskiyou",2012,11,313
+"Siskiyou",2012,12,191
+"Solano",2012,1,591
+"Solano",2012,2,81
+"Solano",2012,3,109
+"Solano",2012,4,0
+"Solano",2012,5,13
+"Solano",2012,6,156
+"Solano",2012,7,241
+"Solano",2012,8,232
+"Solano",2012,9,30
+"Solano",2012,10,14
+"Solano",2012,11,0
+"Solano",2012,12,137
+"Sonoma",2012,1,42
+"Sonoma",2012,2,299
+"Sonoma",2012,3,72
+"Sonoma",2012,4,28
+"Sonoma",2012,5,532
+"Sonoma",2012,6,0
+"Sonoma",2012,7,15
+"Sonoma",2012,8,159
+"Sonoma",2012,9,0
+"Sonoma",2012,10,0
+"Sonoma",2012,11,500
+"Sonoma",2012,12,0
+"Stanislaus",2012,1,51
+"Stanislaus",2012,2,453
+"Stanislaus",2012,3,0
+"Stanislaus",2012,4,61
+"Stanislaus",2012,5,0
+"Stanislaus",2012,6,0
+"Stanislaus",2012,7,327
+"Stanislaus",2012,8,34
+"Stanislaus",2012,9,46
+"Stanislaus",2012,10,0
+"Stanislaus",2012,11,3702
+"Stanislaus",2012,12,13
+"Sutter",2012,1,127
+"Sutter",2012,2,0
+"Sutter",2012,3,38
+"Sutter",2012,4,73
+"Sutter",2012,5,0
+"Sutter",2012,6,0
+"Sutter",2012,7,134
+"Sutter",2012,8,92
+"Sutter",2012,9,66
+"Sutter",2012,10,1246
+"Sutter",2012,11,226
+"Sutter",2012,12,0
+"Tehama",2012,1,927
+"Tehama",2012,2,603
+"Tehama",2012,3,0
+"Tehama",2012,4,704
+"Tehama",2012,5,1278
+"Tehama",2012,6,354
+"Tehama",2012,7,261
+"Tehama",2012,8,134
+"Tehama",2012,9,297
+"Tehama",2012,10,205
+"Tehama",2012,11,656
+"Tehama",2012,12,109
+"Trinity",2012,1,140
+"Trinity",2012,2,0
+"Trinity",2012,3,13
+"Trinity",2012,4,149
+"Trinity",2012,5,269
+"Trinity",2012,6,265
+"Trinity",2012,7,31
+"Trinity",2012,8,27
+"Trinity",2012,9,0
+"Trinity",2012,10,166
+"Trinity",2012,11,17
+"Trinity",2012,12,339
+"Tulare",2012,1,63
+"Tulare",2012,2,27
+"Tulare",2012,3,619
+"Tulare",2012,4,0
+"Tulare",2012,5,30
+"Tulare",2012,6,158
+"Tulare",2012,7,0
+"Tulare",2012,8,0
+"Tulare",2012,9,477
+"Tulare",2012,10,0
+"Tulare",2012,11,76
+"Tulare",2012,12,384
+"Tuolumne",2012,1,0
+"Tuolumne",2012,2,83
+"Tuolumne",2012,3,28
+"Tuolumne",2012,4,0
+"Tuolumne",2012,5,316
+"Tuolumne",2012,6,42
+"Tuolumne",2012,7,41
+"Tuolumne",2012,8,0
+"Tuolumne",2012,9,3816
+"Tuolumne",2012,10,32
+"Tuolumne",2012,11,142
+"Tuolumne",2012,12,0
+"Ventura",2012,1,45
+"Ventura",2012,2,82
+"Ventura",2012,3,0
+"Ventura",2012,4,0
+"Ventura",2012,5,155
+"Ventura",2012,6,106
+"Ventura",2012,7,65
+"Ventura",2012,8,1308
+"Ventura",2012,9,233
+"Ventura",2012,10,0
+"Ventura",2012,11,924
+"Ventura",2012,12,691
+"Yolo",2012,1,0
+"Yolo",2012,2,702
+"Yolo",2012,3,1386
+"Yolo",2012,4,399
+"Yolo",2012,5,327
+"Yolo",2012,6,153
+"Yolo",2012,7,292
+"Yolo",2012,8,197
+"Yolo",2012,9,671
+"Yolo",2012,10,100
+"Yolo",2012,11,152
+"Yolo",2012,12,0
+"Yuba",2012,1,13
+"Yuba",2012,2,169
+"Yuba",2012,3,257
+"Yuba",2012,4,283
+"Yuba",2012,5,34
+"Yuba",2012,6,13
+"Yuba",2012,7,0
+"Yuba",2012,8,176
+"Yuba",2012,9,34
+"Yuba",2012,10,334
+"Yuba",2012,11,78
+"Yuba",2012,12,45
+"Alameda",2013,1,754
+"Alameda",2013,2,0
+"Alameda",2013,3,12
+"Alameda",2013,4,181
+"Alameda",2013,5,42
+"Alameda",2013,6,0
+"Alameda",2013,7,567
+"Alameda",2013,8,0
+"Alameda",2013,9,92
+"Alameda",2013,10,533
+"Alameda",2013,11,0
+"Alameda",2013,12,74
+"Alpine",2013,1,79
+"Alpine",2013,2,0
+"Alpine",2013,3,350
+"Alpine",2013,4,47
+"Alpine",2013,5,48
+"Alpine",2013,6,0
+"Alpine",2013,7,4591
+"Alpine",2013,8,51
+"Alpine",2013,9,174
+"Alpine",2013,10,0
+"Alpine",2013,11,57
+"Alpine",2013,12,95
+"Amador",2013,1,0
+"Amador",2013,2,0
+"Amador",2013,3,172
+"Amador",2013,4,92
+"Amador",2013,5,76
+"Amador",2013,6,1620
+"Amador",2013,7,277
+"Amador",2013,8,0
+"Amador",2013,9,1071
+"Amador",2013,10,794
+"Amador",2013,11,0
+"Amador",2013,12,908
+"Butte",2013,1,1661
+"Butte",2013,2,442
+"Butte",2013,3,321
+"Butte",2013,4,155
+"Butte",2013,5,402
+"Butte",2013,6,238
+"Butte",2013,7,781
+"Butte",2013,8,138
+"Butte",2013,9,160
+"Butte",2013,10,0
+"Butte",2013,11,30
+"Butte",2013,12,200
+"Calaveras",2013,1,309
+"Calaveras",2013,2,308
+"Calaveras",2013,3,0
+"Calaveras",2013,4,17
+"Calaveras",2013,5,0
+"Calaveras",2013,6,197
+"Calaveras",2013,7,33
+"Calaveras",2013,8,397
+"Calaveras",2013,9,92
+"Calaveras",2013,10,36
+"Calaveras",2013,11,656
+"Calaveras",2013,12,0
+"Colusa",2013,1,17
+"Colusa",2013,2,169
+"Colusa",2013,3,14
+"Colusa",2013,4,0
+"Colusa",2013,5,526
+"Colusa",2013,6,0
+"Colusa",2013,7,55
+"Colusa",2013,8,453
+"Colusa",2013,9,0
+"Colusa",2013,10,74
+"Colusa",2013,11,35
+"Colusa",2013,12,0
+"Contra Costa",2013,1,309
+"Contra Costa",2013,2,38
+"Contra Costa",2013,3,28
+"Contra Costa",2013,4,0
+"Contra Costa",2013,5,4148
+"Contra Costa",2013,6,67
+"Contra Costa",2013,7,137
+"Contra Costa",2013,8,0
+"Contra Costa",2013,9,36
+"Contra Costa",2013,10,84
+"Contra Costa",2013,11,0
+"Contra Costa",2013,12,0
+"Del Norte",2013,1,162
+"Del Norte",2013,2,92
+"Del Norte",2013,3,72
+"Del Norte",2013,4,1383
+"Del Norte",2013,5,209
+"Del Norte",2013,6,0
+"Del Norte",2013,7,969
+"Del Norte",2013,8,670
+"Del Norte",2013,9,0
+"Del Norte",2013,10,777
+"Del Norte",2013,11,1482
+"Del Norte",2013,12,352
+"El Dorado",2013,1,297
+"El Dorado",2013,2,156
+"El Dorado",2013,3,358
+"El Dorado",2013,4,244
+"El Dorado",2013,5,730
+"El Dorado",2013,6,122
+"El Dorado",2013,7,156
+"El Dorado",2013,8,0
+"El Dorado",2013,9,26
+"El Dorado",2013,10,206
+"El Dorado",2013,11,308
+"El Dorado",2013,12,300
+"Fresno",2013,1,40
+"Fresno",2013,2,26
+"Fresno",2013,3,0
+"Fresno",2013,4,159
+"Fresno",2013,5,41
+"Fresno",2013,6,361
+"Fresno",2013,7,109
+"Fresno",2013,8,26
+"Fresno",2013,9,708
+"Fresno",2013,10,0
+"Fresno",2013,11,13
+"Fresno",2013,12,173
+"Glenn",2013,1,15
+"Glenn",2013,2,0
+"Glenn",2013,3,478
+"Glenn",2013,4,0
+"Glenn",2013,5,69
+"Glenn",2013,6,460
+"Glenn",2013,7,0
+"Glenn",2013,8,79
+"Glenn",2013,9,46
+"Glenn",2013,10,0
+"Glenn",2013,11,302
+"Glenn",2013,12,35
+"Humboldt",2013,1,29
+"Humboldt",2013,2,0
+"Humboldt",2013,3,3991
+"Humboldt",2013,4,56
+"Humboldt",2013,5,134
+"Humboldt",2013,6,0
+"Humboldt",2013,7,64
+"Humboldt",2013,8,81
+"Humboldt",2013,9,0
+"Humboldt",2013,10,0
+"Humboldt",2013,11,187
+"Humboldt",2013,12,77
+"Imperial",2013,1,52
+"Imperial",2013,2,1380
+"Imperial",2013,3,214
+"Imperial",2013,4,0
+"Imperial",2013,5,982
+"Imperial",2013,6,740
+"Imperial",2013,7,12
+"Imperial",2013,8,832
+"Imperial",2013,9,1437
+"Imperial",2013,10,386
+"Imperial",2013,11,284
+"Imperial",2013,12,185
+"Inyo",2013,1,346
+"Inyo",2013,2,207
+"Inyo",2013,3,690
+"Inyo",2013,4,106
+"Inyo",2013,5,142
+"Inyo",2013,6,0
+"Inyo",2013,7,11
+"Inyo",2013,8,191
+"Inyo",2013,9,285
+"Inyo",2013,10,281
+"Inyo",2013,11,24
+"Inyo",2013,12,14
+"Kern",2013,1,0
+"Kern",2013,2,176
+"Kern",2013,3,22
+"Kern",2013,4,365
+"Kern",2013,5,93
+"Kern",2013,6,37
+"Kern",2013,7,599
+"Kern",2013,8,0
+"Kern",2013,9,13
+"Kern",2013,10,143
+"Kern",2013,11,0
+"Kern",2013,12,0
+"Kings",2013,1,454
+"Kings",2013,2,0
+"Kings",2013,3,57
+"Kings",2013,4,389
+"Kings",2013,5,0
+"Kings",2013,6,76
+"Kings",2013,7,44
+"Kings",2013,8,0
+"Kings",2013,9,298
+"Kings",2013,10,46
+"Kings",2013,11,17
+"Kings",2013,12,0
+"Lake",2013,1,3476
+"Lake",2013,2,35
+"Lake",2013,3,125
+"Lake",2013,4,0
+"Lake",2013,5,37
+"Lake",2013,6,69
+"Lake",2013,7,0
+"Lake",2013,8,0
+"Lake",2013,9,144
+"Lake",2013,10,77
+"Lake",2013,11,62
+"Lake",2013,12,1245
+"Lassen",2013,1,212
+"Lassen",2013,2,0
+"Lassen",2013,3,864
+"Lassen",2013,4,616
+"Lassen",2013,5,0
+"Lassen",2013,6,710
+"Lassen",2013,7,1319
+"Lassen",2013,8,327
+"Lassen",2013,9,262
+"Lassen",2013,10,131
+"Lassen",2013,11,294
+"Lassen",2013,12,164
+"Los Angeles",2013,1,651
+"Los Angeles",2013,2,87
+"Los Angeles",2013,3,153
+"Los Angeles",2013,4,0
+"Los Angeles",2013,5,29
+"Los Angeles",2013,6,175
+"Los Angeles",2013,7,229
+"Los Angeles",2013,8,250
+"Los Angeles",2013,9,23
+"Los Angeles",2013,10,0
+"Los Angeles",2013,11,0
+"Los Angeles",2013,12,144
+"Madera",2013,1,34
+"Madera",2013,2,316
+"Madera",2013,3,57
+"Madera",2013,4,43
+"Madera",2013,5,524
+"Madera",2013,6,0
+"Madera",2013,7,11
+"Madera",2013,8,156
+"Madera",2013,9,11
+"Madera",2013,10,0
+"Madera",2013,11,449
+"Madera",2013,12,0
+"Marin",2013,1,57
+"Marin",2013,2,358
+"Marin",2013,3,0
+"Marin",2013,4,55
+"Marin",2013,5,46
+"Marin",2013,6,0
+"Marin",2013,7,309
+"Marin",2013,8,25
+"Marin",2013,9,25
+"Marin",2013,10,0
+"Marin",2013,11,3399
+"Marin",2013,12,35
+"Mariposa",2013,1,120
+"Mariposa",2013,2,0
+"Mariposa",2013,3,24
+"Mariposa",2013,4,61
+"Mariposa",2013,5,0
+"Mariposa",2013,6,0
+"Mariposa",2013,7,155
+"Mariposa",2013,8,81
+"Mariposa",2013,9,44
+"Mariposa",2013,10,1215
+"Mariposa",2013,11,212
+"Mariposa",2013,12,0
+"Mendocino",2013,1,876
+"Mendocino",2013,2,644
+"Mendocino",2013,3,0
+"Mendocino",2013,4,679
+"Mendocino",2013,5,1251
+"Mendocino",2013,6,286
+"Mendocino",2013,7,265
+"Mendocino",2013,8,153
+"Mendocino",2013,9,289
+"Mendocino",2013,10,185
+"Mendocino",2013,11,612
+"Mendocino",2013,12,120
+"Merced",2013,1,124
+"Merced",2013,2,0
+"Merced",2013,3,30
+"Merced",2013,4,151
+"Merced",2013,5,274
+"Merced",2013,6,237
+"Merced",2013,7,17
+"Merced",2013,8,20
+"Merced",2013,9,0
+"Merced",2013,10,137
+"Merced",2013,11,28
+"Merced",2013,12,348
+"Modoc",2013,1,56
+"Modoc",2013,2,12
+"Modoc",2013,3,523
+"Modoc",2013,4,0
+"Modoc",2013,5,0
+"Modoc",2013,6,142
+"Modoc",2013,7,0
+"Modoc",2013,8,0
+"Modoc",2013,9,428
+"Modoc",2013,10,0
+"Modoc",2013,11,76
+"Modoc",2013,12,365
+"Mono",2013,1,0
+"Mono",2013,2,70
+"Mono",2013,3,35
+"Mono",2013,4,0
+"Mono",2013,5,275
+"Mono",2013,6,26
+"Mono",2013,7,29
+"Mono",2013,8,0
+"Mono",2013,9,3393
+"Mono",2013,10,30
+"Mono",2013,11,119
+"Mono",2013,12,0
+"Monterey",2013,1,29
+"Monterey",2013,2,59
+"Monterey",2013,3,0
+"Monterey",2013,4,0
+"Monterey",2013,5,121
+"Monterey",2013,6,73
+"Monterey",2013,7,57
+"Monterey",2013,8,1102
+"Monterey",2013,9,226
+"Monterey",2013,10,0
+"Monterey",2013,11,780
+"Monterey",2013,12,619
+"Napa",2013,1,0
+"Napa",2013,2,681
+"Napa",2013,3,1194
+"Napa",2013,4,324
+"Napa",2013,5,241
+"Napa",2013,6,113
+"Napa",2013,7,284
+"Napa",2013,8,157
+"Napa",2013,9,604
+"Napa",2013,10,86
+"Napa",2013,11,141
+"Napa",2013,12,0
+"Nevada",2013,1,11
+"Nevada",2013,2,142
+"Nevada",2013,3,220
+"Nevada",2013,4,203
+"Nevada",2013,5,15
+"Nevada",2013,6,0
+"Nevada",2013,7,0
+"Nevada",2013,8,146
+"Nevada",2013,9,20
+"Nevada",2013,10,313
+"Nevada",2013,11,49
+"Nevada",2013,12,17
+"Orange",2013,1,508
+"Orange",2013,2,0
+"Orange",2013,3,11
+"Orange",2013,4,135
+"Orange",2013,5,0
+"Orange",2013,6,0
+"Orange",2013,7,417
+"Orange",2013,8,0
+"Orange",2013,9,60
+"Orange",2013,10,339
+"Orange",2013,11,0
+"Orange",2013,12,69
+"Placer",2013,1,32
+"Placer",2013,2,0
+"Placer",2013,3,300
+"Placer",2013,4,0
+"Placer",2013,5,27
+"Placer",2013,6,0
+"Placer",2013,7,3235
+"Placer",2013,8,29
+"Placer",2013,9,110
+"Placer",2013,10,0
+"Placer",2013,11,48
+"Placer",2013,12,81
+"Plumas",2013,1,0
+"Plumas",2013,2,0
+"Plumas",2013,3,128
+"Plumas",2013,4,82
+"Plumas",2013,5,54
+"Plumas",2013,6,1098
+"Plumas",2013,7,215
+"Plumas",2013,8,0
+"Plumas",2013,9,842
+"Plumas",2013,10,568
+"Plumas",2013,11,0
+"Plumas",2013,12,687
+"Riverside",2013,1,1226
+"Riverside",2013,2,322
+"Riverside",2013,3,253
+"Riverside",2013,4,131
+"Riverside",2013,5,265
+"Riverside",2013,6,208
+"Riverside",2013,7,622
+"Riverside",2013,8,102
+"Riverside",2013,9,152
+"Riverside",2013,10,0
+"Riverside",2013,11,0
+"Riverside",2013,12,150
+"Sacramento",2013,1,245
+"Sacramento",2013,2,227
+"Sacramento",2013,3,0
+"Sacramento",2013,4,0
+"Sacramento",2013,5,0
+"Sacramento",2013,6,151
+"Sacramento",2013,7,50
+"Sacramento",2013,8,364
+"Sacramento",2013,9,45
+"Sacramento",2013,10,29
+"Sacramento",2013,11,529
+"Sacramento",2013,12,0
+"San Benito",2013,1,18
+"San Benito",2013,2,134
+"San Benito",2013,3,0
+"San Benito",2013,4,0
+"San Benito",2013,5,439
+"San Benito",2013,6,0
+"San Benito",2013,7,54
+"San Benito",2013,8,354
+"San Benito",2013,9,0
+"San Benito",2013,10,58
+"San Benito",2013,11,50
+"San Benito",2013,12,0
+"San Bernardino",2013,1,284
+"San Bernardino",2013,2,26
+"San Bernardino",2013,3,28
+"San Bernardino",2013,4,0
+"San Bernardino",2013,5,3423
+"San Bernardino",2013,6,28
+"San Bernardino",2013,7,118
+"San Bernardino",2013,8,0
+"San Bernardino",2013,9,47
+"San Bernardino",2013,10,79
+"San Bernardino",2013,11,0
+"San Bernardino",2013,12,0
+"San Diego",2013,1,122
+"San Diego",2013,2,68
+"San Diego",2013,3,62
+"San Diego",2013,4,1201
+"San Diego",2013,5,213
+"San Diego",2013,6,0
+"San Diego",2013,7,822
+"San Diego",2013,8,592
+"San Diego",2013,9,0
+"San Diego",2013,10,688
+"San Diego",2013,11,1211
+"San Diego",2013,12,263
+"San Francisco",2013,1,263
+"San Francisco",2013,2,133
+"San Francisco",2013,3,276
+"San Francisco",2013,4,190
+"San Francisco",2013,5,605
+"San Francisco",2013,6,90
+"San Francisco",2013,7,133
+"San Francisco",2013,8,0
+"San Francisco",2013,9,0
+"San Francisco",2013,10,159
+"San Francisco",2013,11,266
+"San Francisco",2013,12,243
+"San Joaquin",2013,1,11
+"San Joaquin",2013,2,12
+"San Joaquin",2013,3,0
+"San Joaquin",2013,4,138
+"San Joaquin",2013,5,40
+"San Joaquin",2013,6,321
+"San Joaquin",2013,7,35
+"San Joaquin",2013,8,15
+"San Joaquin",2013,9,500
+"San Joaquin",2013,10,0
+"San Joaquin",2013,11,12
+"San Joaquin",2013,12,133
+"San Luis Obispo",2013,1,22
+"San Luis Obispo",2013,2,0
+"San Luis Obispo",2013,3,391
+"San Luis Obispo",2013,4,0
+"San Luis Obispo",2013,5,55
+"San Luis Obispo",2013,6,360
+"San Luis Obispo",2013,7,0
+"San Luis Obispo",2013,8,77
+"San Luis Obispo",2013,9,31
+"San Luis Obispo",2013,10,0
+"San Luis Obispo",2013,11,307
+"San Luis Obispo",2013,12,25
+"San Mateo",2013,1,19
+"San Mateo",2013,2,0
+"San Mateo",2013,3,3212
+"San Mateo",2013,4,32
+"San Mateo",2013,5,120
+"San Mateo",2013,6,0
+"San Mateo",2013,7,54
+"San Mateo",2013,8,78
+"San Mateo",2013,9,0
+"San Mateo",2013,10,0
+"San Mateo",2013,11,124
+"San Mateo",2013,12,71
+"Santa Barbara",2013,1,63
+"Santa Barbara",2013,2,1178
+"Santa Barbara",2013,3,209
+"Santa Barbara",2013,4,0
+"Santa Barbara",2013,5,823
+"Santa Barbara",2013,6,593
+"Santa Barbara",2013,7,0
+"Santa Barbara",2013,8,682
+"Santa Barbara",2013,9,1192
+"Santa Barbara",2013,10,321
+"Santa Barbara",2013,11,225
+"Santa Barbara",2013,12,132
+"Santa Clara",2013,1,284
+"Santa Clara",2013,2,164
+"Santa Clara",2013,3,535
+"Santa Clara",2013,4,106
+"Santa Clara",2013,5,114
+"Santa Clara",2013,6,0
+"Santa Clara",2013,7,15
+"Santa Clara",2013,8,149
+"Santa Clara",2013,9,229
+"Santa Clara",2013,10,236
+"Santa Clara",2013,11,25
+"Santa Clara",2013,12,0
+"Santa Cruz",2013,1,0
+"Santa Cruz",2013,2,147
+"Santa Cruz",2013,3,40
+"Santa Cruz",2013,4,302
+"Santa Cruz",2013,5,63
+"Santa Cruz",2013,6,27
+"Santa Cruz",2013,7,552
+"Santa Cruz",2013,8,0
+"Santa Cruz",2013,9,0
+"Santa Cruz",2013,10,164
+"Santa Cruz",2013,11,0
+"Santa Cruz",2013,12,0
+"Shasta",2013,1,429
+"Shasta",2013,2,0
+"Shasta",2013,3,73
+"Shasta",2013,4,392
+"Shasta",2013,5,0
+"Shasta",2013,6,73
+"Shasta",2013,7,32
+"Shasta",2013,8,0
+"Shasta",2013,9,266
+"Shasta",2013,10,47
+"Shasta",2013,11,49
+"Shasta",2013,12,0
+"Sierra",2013,1,3495
+"Sierra",2013,2,32
+"Sierra",2013,3,137
+"Sierra",2013,4,0
+"Sierra",2013,5,15
+"Sierra",2013,6,81
+"Sierra",2013,7,0
+"Sierra",2013,8,0
+"Sierra",2013,9,167
+"Sierra",2013,10,75
+"Sierra",2013,11,74
+"Sierra",2013,12,1177
+"Siskiyou",2013,1,266
+"Siskiyou",2013,2,0
+"Siskiyou",2013,3,863
+"Siskiyou",2013,4,656
+"Siskiyou",2013,5,0
+"Siskiyou",2013,6,717
+"Siskiyou",2013,7,1246
+"Siskiyou",2013,8,371
+"Siskiyou",2013,9,281
+"Siskiyou",2013,10,144
+"Siskiyou",2013,11,305
+"Siskiyou",2013,12,194
+"Solano",2013,1,613
+"Solano",2013,2,91
+"Solano",2013,3,170
+"Solano",2013,4,0
+"Solano",2013,5,24
+"Solano",2013,6,163
+"Solano",2013,7,254
+"Solano",2013,8,246
+"Solano",2013,9,25
+"Solano",2013,10,15
+"Solano",2013,11,0
+"Solano",2013,12,166
+"Sonoma",2013,1,19
+"Sonoma",2013,2,322
+"Sonoma",2013,3,54
+"Sonoma",2013,4,24
+"Sonoma",2013,5,549
+"Sonoma",2013,6,0
+"Sonoma",2013,7,0
+"Sonoma",2013,8,174
+"Sonoma",2013,9,16
+"Sonoma",2013,10,0
+"Sonoma",2013,11,515
+"Sonoma",2013,12,11
+"Stanislaus",2013,1,68
+"Stanislaus",2013,2,355
+"Stanislaus",2013,3,0
+"Stanislaus",2013,4,66
+"Stanislaus",2013,5,12
+"Stanislaus",2013,6,11
+"Stanislaus",2013,7,268
+"Stanislaus",2013,8,49
+"Stanislaus",2013,9,40
+"Stanislaus",2013,10,0
+"Stanislaus",2013,11,3477
+"Stanislaus",2013,12,47
+"Sutter",2013,1,136
+"Sutter",2013,2,0
+"Sutter",2013,3,33
+"Sutter",2013,4,81
+"Sutter",2013,5,0
+"Sutter",2013,6,0
+"Sutter",2013,7,164
+"Sutter",2013,8,82
+"Sutter",2013,9,58
+"Sutter",2013,10,1282
+"Sutter",2013,11,210
+"Sutter",2013,12,0
+"Tehama",2013,1,871
+"Tehama",2013,2,645
+"Tehama",2013,3,0
+"Tehama",2013,4,727
+"Tehama",2013,5,1226
+"Tehama",2013,6,301
+"Tehama",2013,7,264
+"Tehama",2013,8,128
+"Tehama",2013,9,287
+"Tehama",2013,10,165
+"Tehama",2013,11,612
+"Tehama",2013,12,97
+"Trinity",2013,1,147
+"Trinity",2013,2,0
+"Trinity",2013,3,13
+"Trinity",2013,4,152
+"Trinity",2013,5,253
+"Trinity",2013,6,269
+"Trinity",2013,7,26
+"Trinity",2013,8,25
+"Trinity",2013,9,0
+"Trinity",2013,10,134
+"Trinity",2013,11,33
+"Trinity",2013,12,346
+"Tulare",2013,1,77
+"Tulare",2013,2,55
+"Tulare",2013,3,602
+"Tulare",2013,4,0
+"Tulare",2013,5,13
+"Tulare",2013,6,159
+"Tulare",2013,7,0
+"Tulare",2013,8,0
+"Tulare",2013,9,512
+"Tulare",2013,10,0
+"Tulare",2013,11,87
+"Tulare",2013,12,459
+"Tuolumne",2013,1,0
+"Tuolumne",2013,2,77
+"Tuolumne",2013,3,49
+"Tuolumne",2013,4,14
+"Tuolumne",2013,5,300
+"Tuolumne",2013,6,62
+"Tuolumne",2013,7,27
+"Tuolumne",2013,8,0
+"Tuolumne",2013,9,3848
+"Tuolumne",2013,10,35
+"Tuolumne",2013,11,134
+"Tuolumne",2013,12,0
+"Ventura",2013,1,53
+"Ventura",2013,2,75
+"Ventura",2013,3,0
+"Ventura",2013,4,0
+"Ventura",2013,5,155
+"Ventura",2013,6,93
+"Ventura",2013,7,54
+"Ventura",2013,8,1321
+"Ventura",2013,9,227
+"Ventura",2013,10,0
+"Ventura",2013,11,960
+"Ventura",2013,12,676
+"Yolo",2013,1,0
+"Yolo",2013,2,772
+"Yolo",2013,3,1386
+"Yolo",2013,4,373
+"Yolo",2013,5,271
+"Yolo",2013,6,140
+"Yolo",2013,7,329
+"Yolo",2013,8,228
+"Yolo",2013,9,722
+"Yolo",2013,10,109
+"Yolo",2013,11,147
+"Yolo",2013,12,0
+"Yuba",2013,1,13
+"Yuba",2013,2,186
+"Yuba",2013,3,299
+"Yuba",2013,4,310
+"Yuba",2013,5,32
+"Yuba",2013,6,27
+"Yuba",2013,7,0
+"Yuba",2013,8,170
+"Yuba",2013,9,36
+"Yuba",2013,10,336
+"Yuba",2013,11,57
+"Yuba",2013,12,32
+"Alameda",2014,1,688
+"Alameda",2014,2,0
+"Alameda",2014,3,24
+"Alameda",2014,4,157
+"Alameda",2014,5,0
+"Alameda",2014,6,0
+"Alameda",2014,7,555
+"Alameda",2014,8,0
+"Alameda",2014,9,80
+"Alameda",2014,10,471
+"Alameda",2014,11,0
+"Alameda",2014,12,89
+"Alpine",2014,1,32
+"Alpine",2014,2,0
+"Alpine",2014,3,327
+"Alpine",2014,4,44
+"Alpine",2014,5,50
+"Alpine",2014,6,0
+"Alpine",2014,7,4045
+"Alpine",2014,8,31
+"Alpine",2014,9,140
+"Alpine",2014,10,0
+"Alpine",2014,11,34
+"Alpine",2014,12,102
+"Amador",2014,1,0
+"Amador",2014,2,0
+"Amador",2014,3,160
+"Amador",2014,4,88
+"Amador",2014,5,60
+"Amador",2014,6,1398
+"Amador",2014,7,258
+"Amador",2014,8,0
+"Amador",2014,9,1033
+"Amador",2014,10,867
+"Amador",2014,11,0
+"Amador",2014,12,872
+"Butte",2014,1,1503
+"Butte",2014,2,381
+"Butte",2014,3,360
+"Butte",2014,4,167
+"Butte",2014,5,369
+"Butte",2014,6,237
+"Butte",2014,7,809
+"Butte",2014,8,103
+"Butte",2014,9,155
+"Butte",2014,10,0
+"Butte",2014,11,16
+"Butte",2014,12,213
+"Calaveras",2014,1,305
+"Calaveras",2014,2,285
+"Calaveras",2014,3,40
+"Calaveras",2014,4,26
+"Calaveras",2014,5,0
+"Calaveras",2014,6,187
+"Calaveras",2014,7,25
+"Calaveras",2014,8,359
+"Calaveras",2014,9,90
+"Calaveras",2014,10,55
+"Calaveras",2014,11,552
+"Calaveras",2014,12,0
+"Colusa",2014,1,0
+"Colusa",2014,2,137
+"Colusa",2014,3,14
+"Colusa",2014,4,0
+"Colusa",2014,5,500
+"Colusa",2014,6,0
+"Colusa",2014,7,84
+"Colusa",2014,8,364
+"Colusa",2014,9,0
+"Colusa",2014,10,73
+"Colusa",2014,11,36
+"Colusa",2014,12,0
+"Contra Costa",2014,1,291
+"Contra Costa",2014,2,28
+"Contra Costa",2014,3,0
+"Contra Costa",2014,4,0
+"Contra Costa",2014,5,3450
+"Contra Costa",2014,6,50
+"Contra Costa",2014,7,126
+"Contra Costa",2014,8,0
+"Contra Costa",2014,9,30
+"Contra Costa",2014,10,60
+"Contra Costa",2014,11,0
+"Contra Costa",2014,12,0
+"Del Norte",2014,1,139
+"Del Norte",2014,2,83
+"Del Norte",2014,3,50
+"Del Norte",2014,4,1174
+"Del Norte",2014,5,244
+"Del Norte",2014,6,0
+"Del Norte",2014,7,871
+"Del Norte",2014,8,636
+"Del Norte",2014,9,0
+"Del Norte",2014,10,706
+"Del Norte",2014,11,1219
+"Del Norte",2014,12,303
+"El Dorado",2014,1,293
+"El Dorado",2014,2,148
+"El Dorado",2014,3,326
+"El Dorado",2014,4,173
+"El Dorado",2014,5,660
+"El Dorado",2014,6,120
+"El Dorado",2014,7,145
+"El Dorado",2014,8,0
+"El Dorado",2014,9,11
+"El Dorado",2014,10,166
+"El Dorado",2014,11,280
+"El Dorado",2014,12,251
+"Fresno",2014,1,13
+"Fresno",2014,2,25
+"Fresno",2014,3,0
+"Fresno",2014,4,159
+"Fresno",2014,5,30
+"Fresno",2014,6,311
+"Fresno",2014,7,55
+"Fresno",2014,8,48
+"Fresno",2014,9,606
+"Fresno",2014,10,0
+"Fresno",2014,11,27
+"Fresno",2014,12,146
+"Glenn",2014,1,12
+"Glenn",2014,2,0
+"Glenn",2014,3,488
+"Glenn",2014,4,0
+"Glenn",2014,5,76
+"Glenn",2014,6,374
+"Glenn",2014,7,0
+"Glenn",2014,8,78
+"Glenn",2014,9,46
+"Glenn",2014,10,0
+"Glenn",2014,11,276
+"Glenn",2014,12,33
+"Humboldt",2014,1,16
+"Humboldt",2014,2,0
+"Humboldt",2014,3,3787
+"Humboldt",2014,4,29
+"Humboldt",2014,5,141
+"Humboldt",2014,6,0
+"Humboldt",2014,7,43
+"Humboldt",2014,8,58
+"Humboldt",2014,9,0
+"Humboldt",2014,10,0
+"Humboldt",2014,11,141
+"Humboldt",2014,12,100
+"Imperial",2014,1,57
+"Imperial",2014,2,1296
+"Imperial",2014,3,203
+"Imperial",2014,4,0
+"Imperial",2014,5,925
+"Imperial",2014,6,689
+"Imperial",2014,7,0
+"Imperial",2014,8,751
+"Imperial",2014,9,1372
+"Imperial",2014,10,318
+"Imperial",2014,11,307
+"Imperial",2014,12,155
+"Inyo",2014,1,311
+"Inyo",2014,2,205
+"Inyo",2014,3,660
+"Inyo",2014,4,117
+"Inyo",2014,5,138
+"Inyo",2014,6,0
+"Inyo",2014,7,11
+"Inyo",2014,8,189
+"Inyo",2014,9,284
+"Inyo",2014,10,253
+"Inyo",2014,11,11
+"Inyo",2014,12,42
+"Kern",2014,1,0
+"Kern",2014,2,143
+"Kern",2014,3,38
+"Kern",2014,4,351
+"Kern",2014,5,72
+"Kern",2014,6,28
+"Kern",2014,7,574
+"Kern",2014,8,0
+"Kern",2014,9,13
+"Kern",2014,10,127
+"Kern",2014,11,14
+"Kern",2014,12,0
+"Kings",2014,1,448
+"Kings",2014,2,0
+"Kings",2014,3,62
+"Kings",2014,4,394
+"Kings",2014,5,0
+"Kings",2014,6,73
+"Kings",2014,7,41
+"Kings",2014,8,0
+"Kings",2014,9,297
+"Kings",2014,10,27
+"Kings",2014,11,40
+"Kings",2014,12,0
+"Lake",2014,1,3405
+"Lake",2014,2,30
+"Lake",2014,3,118
+"Lake",2014,4,0
+"Lake",2014,5,41
+"Lake",2014,6,70
+"Lake",2014,7,0
+"Lake",2014,8,0
+"Lake",2014,9,140
+"Lake",2014,10,66
+"Lake",2014,11,62
+"Lake",2014,12,1220
+"Lassen",2014,1,249
+"Lassen",2014,2,0
+"Lassen",2014,3,933
+"Lassen",2014,4,666
+"Lassen",2014,5,0
+"Lassen",2014,6,725
+"Lassen",2014,7,1300
+"Lassen",2014,8,302
+"Lassen",2014,9,261
+"Lassen",2014,10,122
+"Lassen",2014,11,309
+"Lassen",2014,12,165
+"Los Angeles",2014,1,639
+"Los Angeles",2014,2,99
+"Los Angeles",2014,3,130
+"Los Angeles",2014,4,0
+"Los Angeles",2014,5,0
+"Los Angeles",2014,6,183
+"Los Angeles",2014,7,256
+"Los Angeles",2014,8,250
+"Los Angeles",2014,9,15
+"Los Angeles",2014,10,12
+"Los Angeles",2014,11,0
+"Los Angeles",2014,12,161
+"Madera",2014,1,35
+"Madera",2014,2,322
+"Madera",2014,3,61
+"Madera",2014,4,19
+"Madera",2014,5,560
+"Madera",2014,6,0
+"Madera",2014,7,0
+"Madera",2014,8,132
+"Madera",2014,9,0
+"Madera",2014,10,0
+"Madera",2014,11,488
+"Madera",2014,12,0
+"Marin",2014,1,67
+"Marin",2014,2,381
+"Marin",2014,3,0
+"Marin",2014,4,58
+"Marin",2014,5,18
+"Marin",2014,6,0
+"Marin",2014,7,266
+"Marin",2014,8,34
+"Marin",2014,9,12
+"Marin",2014,10,0
+"Marin",2014,11,3555
+"Marin",2014,12,43
+"Mariposa",2014,1,122
+"Mariposa",2014,2,0
+"Mariposa",2014,3,30
+"Mariposa",2014,4,57
+"Mariposa",2014,5,0
+"Mariposa",2014,6,0
+"Mariposa",2014,7,146
+"Mariposa",2014,8,75
+"Mariposa",2014,9,54
+"Mariposa",2014,10,1219
+"Mariposa",2014,11,204
+"Mariposa",2014,12,12
+"Mendocino",2014,1,932
+"Mendocino",2014,2,677
+"Mendocino",2014,3,0
+"Mendocino",2014,4,749
+"Mendocino",2014,5,1289
+"Mendocino",2014,6,312
+"Mendocino",2014,7,267
+"Mendocino",2014,8,152
+"Mendocino",2014,9,264
+"Mendocino",2014,10,208
+"Mendocino",2014,11,675
+"Mendocino",2014,12,108
+"Merced",2014,1,154
+"Merced",2014,2,0
+"Merced",2014,3,11
+"Merced",2014,4,165
+"Merced",2014,5,267
+"Merced",2014,6,243
+"Merced",2014,7,42
+"Merced",2014,8,13
+"Merced",2014,9,0
+"Merced",2014,10,150
+"Merced",2014,11,35
+"Merced",2014,12,337
+"Modoc",2014,1,62
+"Modoc",2014,2,26
+"Modoc",2014,3,533
+"Modoc",2014,4,0
+"Modoc",2014,5,11
+"Modoc",2014,6,111
+"Modoc",2014,7,0
+"Modoc",2014,8,0
+"Modoc",2014,9,434
+"Modoc",2014,10,0
+"Modoc",2014,11,67
+"Modoc",2014,12,342
+"Mono",2014,1,0
+"Mono",2014,2,80
+"Mono",2014,3,43
+"Mono",2014,4,0
+"Mono",2014,5,282
+"Mono",2014,6,28
+"Mono",2014,7,28
+"Mono",2014,8,0
+"Mono",2014,9,3254
+"Mono",2014,10,37
+"Mono",2014,11,146
+"Mono",2014,12,0
+"Monterey",2014,1,38
+"Monterey",2014,2,57
+"Monterey",2014,3,0
+"Monterey",2014,4,0
+"Monterey",2014,5,120
+"Monterey",2014,6,73
+"Monterey",2014,7,46
+"Monterey",2014,8,1139
+"Monterey",2014,9,242
+"Monterey",2014,10,0
+"Monterey",2014,11,815
+"Monterey",2014,12,639
+"Napa",2014,1,0
+"Napa",2014,2,657
+"Napa",2014,3,1198
+"Napa",2014,4,326
+"Napa",2014,5,292
+"Napa",2014,6,155
+"Napa",2014,7,278
+"Napa",2014,8,207
+"Napa",2014,9,625
+"Napa",2014,10,86
+"Napa",2014,11,136
+"Napa",2014,12,0
+"Nevada",2014,1,26
+"Nevada",2014,2,150
+"Nevada",2014,3,224
+"Nevada",2014,4,240
+"Nevada",2014,5,14
+"Nevada",2014,6,24
+"Nevada",2014,7,0
+"Nevada",2014,8,153
+"Nevada",2014,9,17
+"Nevada",2014,10,313
+"Nevada",2014,11,61
+"Nevada",2014,12,31
+"Orange",2014,1,558
+"Orange",2014,2,0
+"Orange",2014,3,18
+"Orange",2014,4,120
+"Orange",2014,5,0
+"Orange",2014,6,0
+"Orange",2014,7,440
+"Orange",2014,8,0
+"Orange",2014,9,80
+"Orange",2014,10,373
+"Orange",2014,11,0
+"Orange",2014,12,46
+"Placer",2014,1,32
+"Placer",2014,2,0
+"Placer",2014,3,290
+"Placer",2014,4,26
+"Placer",2014,5,32
+"Placer",2014,6,0
+"Placer",2014,7,3426
+"Placer",2014,8,45
+"Placer",2014,9,137
+"Placer",2014,10,0
+"Placer",2014,11,39
+"Placer",2014,12,54
+"Plumas",2014,1,0
+"Plumas",2014,2,0
+"Plumas",2014,3,135
+"Plumas",2014,4,80
+"Plumas",2014,5,56
+"Plumas",2014,6,1141
+"Plumas",2014,7,226
+"Plumas",2014,8,0
+"Plumas",2014,9,797
+"Plumas",2014,10,648
+"Plumas",2014,11,0
+"Plumas",2014,12,684
+"Riverside",2014,1,1221
+"Riverside",2014,2,320
+"Riverside",2014,3,298
+"Riverside",2014,4,147
+"Riverside",2014,5,307
+"Riverside",2014,6,175
+"Riverside",2014,7,668
+"Riverside",2014,8,88
+"Riverside",2014,9,152
+"Riverside",2014,10,0
+"Riverside",2014,11,11
+"Riverside",2014,12,167
+"Sacramento",2014,1,250
+"Sacramento",2014,2,269
+"Sacramento",2014,3,12
+"Sacramento",2014,4,0
+"Sacramento",2014,5,0
+"Sacramento",2014,6,142
+"Sacramento",2014,7,22
+"Sacramento",2014,8,312
+"Sacramento",2014,9,72
+"Sacramento",2014,10,46
+"Sacramento",2014,11,538
+"Sacramento",2014,12,0
+"San Benito",2014,1,0
+"San Benito",2014,2,129
+"San Benito",2014,3,0
+"San Benito",2014,4,0
+"San Benito",2014,5,464
+"San Benito",2014,6,0
+"San Benito",2014,7,76
+"San Benito",2014,8,391
+"San Benito",2014,9,0
+"San Benito",2014,10,75
+"San Benito",2014,11,44
+"San Benito",2014,12,0
+"San Bernardino",2014,1,285
+"San Bernardino",2014,2,33
+"San Bernardino",2014,3,0
+"San Bernardino",2014,4,0
+"San Bernardino",2014,5,3353
+"San Bernardino",2014,6,29
+"San Bernardino",2014,7,121
+"San Bernardino",2014,8,0
+"San Bernardino",2014,9,18
+"San Bernardino",2014,10,68
+"San Bernardino",2014,11,0
+"San Bernardino",2014,12,0
+"San Diego",2014,1,136
+"San Diego",2014,2,81
+"San Diego",2014,3,75
+"San Diego",2014,4,1170
+"San Diego",2014,5,206
+"San Diego",2014,6,0
+"San Diego",2014,7,812
+"San Diego",2014,8,636
+"San Diego",2014,9,0
+"San Diego",2014,10,685
+"San Diego",2014,11,1249
+"San Diego",2014,12,308
+"San Francisco",2014,1,273
+"San Francisco",2014,2,133
+"San Francisco",2014,3,290
+"San Francisco",2014,4,200
+"San Francisco",2014,5,567
+"San Francisco",2014,6,86
+"San Francisco",2014,7,118
+"San Francisco",2014,8,0
+"San Francisco",2014,9,0
+"San Francisco",2014,10,162
+"San Francisco",2014,11,255
+"San Francisco",2014,12,224
+"San Joaquin",2014,1,0
+"San Joaquin",2014,2,28
+"San Joaquin",2014,3,0
+"San Joaquin",2014,4,137
+"San Joaquin",2014,5,36
+"San Joaquin",2014,6,309
+"San Joaquin",2014,7,58
+"San Joaquin",2014,8,29
+"San Joaquin",2014,9,489
+"San Joaquin",2014,10,0
+"San Joaquin",2014,11,0
+"San Joaquin",2014,12,138
+"San Luis Obispo",2014,1,23
+"San Luis Obispo",2014,2,0
+"San Luis Obispo",2014,3,422
+"San Luis Obispo",2014,4,0
+"San Luis Obispo",2014,5,80
+"San Luis Obispo",2014,6,369
+"San Luis Obispo",2014,7,0
+"San Luis Obispo",2014,8,65
+"San Luis Obispo",2014,9,46
+"San Luis Obispo",2014,10,0
+"San Luis Obispo",2014,11,320
+"San Luis Obispo",2014,12,27
+"San Mateo",2014,1,13
+"San Mateo",2014,2,0
+"San Mateo",2014,3,3267
+"San Mateo",2014,4,44
+"San Mateo",2014,5,127
+"San Mateo",2014,6,0
+"San Mateo",2014,7,46
+"San Mateo",2014,8,69
+"San Mateo",2014,9,0
+"San Mateo",2014,10,0
+"San Mateo",2014,11,150
+"San Mateo",2014,12,74
+"Santa Barbara",2014,1,41
+"Santa Barbara",2014,2,1182
+"Santa Barbara",2014,3,182
+"Santa Barbara",2014,4,0
+"Santa Barbara",2014,5,852
+"Santa Barbara",2014,6,621
+"Santa Barbara",2014,7,0
+"Santa Barbara",2014,8,723
+"Santa Barbara",2014,9,1207
+"Santa Barbara",2014,10,297
+"Santa Barbara",2014,11,231
+"Santa Barbara",2014,12,125
+"Santa Clara",2014,1,265
+"Santa Clara",2014,2,194
+"Santa Clara",2014,3,607
+"Santa Clara",2014,4,108
+"Santa Clara",2014,5,131
+"Santa Clara",2014,6,0
+"Santa Clara",2014,7,0
+"Santa Clara",2014,8,185
+"Santa Clara",2014,9,253
+"Santa Clara",2014,10,263
+"Santa Clara",2014,11,16
+"Santa Clara",2014,12,26
+"Santa Cruz",2014,1,0
+"Santa Cruz",2014,2,145
+"Santa Cruz",2014,3,22
+"Santa Cruz",2014,4,341
+"Santa Cruz",2014,5,33
+"Santa Cruz",2014,6,41
+"Santa Cruz",2014,7,578
+"Santa Cruz",2014,8,0
+"Santa Cruz",2014,9,13
+"Santa Cruz",2014,10,148
+"Santa Cruz",2014,11,15
+"Santa Cruz",2014,12,0
+"Shasta",2014,1,450
+"Shasta",2014,2,0
+"Shasta",2014,3,80
+"Shasta",2014,4,377
+"Shasta",2014,5,0
+"Shasta",2014,6,73
+"Shasta",2014,7,30
+"Shasta",2014,8,0
+"Shasta",2014,9,309
+"Shasta",2014,10,46
+"Shasta",2014,11,25
+"Shasta",2014,12,0
+"Sierra",2014,1,3426
+"Sierra",2014,2,32
+"Sierra",2014,3,139
+"Sierra",2014,4,0
+"Sierra",2014,5,39
+"Sierra",2014,6,84
+"Sierra",2014,7,0
+"Sierra",2014,8,0
+"Sierra",2014,9,150
+"Sierra",2014,10,73
+"Sierra",2014,11,58
+"Sierra",2014,12,1177
+"Siskiyou",2014,1,244
+"Siskiyou",2014,2,0
+"Siskiyou",2014,3,874
+"Siskiyou",2014,4,660
+"Siskiyou",2014,5,0
+"Siskiyou",2014,6,675
+"Siskiyou",2014,7,1282
+"Siskiyou",2014,8,293
+"Siskiyou",2014,9,249
+"Siskiyou",2014,10,136
+"Siskiyou",2014,11,300
+"Siskiyou",2014,12,156
+"Solano",2014,1,674
+"Solano",2014,2,72
+"Solano",2014,3,134
+"Solano",2014,4,0
+"Solano",2014,5,15
+"Solano",2014,6,155
+"Solano",2014,7,262
+"Solano",2014,8,248
+"Solano",2014,9,12
+"Solano",2014,10,0
+"Solano",2014,11,0
+"Solano",2014,12,136
+"Sonoma",2014,1,31
+"Sonoma",2014,2,330
+"Sonoma",2014,3,70
+"Sonoma",2014,4,34
+"Sonoma",2014,5,562
+"Sonoma",2014,6,0
+"Sonoma",2014,7,14
+"Sonoma",2014,8,137
+"Sonoma",2014,9,0
+"Sonoma",2014,10,0
+"Sonoma",2014,11,481
+"Sonoma",2014,12,0
+"Stanislaus",2014,1,69
+"Stanislaus",2014,2,425
+"Stanislaus",2014,3,0
+"Stanislaus",2014,4,60
+"Stanislaus",2014,5,58
+"Stanislaus",2014,6,0
+"Stanislaus",2014,7,278
+"Stanislaus",2014,8,36
+"Stanislaus",2014,9,38
+"Stanislaus",2014,10,0
+"Stanislaus",2014,11,3603
+"Stanislaus",2014,12,29
+"Sutter",2014,1,119
+"Sutter",2014,2,0
+"Sutter",2014,3,46
+"Sutter",2014,4,75
+"Sutter",2014,5,0
+"Sutter",2014,6,0
+"Sutter",2014,7,142
+"Sutter",2014,8,78
+"Sutter",2014,9,48
+"Sutter",2014,10,1264
+"Sutter",2014,11,209
+"Sutter",2014,12,0
+"Tehama",2014,1,891
+"Tehama",2014,2,681
+"Tehama",2014,3,0
+"Tehama",2014,4,705
+"Tehama",2014,5,1307
+"Tehama",2014,6,310
+"Tehama",2014,7,310
+"Tehama",2014,8,139
+"Tehama",2014,9,270
+"Tehama",2014,10,195
+"Tehama",2014,11,658
+"Tehama",2014,12,102
+"Trinity",2014,1,130
+"Trinity",2014,2,0
+"Trinity",2014,3,0
+"Trinity",2014,4,160
+"Trinity",2014,5,261
+"Trinity",2014,6,264
+"Trinity",2014,7,27
+"Trinity",2014,8,15
+"Trinity",2014,9,0
+"Trinity",2014,10,152
+"Trinity",2014,11,22
+"Trinity",2014,12,338
+"Tulare",2014,1,45
+"Tulare",2014,2,41
+"Tulare",2014,3,635
+"Tulare",2014,4,0
+"Tulare",2014,5,19
+"Tulare",2014,6,147
+"Tulare",2014,7,11
+"Tulare",2014,8,0
+"Tulare",2014,9,506
+"Tulare",2014,10,12
+"Tulare",2014,11,71
+"Tulare",2014,12,396
+"Tuolumne",2014,1,0
+"Tuolumne",2014,2,69
+"Tuolumne",2014,3,51
+"Tuolumne",2014,4,0
+"Tuolumne",2014,5,331
+"Tuolumne",2014,6,51
+"Tuolumne",2014,7,17
+"Tuolumne",2014,8,0
+"Tuolumne",2014,9,3963
+"Tuolumne",2014,10,49
+"Tuolumne",2014,11,144
+"Tuolumne",2014,12,0
+"Ventura",2014,1,57
+"Ventura",2014,2,83
+"Ventura",2014,3,0
+"Ventura",2014,4,0
+"Ventura",2014,5,163
+"Ventura",2014,6,98
+"Ventura",2014,7,44
+"Ventura",2014,8,1359
+"Ventura",2014,9,251
+"Ventura",2014,10,0
+"Ventura",2014,11,1013
+"Ventura",2014,12,696
+"Yolo",2014,1,0
+"Yolo",2014,2,825
+"Yolo",2014,3,1350
+"Yolo",2014,4,353
+"Yolo",2014,5,304
+"Yolo",2014,6,154
+"Yolo",2014,7,351
+"Yolo",2014,8,200
+"Yolo",2014,9,705
+"Yolo",2014,10,118
+"Yolo",2014,11,147
+"Yolo",2014,12,0
+"Yuba",2014,1,32
+"Yuba",2014,2,201
+"Yuba",2014,3,283
+"Yuba",2014,4,306
+"Yuba",2014,5,24
+"Yuba",2014,6,24
+"Yuba",2014,7,0
+"Yuba",2014,8,169
+"Yuba",2014,9,40
+"Yuba",2014,10,380
+"Yuba",2014,11,69
+"Yuba",2014,12,32
+"Alameda",2015,1,753
+"Alameda",2015,2,0
+"Alameda",2015,3,29
+"Alameda",2015,4,168
+"Alameda",2015,5,0
+"Alameda",2015,6,0
+"Alameda",2015,7,599
+"Alameda",2015,8,0
+"Alameda",2015,9,98
+"Alameda",2015,10,449
+"Alameda",2015,11,0
+"Alameda",2015,12,79
+"Alpine",2015,1,67
+"Alpine",2015,2,0
+"Alpine",2015,3,358
+"Alpine",2015,4,53
+"Alpine",2015,5,28
+"Alpine",2015,6,0
+"Alpine",2015,7,4697
+"Alpine",2015,8,35
+"Alpine",2015,9,162
+"Alpine",2015,10,0
+"Alpine",2015,11,58
+"Alpine",2015,12,80
+"Amador",2015,1,0
+"Amador",2015,2,0
+"Amador",2015,3,185
+"Amador",2015,4,104
+"Amador",2015,5,77
+"Amador",2015,6,1551
+"Amador",2015,7,249
+"Amador",2015,8,0
+"Amador",2015,9,1146
+"Amador",2015,10,824
+"Amador",2015,11,0
+"Amador",2015,12,940
+"Butte",2015,1,1657
+"Butte",2015,2,429
+"Butte",2015,3,403
+"Butte",2015,4,188
+"Butte",2015,5,421
+"Butte",2015,6,212
+"Butte",2015,7,839
+"Butte",2015,8,141
+"Butte",2015,9,175
+"Butte",2015,10,0
+"Butte",2015,11,15
+"Butte",2015,12,205
+"Calaveras",2015,1,312
+"Calaveras",2015,2,309
+"Calaveras",2015,3,36
+"Calaveras",2015,4,14
+"Calaveras",2015,5,0
+"Calaveras",2015,6,210
+"Calaveras",2015,7,22
+"Calaveras",2015,8,449
+"Calaveras",2015,9,84
+"Calaveras",2015,10,57
+"Calaveras",2015,11,621
+"Calaveras",2015,12,0
+"Colusa",2015,1,12
+"Colusa",2015,2,171
+"Colusa",2015,3,0
+"Colusa",2015,4,0
+"Colusa",2015,5,587
+"Colusa",2015,6,0
+"Colusa",2015,7,73
+"Colusa",2015,8,403
+"Colusa",2015,9,0
+"Colusa",2015,10,91
+"Colusa",2015,11,43
+"Colusa",2015,12,0
+"Contra Costa",2015,1,282
+"Contra Costa",2015,2,56
+"Contra Costa",2015,3,33
+"Contra Costa",2015,4,0
+"Contra Costa",2015,5,3806
+"Contra Costa",2015,6,52
+"Contra Costa",2015,7,167
+"Contra Costa",2015,8,0
+"Contra Costa",2015,9,33
+"Contra Costa",2015,10,75
+"Contra Costa",2015,11,0
+"Contra Costa",2015,12,0
+"Del Norte",2015,1,162
+"Del Norte",2015,2,90
+"Del Norte",2015,3,66
+"Del Norte",2015,4,1318
+"Del Norte",2015,5,255
+"Del Norte",2015,6,0
+"Del Norte",2015,7,949
+"Del Norte",2015,8,715
+"Del Norte",2015,9,0
+"Del Norte",2015,10,788
+"Del Norte",2015,11,1379
+"Del Norte",2015,12,352
+"El Dorado",2015,1,329
+"El Dorado",2015,2,146
+"El Dorado",2015,3,335
+"El Dorado",2015,4,206
+"El Dorado",2015,5,742
+"El Dorado",2015,6,112
+"El Dorado",2015,7,147
+"El Dorado",2015,8,0
+"El Dorado",2015,9,0
+"El Dorado",2015,10,193
+"El Dorado",2015,11,274
+"El Dorado",2015,12,285
+"Fresno",2015,1,24
+"Fresno",2015,2,32
+"Fresno",2015,3,0
+"Fresno",2015,4,163
+"Fresno",2015,5,13
+"Fresno",2015,6,348
+"Fresno",2015,7,60
+"Fresno",2015,8,32
+"Fresno",2015,9,624
+"Fresno",2015,10,0
+"Fresno",2015,11,0
+"Fresno",2015,12,176
+"Glenn",2015,1,0
+"Glenn",2015,2,0
+"Glenn",2015,3,544
+"Glenn",2015,4,0
+"Glenn",2015,5,81
+"Glenn",2015,6,404
+"Glenn",2015,7,0
+"Glenn",2015,8,75
+"Glenn",2015,9,27
+"Glenn",2015,10,0
+"Glenn",2015,11,338
+"Glenn",2015,12,54
+"Humboldt",2015,1,16
+"Humboldt",2015,2,0
+"Humboldt",2015,3,3996
+"Humboldt",2015,4,69
+"Humboldt",2015,5,142
+"Humboldt",2015,6,0
+"Humboldt",2015,7,29
+"Humboldt",2015,8,80
+"Humboldt",2015,9,0
+"Humboldt",2015,10,0
+"Humboldt",2015,11,158
+"Humboldt",2015,12,108
+"Imperial",2015,1,79
+"Imperial",2015,2,1383
+"Imperial",2015,3,271
+"Imperial",2015,4,0
+"Imperial",2015,5,1046
+"Imperial",2015,6,802
+"Imperial",2015,7,0
+"Imperial",2015,8,853
+"Imperial",2015,9,1429
+"Imperial",2015,10,403
+"Imperial",2015,11,315
+"Imperial",2015,12,163
+"Inyo",2015,1,355
+"Inyo",2015,2,203
+"Inyo",2015,3,729
+"Inyo",2015,4,106
+"Inyo",2015,5,184
+"Inyo",2015,6,0
+"Inyo",2015,7,32
+"Inyo",2015,8,175
+"Inyo",2015,9,288
+"Inyo",2015,10,331
+"Inyo",2015,11,34
+"Inyo",2015,12,11
+"Kern",2015,1,0
+"Kern",2015,2,185
+"Kern",2015,3,24
+"Kern",2015,4,339
+"Kern",2015,5,72
+"Kern",2015,6,51
+"Kern",2015,7,625
+"Kern",2015,8,0
+"Kern",2015,9,11
+"Kern",2015,10,177
+"Kern",2015,11,12
+"Kern",2015,12,0
+"Kings",2015,1,507
+"Kings",2015,2,0
+"Kings",2015,3,86
+"Kings",2015,4,415
+"Kings",2015,5,0
+"Kings",2015,6,74
+"Kings",2015,7,31
+"Kings",2015,8,0
+"Kings",2015,9,292
+"Kings",2015,10,45
+"Kings",2015,11,14
+"Kings",2015,12,0
+"Lake",2015,1,3748
+"Lake",2015,2,59
+"Lake",2015,3,151
+"Lake",2015,4,0
+"Lake",2015,5,47
+"Lake",2015,6,60
+"Lake",2015,7,0
+"Lake",2015,8,0
+"Lake",2015,9,163
+"Lake",2015,10,81
+"Lake",2015,11,78
+"Lake",2015,12,1257
+"Lassen",2015,1,240
+"Lassen",2015,2,0
+"Lassen",2015,3,959
+"Lassen",2015,4,766
+"Lassen",2015,5,0
+"Lassen",2015,6,751
+"Lassen",2015,7,1325
+"Lassen",2015,8,331
+"Lassen",2015,9,287
+"Lassen",2015,10,142
+"Lassen",2015,11,306
+"Lassen",2015,12,219
+"Los Angeles",2015,1,629
+"Los Angeles",2015,2,107
+"Los Angeles",2015,3,152
+"Los Angeles",2015,4,0
+"Los Angeles",2015,5,13
+"Los Angeles",2015,6,211
+"Los Angeles",2015,7,261
+"Los Angeles",2015,8,291
+"Los Angeles",2015,9,0
+"Los Angeles",2015,10,27
+"Los Angeles",2015,11,0
+"Los Angeles",2015,12,179
+"Madera",2015,1,50
+"Madera",2015,2,327
+"Madera",2015,3,70
+"Madera",2015,4,33
+"Madera",2015,5,582
+"Madera",2015,6,0
+"Madera",2015,7,12
+"Madera",2015,8,143
+"Madera",2015,9,0
+"Madera",2015,10,0
+"Madera",2015,11,454
+"Madera",2015,12,0
+"Marin",2015,1,93
+"Marin",2015,2,454
+"Marin",2015,3,0
+"Marin",2015,4,63
+"Marin",2015,5,44
+"Marin",2015,6,0
+"Marin",2015,7,315
+"Marin",2015,8,35
+"Marin",2015,9,32
+"Marin",2015,10,0
+"Marin",2015,11,3710
+"Marin",2015,12,44
+"Mariposa",2015,1,170
+"Mariposa",2015,2,0
+"Mariposa",2015,3,32
+"Mariposa",2015,4,76
+"Mariposa",2015,5,0
+"Mariposa",2015,6,0
+"Mariposa",2015,7,149
+"Mariposa",2015,8,88
+"Mariposa",2015,9,79
+"Mariposa",2015,10,1212
+"Mariposa",2015,11,241
+"Mariposa",2015,12,0
+"Mendocino",2015,1,935
+"Mendocino",2015,2,709
+"Mendocino",2015,3,0
+"Mendocino",2015,4,756
+"Mendocino",2015,5,1321
+"Mendocino",2015,6,351
+"Mendocino",2015,7,315
+"Mendocino",2015,8,145
+"Mendocino",2015,9,322
+"Mendocino",2015,10,217
+"Mendocino",2015,11,703
+"Mendocino",2015,12,89
+"Merced",2015,1,167
+"Merced",2015,2,0
+"Merced",2015,3,0
+"Merced",2015,4,225
+"Merced",2015,5,247
+"Merced",2015,6,260
+"Merced",2015,7,16
+"Merced",2015,8,12
+"Merced",2015,9,0
+"Merced",2015,10,148
+"Merced",2015,11,27
+"Merced",2015,12,392
+"Modoc",2015,1,73
+"Modoc",2015,2,43
+"Modoc",2015,3,593
+"Modoc",2015,4,0
+"Modoc",2015,5,0
+"Modoc",2015,6,164
+"Modoc",2015,7,0
+"Modoc",2015,8,0
+"Modoc",2015,9,506
+"Modoc",2015,10,0
+"Modoc",2015,11,86
+"Modoc",2015,12,354
+"Mono",2015,1,0
+"Mono",2015,2,64
+"Mono",2015,3,33
+"Mono",2015,4,0
+"Mono",2015,5,284
+"Mono",2015,6,32
+"Mono",2015,7,25
+"Mono",2015,8,0
+"Mono",2015,9,3518
+"Mono",2015,10,32
+"Mono",2015,11,132
+"Mono",2015,12,0
+"Monterey",2015,1,13
+"Monterey",2015,2,59
+"Monterey",2015,3,0
+"Monterey",2015,4,0
+"Monterey",2015,5,147
+"Monterey",2015,6,65
+"Monterey",2015,7,41
+"Monterey",2015,8,1214
+"Monterey",2015,9,231
+"Monterey",2015,10,0
+"Monterey",2015,11,886
+"Monterey",2015,12,691
+"Napa",2015,1,0
+"Napa",2015,2,746
+"Napa",2015,3,1252
+"Napa",2015,4,337
+"Napa",2015,5,295
+"Napa",2015,6,166
+"Napa",2015,7,287
+"Napa",2015,8,185
+"Napa",2015,9,616
+"Napa",2015,10,91
+"Napa",2015,11,146
+"Napa",2015,12,0
+"Nevada",2015,1,13
+"Nevada",2015,2,175
+"Nevada",2015,3,259
+"Nevada",2015,4,252
+"Nevada",2015,5,22
+"Nevada",2015,6,19
+"Nevada",2015,7,0
+"Nevada",2015,8,149
+"Nevada",2015,9,18
+"Nevada",2015,10,308
+"Nevada",2015,11,51
+"Nevada",2015,12,26
+"Orange",2015,1,524
+"Orange",2015,2,0
+"Orange",2015,3,13
+"Orange",2015,4,145
+"Orange",2015,5,0
+"Orange",2015,6,0
+"Orange",2015,7,508
+"Orange",2015,8,0
+"Orange",2015,9,92
+"Orange",2015,10,392
+"Orange",2015,11,0
+"Orange",2015,12,63
+"Placer",2015,1,15
+"Placer",2015,2,0
+"Placer",2015,3,292
+"Placer",2015,4,52
+"Placer",2015,5,24
+"Placer",2015,6,0
+"Placer",2015,7,3557
+"Placer",2015,8,32
+"Placer",2015,9,133
+"Placer",2015,10,0
+"Placer",2015,11,45
+"Placer",2015,12,75
+"Plumas",2015,1,0
+"Plumas",2015,2,0
+"Plumas",2015,3,127
+"Plumas",2015,4,71
+"Plumas",2015,5,56
+"Plumas",2015,6,1198
+"Plumas",2015,7,230
+"Plumas",2015,8,0
+"Plumas",2015,9,906
+"Plumas",2015,10,681
+"Plumas",2015,11,0
+"Plumas",2015,12,706
+"Riverside",2015,1,1254
+"Riverside",2015,2,351
+"Riverside",2015,3,291
+"Riverside",2015,4,131
+"Riverside",2015,5,279
+"Riverside",2015,6,184
+"Riverside",2015,7,613
+"Riverside",2015,8,106
+"Riverside",2015,9,150
+"Riverside",2015,10,0
+"Riverside",2015,11,18
+"Riverside",2015,12,178
+"Sacramento",2015,1,256
+"Sacramento",2015,2,258
+"Sacramento",2015,3,18
+"Sacramento",2015,4,13
+"Sacramento",2015,5,0
+"Sacramento",2015,6,147
+"Sacramento",2015,7,18
+"Sacramento",2015,8,334
+"Sacramento",2015,9,55
+"Sacramento",2015,10,30
+"Sacramento",2015,11,543
+"Sacramento",2015,12,0
+"San Benito",2015,1,0
+"San Benito",2015,2,148
+"San Benito",2015,3,0
+"San Benito",2015,4,0
+"San Benito",2015,5,455
+"San Benito",2015,6,0
+"San Benito",2015,7,81
+"San Benito",2015,8,378
+"San Benito",2015,9,0
+"San Benito",2015,10,75
+"San Benito",2015,11,46
+"San Benito",2015,12,0
+"San Bernardino",2015,1,257
+"San Bernardino",2015,2,30
+"San Bernardino",2015,3,42
+"San Bernardino",2015,4,0
+"San Bernardino",2015,5,3653
+"San Bernardino",2015,6,19
+"San Bernardino",2015,7,130
+"San Bernardino",2015,8,0
+"San Bernardino",2015,9,41
+"San Bernardino",2015,10,80
+"San Bernardino",2015,11,0
+"San Bernardino",2015,12,0
+"San Diego",2015,1,158
+"San Diego",2015,2,79
+"San Diego",2015,3,56
+"San Diego",2015,4,1207
+"San Diego",2015,5,214
+"San Diego",2015,6,0
+"San Diego",2015,7,906
+"San Diego",2015,8,644
+"San Diego",2015,9,0
+"San Diego",2015,10,751
+"San Diego",2015,11,1300
+"San Diego",2015,12,318
+"San Francisco",2015,1,255
+"San Francisco",2015,2,110
+"San Francisco",2015,3,286
+"San Francisco",2015,4,198
+"San Francisco",2015,5,621
+"San Francisco",2015,6,100
+"San Francisco",2015,7,150
+"San Francisco",2015,8,0
+"San Francisco",2015,9,0
+"San Francisco",2015,10,174
+"San Francisco",2015,11,268
+"San Francisco",2015,12,294
+"San Joaquin",2015,1,15
+"San Joaquin",2015,2,12
+"San Joaquin",2015,3,0
+"San Joaquin",2015,4,164
+"San Joaquin",2015,5,25
+"San Joaquin",2015,6,314
+"San Joaquin",2015,7,60
+"San Joaquin",2015,8,47
+"San Joaquin",2015,9,535
+"San Joaquin",2015,10,0
+"San Joaquin",2015,11,11
+"San Joaquin",2015,12,134
+"San Luis Obispo",2015,1,0
+"San Luis Obispo",2015,2,0
+"San Luis Obispo",2015,3,457
+"San Luis Obispo",2015,4,0
+"San Luis Obispo",2015,5,74
+"San Luis Obispo",2015,6,365
+"San Luis Obispo",2015,7,0
+"San Luis Obispo",2015,8,60
+"San Luis Obispo",2015,9,52
+"San Luis Obispo",2015,10,0
+"San Luis Obispo",2015,11,264
+"San Luis Obispo",2015,12,35
+"San Mateo",2015,1,40
+"San Mateo",2015,2,0
+"San Mateo",2015,3,3450
+"San Mateo",2015,4,40
+"San Mateo",2015,5,131
+"San Mateo",2015,6,0
+"San Mateo",2015,7,50
+"San Mateo",2015,8,77
+"San Mateo",2015,9,0
+"San Mateo",2015,10,0
+"San Mateo",2015,11,164
+"San Mateo",2015,12,81
+"Santa Barbara",2015,1,54
+"Santa Barbara",2015,2,1194
+"Santa Barbara",2015,3,234
+"Santa Barbara",2015,4,0
+"Santa Barbara",2015,5,866
+"Santa Barbara",2015,6,656
+"Santa Barbara",2015,7,0
+"Santa Barbara",2015,8,694
+"Santa Barbara",2015,9,1233
+"Santa Barbara",2015,10,331
+"Santa Barbara",2015,11,280
+"Santa Barbara",2015,12,144
+"Santa Clara",2015,1,279
+"Santa Clara",2015,2,204
+"Santa Clara",2015,3,664
+"Santa Clara",2015,4,104
+"Santa Clara",2015,5,123
+"Santa Clara",2015,6,0
+"Santa Clara",2015,7,13
+"Santa Clara",2015,8,166
+"Santa Clara",2015,9,238
+"Santa Clara",2015,10,262
+"Santa Clara",2015,11,11
+"Santa Clara",2015,12,35
+"Santa Cruz",2015,1,0
+"Santa Cruz",2015,2,153
+"Santa Cruz",2015,3,43
+"Santa Cruz",2015,4,353
+"Santa Cruz",2015,5,67
+"Santa Cruz",2015,6,0
+"Santa Cruz",2015,7,522
+"Santa Cruz",2015,8,0
+"Santa Cruz",2015,9,0
+"Santa Cruz",2015,10,142
+"Santa Cruz",2015,11,0
+"Santa Cruz",2015,12,0
+"Shasta",2015,1,465
+"Shasta",2015,2,0
+"Shasta",2015,3,74
+"Shasta",2015,4,380
+"Shasta",2015,5,0
+"Shasta",2015,6,70
+"Shasta",2015,7,47
+"Shasta",2015,8,0
+"Shasta",2015,9,264
+"Shasta",2015,10,33
+"Shasta",2015,11,28
+"Shasta",2015,12,0
+"Sierra",2015,1,3644
+"Sierra",2015,2,47
+"Sierra",2015,3,129
+"Sierra",2015,4,0
+"Sierra",2015,5,38
+"Sierra",2015,6,78
+"Sierra",2015,7,0
+"Sierra",2015,8,0
+"Sierra",2015,9,162
+"Sierra",2015,10,76
+"Sierra",2015,11,64
+"Sierra",2015,12,1262
+"Siskiyou",2015,1,219
+"Siskiyou",2015,2,0
+"Siskiyou",2015,3,904
+"Siskiyou",2015,4,643
+"Siskiyou",2015,5,0
+"Siskiyou",2015,6,729
+"Siskiyou",2015,7,1304
+"Siskiyou",2015,8,317
+"Siskiyou",2015,9,271
+"Siskiyou",2015,10,155
+"Siskiyou",2015,11,303
+"Siskiyou",2015,12,203
+"Solano",2015,1,628
+"Solano",2015,2,93
+"Solano",2015,3,126
+"Solano",2015,4,0
+"Solano",2015,5,12
+"Solano",2015,6,190
+"Solano",2015,7,245
+"Solano",2015,8,278
+"Solano",2015,9,25
+"Solano",2015,10,23
+"Solano",2015,11,0
+"Solano",2015,12,169
+"Sonoma",2015,1,39
+"Sonoma",2015,2,367
+"Sonoma",2015,3,76
+"Sonoma",2015,4,30
+"Sonoma",2015,5,588
+"Sonoma",2015,6,0
+"Sonoma",2015,7,16
+"Sonoma",2015,8,157
+"Sonoma",2015,9,0
+"Sonoma",2015,10,0
+"Sonoma",2015,11,525
+"Sonoma",2015,12,0
+"Stanislaus",2015,1,93
+"Stanislaus",2015,2,399
+"Stanislaus",2015,3,0
+"Stanislaus",2015,4,61
+"Stanislaus",2015,5,30
+"Stanislaus",2015,6,0
+"Stanislaus",2015,7,286
+"Stanislaus",2015,8,27
+"Stanislaus",2015,9,28
+"Stanislaus",2015,10,0
+"Stanislaus",2015,11,3925
+"Stanislaus",2015,12,53
+"Sutter",2015,1,137
+"Sutter",2015,2,0
+"Sutter",2015,3,37
+"Sutter",2015,4,56
+"Sutter",2015,5,0
+"Sutter",2015,6,0
+"Sutter",2015,7,145
+"Sutter",2015,8,86
+"Sutter",2015,9,61
+"Sutter",2015,10,1313
+"Sutter",2015,11,261
+"Sutter",2015,12,0
+"Tehama",2015,1,937
+"Tehama",2015,2,756
+"Tehama",2015,3,0
+"Tehama",2015,4,788
+"Tehama",2015,5,1362
+"Tehama",2015,6,351
+"Tehama",2015,7,301
+"Tehama",2015,8,145
+"Tehama",2015,9,319
+"Tehama",2015,10,206
+"Tehama",2015,11,678
+"Tehama",2015,12,122
+"Trinity",2015,1,140
+"Trinity",2015,2,0
+"Trinity",2015,3,25
+"Trinity",2015,4,189
+"Trinity",2015,5,279
+"Trinity",2015,6,269
+"Trinity",2015,7,14
+"Trinity",2015,8,17
+"Trinity",2015,9,0
+"Trinity",2015,10,138
+"Trinity",2015,11,31
+"Trinity",2015,12,347
+"Tulare",2015,1,60
+"Tulare",2015,2,54
+"Tulare",2015,3,669
+"Tulare",2015,4,0
+"Tulare",2015,5,25
+"Tulare",2015,6,179
+"Tulare",2015,7,23
+"Tulare",2015,8,0
+"Tulare",2015,9,521
+"Tulare",2015,10,0
+"Tulare",2015,11,77
+"Tulare",2015,12,445
+"Tuolumne",2015,1,0
+"Tuolumne",2015,2,72
+"Tuolumne",2015,3,44
+"Tuolumne",2015,4,0
+"Tuolumne",2015,5,328
+"Tuolumne",2015,6,27
+"Tuolumne",2015,7,23
+"Tuolumne",2015,8,0
+"Tuolumne",2015,9,4255
+"Tuolumne",2015,10,52
+"Tuolumne",2015,11,157
+"Tuolumne",2015,12,0
+"Ventura",2015,1,55
+"Ventura",2015,2,78
+"Ventura",2015,3,0
+"Ventura",2015,4,0
+"Ventura",2015,5,171
+"Ventura",2015,6,93
+"Ventura",2015,7,59
+"Ventura",2015,8,1426
+"Ventura",2015,9,303
+"Ventura",2015,10,0
+"Ventura",2015,11,1031
+"Ventura",2015,12,770
+"Yolo",2015,1,0
+"Yolo",2015,2,837
+"Yolo",2015,3,1490
+"Yolo",2015,4,369
+"Yolo",2015,5,342
+"Yolo",2015,6,165
+"Yolo",2015,7,354
+"Yolo",2015,8,215
+"Yolo",2015,9,748
+"Yolo",2015,10,108
+"Yolo",2015,11,172
+"Yolo",2015,12,0
+"Yuba",2015,1,14
+"Yuba",2015,2,209
+"Yuba",2015,3,317
+"Yuba",2015,4,304
+"Yuba",2015,5,24
+"Yuba",2015,6,24
+"Yuba",2015,7,0
+"Yuba",2015,8,184
+"Yuba",2015,9,48
+"Yuba",2015,10,381
+"Yuba",2015,11,70
+"Yuba",2015,12,50
