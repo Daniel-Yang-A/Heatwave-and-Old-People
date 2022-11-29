@@ -104,6 +104,6 @@ countywise_HI_WBGT_2011_2015 <- county_station_HI_WBGT_2011_2015 %>%
 ## 4. Write the processed data into RMDBS and store it as a csv
 ```{r}
 write.csv(countywise_HI_WBGT_2011_2015,"countywise_HI_WBGT_2011_2015.csv", row.names = FALSE)
-#dbWriteTable(mysqlconnection, name="processed_HI_WBGT_2011_2015", value=data_month, row.names = FALSE, overwrite=TRUE)
+#dbWriteTable(mysqlconnection, name="countywise_HI_WBGT_2011_2015", value=data_month, row.names = FALSE, overwrite=TRUE)
 ```
 
