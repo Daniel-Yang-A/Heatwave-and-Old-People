@@ -23,7 +23,7 @@ colnames(df) <- c("Station_name", "Year", "Month", "Date",
 
 ## define a function to calculate HImax and WGBTmax
 HI_WBGT_cal <- function(file_name){
-  data <- read.csv(file_name, header=FALSE)
+  data <- read.csv(paste("../data/raw/",file_name,sep=""), header=FALSE)
   colnames(data) <- c("Station_name", "Year", "Month", "Date", "Air_Temperature_max", "Relative_Humidity_min")
   
   T_max <- as.numeric(data$Air_Temperature_max)
