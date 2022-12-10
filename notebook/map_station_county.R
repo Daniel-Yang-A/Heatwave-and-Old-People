@@ -8,8 +8,8 @@ library(ggplot2)
 ## self-defined input files: You can modify the input files to generate a new case study
 ## 1. a monitoring station geometric information csv: should include
 ###  1) a column "name" for the name of that monitoring station
-###  2) a column "Longitude" for the longitude of that monitoring station (form: xx째xx'xx")
-###  2) a column "Latitude" for the latitude of that monitoring station (form: xx째xx'xx")
+###  2) a column "Longitude" for the longitude of that monitoring station (form: xx컓x'xx")
+###  2) a column "Latitude" for the latitude of that monitoring station (form: xx컓x'xx")
 monitoring_station_csv_filename <- "CA_monitoring_station.csv"
 ## 2. a shp document and its auxiliary document that contains county geometry boundary information
 aoi_boundary_shp_filename <- "CA_Counties_TIGER2016.shp"
@@ -27,9 +27,9 @@ monitoring_station <-  # overkill the repetitions
             Longitude = min(Longitude, na.rm = TRUE),
             Latitude = min(Latitude, na.rm = TRUE))
 
-## define a function to transform the longitude and latitude form from xx째xx'xx" to decimal degree
+## define a function to transform the longitude and latitude form from xx컓x'xx" to decimal degree
 str_transform <- function(str){
-  str <- str_replace_all(str, "째", "")
+  str <- str_replace_all(str, "�", "")
   str <- str_replace_all(str, "\'", "")
   str <- str_replace_all(str, "\"", "")
   dec_str <- as.numeric(conv_unit(str, from = "deg_min_sec", to = "dec_deg"))
@@ -75,10 +75,10 @@ county_in_station_HI_WBGT <-
 ## Feature Engineering (Aggregate stationwise data into countywise data)
 countywise_HI_WBGT <- county_in_station_HI_WBGT %>%
   group_by(Year, Month, NAME) %>%
-  summarize(avg_WBGT_max_monthly = mean(avg_WBGT_max_monthly),
-            max_WBGT_max_monthly = max(max_WBGT_max_monthly),
-            duration_heat_wave_monthly = mean(duration_heat_wave_monthly),
-            avg_heat_waves_WBGT_max_monthly = mean(avg_heat_waves_WBGT_max_monthly))
+  summarize(avg_WBGT_max_monthly = mean(avg_WBGT_max_monthly,na.rm=TRUE),
+            max_WBGT_max_monthly = max(max_WBGT_max_monthly,na.rm=TRUE),
+            duration_heat_wave_monthly = mean(duration_heat_wave_monthly,na.rm=TRUE),
+            avg_heat_waves_WBGT_max_monthly = mean(avg_heat_waves_WBGT_max_monthly,na.rm=TRUE))
 
 ## Write the processed data into RMDBS and store it as a csv
 write.csv(countywise_HI_WBGT, file = countywise_HI_WBGT_csv_filename, row.names = FALSE)
