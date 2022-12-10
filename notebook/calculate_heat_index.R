@@ -1,4 +1,5 @@
 library(dplyr)
+library(tidyr)
 library(RMySQL)
 
 ## user-defined input
@@ -57,11 +58,13 @@ write.csv(df,paste(output_stationwise_daily_HI_WGBT_filename,".csv",sep=""), row
 
 
 ## Feature Engineering and Aggregating into Monthly data
+df <- df[!is.na(df$WBGT_max),]
 data_month <- df %>% 
   group_by(Year, Month, Station_name) %>%
+  #group_by(Station_name, .add=TRUE)
   summarise(
-    avg_WBGT_max_monthly = mean(WBGT_max),
-    max_WBGT_max_monthly = max(WBGT_max)
+    avg_WBGT_max_monthly = mean(WBGT_max,na.rm=TRUE),
+    max_WBGT_max_monthly = max(WBGT_max,na.rm=TRUE)
   )
 
 data_month_heat_wave <- df %>% 
@@ -69,7 +72,7 @@ data_month_heat_wave <- df %>%
   filter(WBGT_max>28) %>%
   summarise(
     duration_heat_wave_monthly = ifelse(is.na(n())==TRUE,0,n()),
-    avg_heat_waves_WBGT_max_monthly = mean(WBGT_max)
+    avg_heat_waves_WBGT_max_monthly = mean(WBGT_max,na.rm=TRUE)
   )
 
 data_month <- left_join(data_month, data_month_heat_wave, by=c("Year","Month","Station_name"))
