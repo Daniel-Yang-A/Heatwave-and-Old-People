@@ -10,14 +10,14 @@ library(ggplot2)
 ###  1) a column "name" for the name of that monitoring station
 ###  2) a column "Longitude" for the longitude of that monitoring station (form: xx°xx'xx")
 ###  2) a column "Latitude" for the latitude of that monitoring station (form: xx°xx'xx")
-monitoring_station_csv_filename <- "CA_monitoring_station.csv"
+monitoring_station_csv_filename <- "../data/raw/CA_monitoring_station.csv"
 ## 2. a shp document and its auxiliary document that contains county geometry boundary information
-aoi_boundary_shp_filename <- "CA_Counties_TIGER2016.shp"
+aoi_boundary_shp_filename <- "../data/raw/CA_Counties_TIGER2016.shp"
 ## 3. a processed station-wise daily Heat Index (HI) & Wet Bulb Globe Temperature (WBGT) document
-HI_WBGT_stationwise_csv_filename <- "processed_HI_WBGT_2011_2015.csv"
+HI_WBGT_stationwise_csv_filename <- "../data/preprocessed/processed_HI_WBGT_2011_2015.csv"
 
 ## self-defined output filenames and database info
-countywise_HI_WBGT_csv_filename <- "countywise_HI_WBGT_2011_2015.csv"
+countywise_HI_WBGT_csv_filename <- "../data/preprocessed/countywise_HI_WBGT_2011_2015.csv"
 
 monitoring_station <- read.csv(monitoring_station_csv_filename)
 monitoring_station <-  # overkill the repetitions
