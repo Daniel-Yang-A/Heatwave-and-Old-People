@@ -5,10 +5,7 @@
 
 HI_WBGT_cal <- function(air_temperature_max,
                         relative_humidity_min) {
-  if (all(is.na(as.numeric(air_temperature_max)) |
-            all(is.na(as.numeric(relative_humidity_min))))) {
-    stop("Input must be numeric or can be converted to numeric.")
-  } else if (length(air_temperature_max) != length(relative_humidity_min)) {
+  if (length(air_temperature_max) != length(relative_humidity_min)) {
     stop("Temperature and humidity do not have the same length.")
   } else {
     T_max <- as.numeric(air_temperature_max)
@@ -23,3 +20,4 @@ HI_WBGT_cal <- function(air_temperature_max,
 
 # test
 # HI_WBGT_cal(seq(31,40,by=1),seq(0,100,by=11))
+# HI_WBGT_cal(NA, NA)
