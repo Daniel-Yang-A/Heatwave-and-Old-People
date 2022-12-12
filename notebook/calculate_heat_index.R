@@ -26,6 +26,10 @@ HI_WBGT_cal <- function(file_name){
   data <- read.csv(paste("../data/raw/",file_name,sep=""), header=FALSE)
   colnames(data) <- c("Station_name", "Year", "Month", "Date", "Air_Temperature_max", "Relative_Humidity_min")
   
+  ## remove the outliers
+  data <- data[data$Air_Temperature_max>=30,]
+  data <- data[(data$Relative_Humidity_min<=100 & data$Relative_Humidity_min>=0),]
+  
   T_max <- as.numeric(data$Air_Temperature_max)
   RH_min <- as.numeric(data$Relative_Humidity_min)
   
