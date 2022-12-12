@@ -54,64 +54,64 @@ map_to_county <-
     
   }
 
-## test 1
-aoi_boundary_shp_filename <- "CA_Counties_TIGER2016.shp"
-heat_txt_file <- "heat_map.txt"
-lat_txt_file  <- "lat_mat.txt"
-long_txt_file  <- "long_mat.txt"
-
-sup_heat_txt_file <- "sup_heat_map.txt"
-sup_lat_txt_file  <- "sup_lat_mat.txt"
-sup_long_txt_file  <- "sup_long_mat.txt"
-
-heatmap <- as.matrix(read.table(heat_txt_file,sep=","))
-lat <- as.matrix(read.table(lat_txt_file,sep=","))
-long <- as.matrix(read.table(long_txt_file,sep=","))
-
-sup_heatmap <- as.matrix(read.table(sup_heat_txt_file,sep=","))
-sup_lat <- as.matrix(read.table(sup_lat_txt_file,sep=","))
-sup_long <- as.matrix(read.table(sup_long_txt_file,sep=","))
-
-## Convert Matrix to Vector, record each entry from the original matrix plot as an observation
-heatmap_vec <- c(as.vector(heatmap),as.vector(sup_heatmap))
-lat_vec <- c(as.vector(lat),as.vector(sup_lat))
-long_vec <- c(as.vector(long),as.vector(sup_long))
-
-# remove the NA observations
-idx_na <- which(heatmap_vec==0)
-heatmap_vec <- heatmap_vec[-idx_na]
-lat_vec <- lat_vec[-idx_na]
-long_vec <- long_vec[-idx_na]
-
-point_within_county <- map_to_county(aoi_boundary_shp_filename,
-              heatmap_vec,
-              long_vec,
-              lat_vec)
-
-
-## test 2
-monitoring_station_csv_filename <- "CA_monitoring_station.csv"
-monitoring_station <- read.csv(monitoring_station_csv_filename)
-monitoring_station <-  # overkill the repetitions
-  monitoring_station %>% 
-  group_by(name) %>%
-  summarize(code = min(code, na.rm = TRUE),
-            Longitude = min(Longitude, na.rm = TRUE),
-            Latitude = min(Latitude, na.rm = TRUE))
-
-str_transform <- function(str){
-  str <- str_replace_all(str, "°", "")
-  str <- str_replace_all(str, "\'", "")
-  str <- str_replace_all(str, "\"", "")
-  dec_str <- as.numeric(conv_unit(str, from = "deg_min_sec", to = "dec_deg"))
-  return(dec_str)
-}
-
-code <- monitoring_station$code
-lat <- str_transform(monitoring_station$Latitude)
-long <-  -str_transform(monitoring_station$Longitude)
-
-point_within_county <- map_to_county(aoi_boundary_shp_filename,
-                                     code,
-                                     long,
-                                     lat)
+# ## test 1
+# aoi_boundary_shp_filename <- "CA_Counties_TIGER2016.shp"
+# heat_txt_file <- "heat_map.txt"
+# lat_txt_file  <- "lat_mat.txt"
+# long_txt_file  <- "long_mat.txt"
+# 
+# sup_heat_txt_file <- "sup_heat_map.txt"
+# sup_lat_txt_file  <- "sup_lat_mat.txt"
+# sup_long_txt_file  <- "sup_long_mat.txt"
+# 
+# heatmap <- as.matrix(read.table(heat_txt_file,sep=","))
+# lat <- as.matrix(read.table(lat_txt_file,sep=","))
+# long <- as.matrix(read.table(long_txt_file,sep=","))
+# 
+# sup_heatmap <- as.matrix(read.table(sup_heat_txt_file,sep=","))
+# sup_lat <- as.matrix(read.table(sup_lat_txt_file,sep=","))
+# sup_long <- as.matrix(read.table(sup_long_txt_file,sep=","))
+# 
+# ## Convert Matrix to Vector, record each entry from the original matrix plot as an observation
+# heatmap_vec <- c(as.vector(heatmap),as.vector(sup_heatmap))
+# lat_vec <- c(as.vector(lat),as.vector(sup_lat))
+# long_vec <- c(as.vector(long),as.vector(sup_long))
+# 
+# ## remove the NA observations
+# idx_na <- which(heatmap_vec==0)
+# heatmap_vec <- heatmap_vec[-idx_na]
+# lat_vec <- lat_vec[-idx_na]
+# long_vec <- long_vec[-idx_na]
+# 
+# point_within_county <- map_to_county(aoi_boundary_shp_filename,
+#               heatmap_vec,
+#               long_vec,
+#               lat_vec)
+# 
+# 
+# ## test 2
+# monitoring_station_csv_filename <- "CA_monitoring_station.csv"
+# monitoring_station <- read.csv(monitoring_station_csv_filename)
+# monitoring_station <-  # overkill the repetitions
+#   monitoring_station %>% 
+#   group_by(name) %>%
+#   summarize(code = min(code, na.rm = TRUE),
+#             Longitude = min(Longitude, na.rm = TRUE),
+#             Latitude = min(Latitude, na.rm = TRUE))
+# 
+# str_transform <- function(str){
+#   str <- str_replace_all(str, "°", "")
+#   str <- str_replace_all(str, "\'", "")
+#   str <- str_replace_all(str, "\"", "")
+#   dec_str <- as.numeric(conv_unit(str, from = "deg_min_sec", to = "dec_deg"))
+#   return(dec_str)
+# }
+# 
+# code <- monitoring_station$code
+# lat <- str_transform(monitoring_station$Latitude)
+# long <-  -str_transform(monitoring_station$Longitude)
+# 
+# point_within_county <- map_to_county(aoi_boundary_shp_filename,
+#                                      code,
+#                                      long,
+#                                      lat)
