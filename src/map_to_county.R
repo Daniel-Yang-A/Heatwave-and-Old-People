@@ -1,4 +1,3 @@
-library(measurements)
 library(dplyr)
 library(sf)
 library(tidyverse)
@@ -90,6 +89,7 @@ map_to_county <-
 # 
 # ## test 2
 # library(stringr)
+# library(measurements)
 # monitoring_station_csv_filename <- "CA_monitoring_station.csv"
 # monitoring_station <- read.csv(monitoring_station_csv_filename)
 # monitoring_station <-  # overkill the repetitions
