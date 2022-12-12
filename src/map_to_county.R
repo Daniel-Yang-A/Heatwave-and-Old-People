@@ -1,9 +1,8 @@
 library(measurements)
-library(stringr)
 library(dplyr)
 library(sf)
 library(tidyverse)
-library(ggplot2)
+# library(ggplot2)
 
 
 map_to_county <-
@@ -24,12 +23,12 @@ map_to_county <-
       aoi_boundary_HARV <- read_sf(aoi_boundary_shp_filename)
       aoi_boundary_HARV$geometry <- st_transform(aoi_boundary_HARV$geometry, 4326)
       
-      ## Plot a overview map
-      # png("map_station_county.png", width = 960, height = 960)
-      ggplot()+
-        geom_sf(data=aoi_boundary_HARV$geometry)+
-        geom_point(aes(long, lat))
-      # dev.off()
+      # ## Plot a overview map
+      # # png("map_station_county.png", width = 960, height = 960)
+      # ggplot()+
+      #   geom_sf(data=aoi_boundary_HARV$geometry)+
+      #   geom_point(aes(long, lat))
+      # # dev.off()
       
       ## You can put other useful columns in the long_lat data frame as well.
       heat_sf <- data %>%
@@ -90,6 +89,7 @@ map_to_county <-
 # 
 # 
 # ## test 2
+# library(stringr)
 # monitoring_station_csv_filename <- "CA_monitoring_station.csv"
 # monitoring_station <- read.csv(monitoring_station_csv_filename)
 # monitoring_station <-  # overkill the repetitions
@@ -99,7 +99,7 @@ map_to_county <-
 #             Longitude = min(Longitude, na.rm = TRUE),
 #             Latitude = min(Latitude, na.rm = TRUE))
 # 
-# str_transform <- function(str){
+# transform_long_lat <- function(str){
 #   str <- str_replace_all(str, "°", "")
 #   str <- str_replace_all(str, "\'", "")
 #   str <- str_replace_all(str, "\"", "")
@@ -108,8 +108,8 @@ map_to_county <-
 # }
 # 
 # code <- monitoring_station$code
-# lat <- str_transform(monitoring_station$Latitude)
-# long <-  -str_transform(monitoring_station$Longitude)
+# lat <- transform_long_lat(monitoring_station$Latitude)
+# long <-  -transform_long_lat(monitoring_station$Longitude)
 # 
 # point_within_county <- map_to_county(aoi_boundary_shp_filename,
 #                                      code,
