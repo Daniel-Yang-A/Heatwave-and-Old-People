@@ -22,9 +22,7 @@ month_summary <- function(year, month, station, WBGT_max) {
         station = station,
         WBGT_max = WBGT_max
       )
-    avg_WBGT_max_monthly = mean(WBGT_max, na.rm = TRUE)
-    max_WBGT_max_monthly = max(WBGT_max, na.rm = TRUE)
-    
+    data <- data[!is.na(data$WBGT_max),]
     data_month <- data %>%
       group_by(year, month, station) %>%
       summarise(
@@ -50,11 +48,11 @@ month_summary <- function(year, month, station, WBGT_max) {
 }
 
 # test
-year <- c(2011, 2011, 2011, 2011, 2012, 2012, 2012, 2012)
-month <- c(4, 4, 5, 5, 6, 6, 7, 7)
-station <- c("a", "a", "a", "b", "b", "b", "b", "a")
-temperature <- c(29,30,31,32,34,12,34,24)
-month_summary(year, month, station, temperature)
+# year <- c(2011, 2011, 2011, 2011, 2012, 2012, 2012, 2012)
+# month <- c(4, 4, 5, 5, 6, 6, 7, 7)
+# station <- c("a", "a", "a", "b", "b", "b", "b", "a")
+# temperature <- c(29,30,31,32,34,12,34,24)
+# month_summary(year, month, station, temperature)
 
 
 
