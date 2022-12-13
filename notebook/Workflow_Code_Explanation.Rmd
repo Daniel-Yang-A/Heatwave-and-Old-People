@@ -1,0 +1,763 @@
+---
+title: "STATS 506 Report"
+author: "Yu Lin, Yizhou Zhang, Yupeng Yang, Shukun Liu"
+date: "12/7/2022"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# 1. Description
+   This project is aiming at investigating whether urban heat island effects and heat waves are correlated to the the health (mortality rate and diseases) of the aged. 
+
+The repository contains:
+
+- an analysis of how the mortality rate and occurrences of various diseases of the elderly is affected by the hot climate and heat waves;
+
+- an interactive interface to calculate heat index and exhibit the data and model.
+
+# 2. Background
+## 2.1 heat wave definition
+  The heat waves in this project are identified by a temperature-humidity threshold: one day or longer periods when the daily maximum Wet Bulb Globe Temperature (WBGTmax) > 28 °C. This WBGTmax threshold follows the International Standards Organization (ISO) criteria for recognizing the risk of occupational heat related illnesses. 
+
+## 2.2 Analysis Scope and Measurement
+   - Death data was directly downloaded in csv from California State: Death Profiles by County by Month, 1970-2020 (https://data.chhs.ca.gov/dataset/death-profiles-by-county). This website provides monthly mortality data of all counties in California. We picked the monthly data from 2011 to 2015, based on which our analysis is county-wise.
+   
+   - NASA MODIS Terra Land Surface 8-Day Average Temperature Emissivity Satellite data was acquired from NASA Earthdata website (https://search.earthdata.nasa.gov/search). We only picked the data for regions covering California from 07/20/2013 to 07/27/2013. This data will help us make a county-wise analysis in a small scope.
+   
+   - Daily California station-wise temperature and humidity data was crawled from Western Regional Climate Center (WRCC) (https://wrcc.dri.edu/wraws/ccaF.html). Each county in California has multiple stations, but the WRCC website does not label which county each station belong to. The codes for crawlers are written in Python and we utilized the online computational platform Colab to run multiprocessing jobs. 
+   
+   - The geographical information (latitude and longitude) of each station is then crawled from the same WRCC website and utilized to map the stations into counties. The latitude and longitude information of the border of each county is retrieved from California Open Data Portal (https://data.ca.gov/dataset/california-counties). The following feature engineering is based on this processed county-wise weather data. 
+   
+# 3. Data Exploration and Feature Engineering
+## 3.1 Data Collection
+### Methodology:
+We plan to analyze the relationship between heat waves and the (elderly) death rate in California because Californian data is sufficient and easy to access. 
+
+- From the WRCC website, We crawled daily weather data of over 500 stations from all over California. The data we collected features daily maximum air temperature and relative humidity data of all stations. The website sends the data for a specific station to the explorer only after the users fill out a request form, indicating the target year and month. We found that the data request form can be accessed through the URLs in the form "https://wrcc.dri.edu/cgi-bin/wea_monsum.pl?ca" + station code.
+Therefore we crawled all the station codes first, and then enumerate the code list to collect the weather data, which is stored as csv files.
+
+- The NASA Satellite data for California was downloaded manually, as the website is low-efficient and crawler-unfriendly. The satellite collects data by regions in the shapes of curved parallelograms, and then projects the data to a square region through averaging. The square region is a 1200\*1200 matrix, with each point corresponding to the emissivity of a 1km\*1km grid after the compression (from parallelogram to square). We acquire the longitude and latitude information of the vertexes of the square regions covering California, and approximately find the real longitude and latitude information for each point. The average value and variance of the emissivity in a county will help to measure the heat-island effect of that county.
+
+## 3.2 Data Processing 
+### 3.2.1 Calculate HImax and WBGTmax
+#### Methodology
+To convert the huge daily station-wise weather data for all counties into some features or indicators that are more applicable to data analysis (regression), we decided to use the temperature and humidity data to calculate the WBGT index (a numerical measure of extremely hot weather). Apart from counting the heat waves defined above (WBGTmax > 28 °C), we also want to take into account the intensity of heat waves. To compare days with heat waves to days without extreme temperature, we also reused the heat intensity formula for heat waves to quantify the intensity for days without extreme temperature. To calculate this heat intensity, we used daily minimum relative humidity and maximum temperature for each county we collected that introduced in Section 3.1.
+
+$$
+\begin{split}
+HI_{max} &= \frac{(0.5\times(T_{max}+61.0+(T_{max}-68.0)\times1.2)+(0.094RH_{min}))+T_{max}}{2}\\
+WBGT_{max} &= -0.0034HI_{max}^2 + 0.96HI_{max}-34
+\end{split}
+$$
+
+First load the packages that used in this section
+```{r,warning=FALSE, include=FALSE}
+library(dplyr)
+library(RMySQL)
+```
+
+The next part is generalized to accept different files. User is able to input the data they interested in, and utilize the following code to investigate a specific location, finally generate a new case study. They are also able to design their output file name for their convenience.
+```{r}
+## user-defined input
+# list all the name of the station daily temperature and relative humidity files here.
+# It should include "Station_name", "Year", "Month", 
+# "Date", "Air_Temperature_max", "Relative_Humidity_min" columns
+input_file_names <- c("2011_0_100.csv","2011_101_200.csv","2011_201_300.csv",
+                "2011_301_400.csv","2011_401_500.csv","2011_501_555.csv",
+                "2012_0_185.csv","2012_185_370.csv","2012_370_555.csv",
+                "2013_0_185.csv","2013_185_336.csv","2013_336_555.csv",
+                "2014_0_190.csv","2014_190_380.csv","2014_380_555.csv",
+                "2015_0_185.csv","2015_185_310.csv","2015_310_435.csv","2015_435_555.csv")
+
+## user-defined output filename
+output_stationwise_daily_HI_WGBT_filename <- "TEMP_HUM_HI_WBGT_2011_2015"
+output_stationwise_monthly_HI_WGBT_filename <- "processed_HI_WBGT_2011_2015"
+```
+
+Then we processed the maximum Air Temperature and min Relative Humidity information to generate the daily max heat index (HImax) and the daily maximum Wet Bulb Globe Temperature (WBGTmax). It should be noticed that some weather data collected from  the WRCC website is theoretically wrong. E.g., unexpected -99 Fahrenheit degrees. As our project focuses on the hot situation, and the input variables for the later regression model are monthly and county-wise, we chose to drop the station daily data in which temperature is lower than 30 Fahrenheit degrees. We also dropped the data with relative humidity out of the range from 0 to 100, since a relative humidity is rigorously defined in that range theoretically.
+```{r,warning=FALSE}
+## Construct a new data frame to record all the temperature data
+df <- data.frame(matrix(ncol=8,nrow=0))
+colnames(df) <- c("Station_name", "Year", "Month", "Date",
+                  "Air_Temperature_max", "Relative_Humidity_min", "HI_max", "WBGT_max")
+
+## define a function to calculate HImax and WGBTmax
+HI_WBGT_cal <- function(file_name){
+  data <- read.csv(file_name, header=FALSE)
+  colnames(data) <- c("Station_name", "Year", "Month", "Date", 
+                      "Air_Temperature_max", "Relative_Humidity_min")
+  
+  # drop abnormal data
+  data <- data[!is.na(data$Air_Temperature_max),]
+  data <- data[!is.na(data$Relative_Humidity_min),]
+  data <- data[data$Air_Temperature_max>=30,]
+  data <- data[(data$Relative_Humidity_min<=100 & data$Relative_Humidity_min>=0),]
+  
+  T_max <- as.numeric(data$Air_Temperature_max)
+  RH_min <- as.numeric(data$Relative_Humidity_min)
+  
+  HI_max <- ((0.5*(T_max+61.0+(T_max-68.0)*1.2)+(0.094*RH_min))+T_max)/2
+  WBGT_max <- -0.0034*HI_max^2 + 0.96*HI_max-34
+  
+  data <- data %>%
+    mutate(HI_max = HI_max,
+           WBGT_max = WBGT_max)
+  
+  return(data)
+}
+
+# merge all the csv into one data frame and remove those with NA WBGT_max value
+for (file_name in input_file_names) {
+  data <- HI_WBGT_cal(file_name)
+  df <- rbind(df, data)
+}
+```
+
+After the data being processed, we write the merged data into RMDBS and store it as a csv
+```{r}
+write.csv(df,paste(output_stationwise_daily_HI_WGBT_filename,".csv",sep=""), row.names = FALSE)
+# mysqlconnection = dbConnect(RMySQL::MySQL(),
+#                             dbname='506_project',
+#                             host='35.2.205.222',
+#                             port=3306,
+#                             user='linyu',
+#                             password='123456',
+# )
+# dbWriteTable(mysqlconnection, name=output_stationwise_daily_HI_WGBT_filename, 
+# value=df, row.names = FALSE, overwrite=TRUE)
+```
+
+### 3.2.2 Feature Engineering and Aggregate it into Monthly Data
+
+As we mentioned before, our death profile data is recorded monthly. To parallel all the data into the same level, here we engineer the HImax and WBGTmax data into month level and conduct some feature engineering to explore further.
+
+We want to construct 4 features:
+
+1) Monthly average WGBT_max in each station
+
+2) Duration of heat wave in each station by month (WGBT_max >28)
+
+3) Monthly maximum WGBT_max in each station
+
+4) Monthly average WGBT_max in each station for heat wave (WGBT_max > 28)
+
+```{r, warning=FALSE}
+data_month <- df %>% 
+  group_by(Year, Month, Station_name) %>%
+  summarise(
+    avg_WBGT_max_monthly = mean(WBGT_max,na.rm=TRUE),
+    max_WBGT_max_monthly = max(WBGT_max,na.rm=TRUE)
+  )
+
+data_month_heat_wave <- df %>% 
+  group_by(Year, Month, Station_name) %>%
+  filter(WBGT_max>28) %>%
+  summarise(
+    duration_heat_wave_monthly = ifelse(is.na(n())==TRUE,0,n()),
+    avg_heat_waves_WBGT_max_monthly = mean(WBGT_max,na.rm=TRUE)
+  )
+
+data_month <- left_join(data_month, data_month_heat_wave, by=c("Year","Month","Station_name"))
+```
+
+Write the processed data into RMDBS and store it as a csv
+```{r, warning=FALSE}
+write.csv(data_month,paste(output_stationwise_monthly_HI_WGBT_filename,".csv",sep=""), row.names = FALSE)
+#dbWriteTable(mysqlconnection, name="processed_HI_WBGT_2011_2015", 
+# value=data_month, row.names = FALSE, overwrite=TRUE)
+gc()
+```
+
+
+### 3.2.3 Map Station Data to Counties
+
+First load the packages
+```{r, warning=FALSE, include=FALSE}
+library(measurements)
+library(stringr)
+library(dplyr)
+library(sf)
+library(tidyverse)
+library(ggplot2)
+```
+
+Just like the previous section, users are able to modify the input files to generate a new case study. Note that the input files have to contain some columns with specific format.
+```{r}
+## 1. a monitoring station geometric information csv: should include
+###  1) a column "name" for the name of that monitoring station
+###  2) a column "Longitude" for the longitude of that monitoring station (form: xx°xx'xx")
+###  2) a column "Latitude" for the latitude of that monitoring station (form: xx°xx'xx")
+monitoring_station_csv_filename <- "CA_monitoring_station.csv"
+## 2. a shp document and its auxiliary document that contains county geometry boundary information
+aoi_boundary_shp_filename <- "CA_Counties_TIGER2016.shp"
+## 3. a processed station-wise daily Heat Index (HI) & Wet Bulb Globe Temperature (WBGT) document
+HI_WBGT_stationwise_csv_filename <- "processed_HI_WBGT_2011_2015.csv"
+
+## self-defined output filenames and database info
+countywise_HI_WBGT_csv_filename <- "countywise_HI_WBGT_2011_2015.csv"
+
+monitoring_station <- read.csv(monitoring_station_csv_filename)
+monitoring_station <-  # overkill the repetitions
+  monitoring_station %>% 
+  group_by(name) %>%
+  summarize(code = min(code, na.rm = TRUE),
+            Longitude = min(Longitude, na.rm = TRUE),
+            Latitude = min(Latitude, na.rm = TRUE))
+```
+
+Since the geometric information in our file is str format and hard to compare, we then define a function to transform the longitude and latitude form from xx°xx'xx" to decimal degree.
+```{r}
+str_transform <- function(str){
+  str <- str_replace_all(str, "°", "")
+  str <- str_replace_all(str, "\'", "")
+  str <- str_replace_all(str, "\"", "")
+  dec_str <- as.numeric(conv_unit(str, from = "deg_min_sec", to = "dec_deg"))
+  return(dec_str)
+}
+
+lat <- str_transform(monitoring_station$Latitude)
+long <- -str_transform(monitoring_station$Longitude)
+long_lat <- data.frame("name"=monitoring_station$name,
+                       "code"=monitoring_station$code,
+                       "long"=long,
+                       "lat"=lat)
+```
+
+To compare and map the monitoring station spot into county polygon, we transformed coordinate to keep they are in the same coordinates. We then generate a overview map for reference. 
+```{r}
+## transform coordinate !!!
+aoi_boundary_HARV <- read_sf(aoi_boundary_shp_filename)
+aoi_boundary_HARV$geometry <- st_transform(aoi_boundary_HARV$geometry, 4326)
+
+## Plot a overview map
+# png("map_station_county.png", width = 960, height = 960)
+ggplot()+
+  geom_sf(data=aoi_boundary_HARV$geometry)+
+  geom_point(aes(long, lat),size=1)
+# dev.off()
+```
+
+With all data in the same coordinate, we retrieve the required columns, and mapped monitoring station into counties by "st_within". Note that users could put other useful columns in the long_lat data frame as well.
+```{r}
+sta_sf <- long_lat %>%
+  mutate_at(vars(long, lat), as.numeric) %>%   # coordinates must be numeric
+  st_as_sf(
+    coords = c("long", "lat"),
+    agr = "constant",
+    crs = 4326,
+    stringsAsFactors = FALSE,
+    remove = TRUE
+  )
+station_in_county <- st_join(sta_sf, aoi_boundary_HARV, join = st_within)
+head(station_in_county)
+```
+
+We then join the station in county table and processed WBGT stationwise table. 
+```{r}
+HI_WBGT_stationwise <- read.csv(HI_WBGT_stationwise_csv_filename)
+county_in_station_HI_WBGT <- 
+  left_join(HI_WBGT_stationwise, station_in_county, by=c("Station_name"="name"))
+```
+
+To match the death profile data level, we still need to aggregate stationwise data into countywise data.
+```{r,include=FALSE}
+countywise_HI_WBGT <- county_in_station_HI_WBGT %>%
+  group_by(Year, Month, NAME) %>%
+  summarize(avg_WBGT_max_monthly = mean(avg_WBGT_max_monthly, na.rm=TRUE),
+            max_WBGT_max_monthly = max(max_WBGT_max_monthly, na.rm=TRUE),
+            duration_heat_wave_monthly = mean(duration_heat_wave_monthly, na.rm=TRUE),
+            avg_heat_waves_WBGT_max_monthly = mean(avg_heat_waves_WBGT_max_monthly, na.rm=TRUE))
+```
+
+Finally, we could write the processed data into RMDBS and store it as a csv
+```{r}
+write.csv(countywise_HI_WBGT, file = countywise_HI_WBGT_csv_filename, row.names = FALSE)
+# dbWriteTable(mysqlconnection, name="countywise_HI_WBGT", 
+# value=data_month, row.names = FALSE, overwrite=TRUE)
+```
+
+### 3.2.4 Death Profile Data Manipulation
+Regarding the death data, we are able to access the death data of each county per month on the website. We will use the total population, total death number and the elderly’s death number of each county as our response variables. The data also includes the cause of deaths. We then will fit a regression model and find out the relationship between heat waves and the death rate (or relative illnesses) of California. 
+\par
+Since we intended to analyze data from 2011 to 2015. We downloaded two csv files from the California Health and Human Service website https://data.chhs.ca.gov/ . To lessen the redundancy of code. We wrote a function for extracting useful death number from the csv file. It needs to be pointed out that the function is only compatible with the data set from this website considering the unique and complex format of its data file.
+
+
+```{r}
+source("gdn.R")
+
+data1 = read.csv("2021-05-14_deaths_final_2009-2013_occurrence_county_month_sup.csv")
+data2 = read.csv("2021-11-29_deaths_final_2014-2018_occurrence_county_month_sup.csv")
+
+#Extracting useful data from the raw dataset.
+d2011<-gdn(data1,2011)
+d2012<-gdn(data1,2012)
+d2013<-gdn(data1,2013)
+d2014<-gdn(data2,2014)
+d2015<-gdn(data2,2015)
+
+#Bind the five years' data frames by row.
+dd<-rbind(d2011,d2012,d2013,d2014,d2015)
+write.csv(dd,"death.csv",row.names = F)
+```
+
+The function is attached below. We aims to get the death number of people with age equal to or larger than 65.
+
+```{r}
+#The function is for extracting death number for the elderly.
+gdn <- function(dataset, year) {
+  dataset[is.na(dataset)]=0
+  county_name<-unique(dataset$County)
+  month<-unique(dataset$Month)
+  d<-c()
+  for (j in month) {
+    for (i in county_name) {
+      elderly_death<-sum(dataset$Count[dataset$County==i&dataset$Year==year&
+                          dataset$Month==j&
+                          dataset$Cause_Desc=="All causes (total)"&
+                          dataset$Strata=="Age"][9:11])
+      d<-c(d,elderly_death)
+    }
+  }
+  #Creating a data frame that stores the death number with the Year, Month, and County.
+  df=data.frame(county=rep(county_name,12),
+                year=rep(year,12*length(county_name)),
+                month=rep(1:12,each=length(county_name)),
+                death=d)
+  
+  return(df)
+}
+```
+
+
+### 3.2.5 Census data
+We got the Californian census data from the package "tidycensus" in county level. We obtained the total population of each county in California and the population of elderly (Age $\ge 65$).
+```{r,include=FALSE}
+library(tidycensus)
+cd<-c()
+ed<-c()
+out=data.frame()
+for (j in 2011:2015) {
+  cd<-c()
+  ed<-c()
+  for (i in unique(data1$County)) {
+    f1<-get_acs(state='CA', county=i,geography = 'tract', variables = c("B01001_001"),
+                geometry = T,year = j)
+    cd<-c(cd,sum(f1$estimate))
+    f2<-get_acs(state='CA', county=i,geography = 'tract', variables = 
+                c("B01001_020","B01001_021","B01001_022","B01001_023","B01001_024",
+                  "B01001_025","B01001_044","B01001_045","B01001_046","B01001_047",
+                  "B01001_048","B01001_049"), geometry = F,year = j)
+    ed<-c(ed,sum(f2$estimate))
+  }
+  ep<-ed/cd
+  #dr<-100*dy/ed
+  outn<-data.frame(Year=rep(j,58),County=unique(data1$County), total = cd, 
+                   elderly = ed, elder_proportion = ep)
+  out=rbind(out,outn)
+}
+write.csv(out,"cal_census_2011_to_2015.csv",row.names = F)
+```
+
+In the block above, f1 is for taking the total population, f2 is for taking the elderly population. To make the data frame more readable and easier to conduct data analysis later. We add the Year and Month as two new columns.
+
+
+## 3.2.6 Calculate heat island index within counties
+
+Load the required packages
+```{r}
+library(measurements)
+library(stringr)
+library(dplyr)
+library(sf)
+library(tidyverse)
+library(ggplot2)
+```
+
+Users are able to modify the input files to generate a new case study. Here we use the NASA emissivity satellite data within California from 7/20/2013 to 7/27/2013. The raw data was processed and stored as 1200*1200 matrices in txt files.
+```{r}
+## self-defined input files: You can modify the input files to generate a new case study
+## 1. a set of files including heatmap, latitude, longitude information respectively. 
+heat_txt_file <- "heat_map.txt"
+lat_txt_file  <- "lat_mat.txt"
+long_txt_file  <- "long_mat.txt"
+
+sup_heat_txt_file <- "sup_heat_map.txt"
+sup_lat_txt_file  <- "sup_lat_mat.txt"
+sup_long_txt_file  <- "sup_long_mat.txt"
+
+## 2. a shp document and its auxiliary document that contains county geometry boundary information
+aoi_boundary_shp_filename <- "CA_Counties_TIGER2016.shp"
+
+## self-defined output filenames and database info
+heat_point_within_county_csv_filename <- "heat_point_within_county.csv"
+countywise_Heatmap_csv_filename <- "countywise_Heatmap.csv"
+```
+
+Then we read the heat information and geometric information, and transform them into long vectors, in preparation for mapping each data point onto its corresponding county.
+```{r}
+## read the heat information and geometric information
+heatmap <- as.matrix(read.table(heat_txt_file,sep=","))
+lat <- as.matrix(read.table(lat_txt_file,sep=","))
+long <- as.matrix(read.table(long_txt_file,sep=","))
+
+sup_heatmap <- as.matrix(read.table(sup_heat_txt_file,sep=","))
+sup_lat <- as.matrix(read.table(sup_lat_txt_file,sep=","))
+sup_long <- as.matrix(read.table(sup_long_txt_file,sep=","))
+
+## Convert Matrix to Vector, record each entry from the original matrix plot as an observation
+heatmap_vec <- c(as.vector(heatmap),as.vector(sup_heatmap))
+lat_vec <- c(as.vector(lat),as.vector(sup_lat))
+long_vec <- c(as.vector(long),as.vector(sup_long))
+```
+
+After the transformation, we combine three columns together and removed abnormal row. E.g., the emissity should be  strictly larger than 0. 
+```{r}
+## combine three columns together
+heatmap <- as.data.frame(cbind(heatmap_vec,lat_vec,long_vec))
+colnames(heatmap) <- c("heat","lat","long")
+
+## remove the abnormal observation (with heat<=0)
+heatmap <- heatmap[heatmap$heat > 0, ]
+lat <- heatmap$lat
+long <- heatmap$long
+```
+
+We then got a new matrix with the following three columns:
+ 1. heat emissivity;   
+ 2. latitude;   
+ 3. longitide
+
+Using the similar method we conducted in Section 3.2.3, We mapped each observations into California counties and only kept those within California. We also wrote the output dataframe into a csv file.
+```{r}
+## transform coordinate !!!
+aoi_boundary_HARV <- read_sf(aoi_boundary_shp_filename)
+aoi_boundary_HARV$geometry <- st_transform(aoi_boundary_HARV$geometry, 4326)
+
+## You can put other useful columns in the long_lat data frame as well.
+heat_sf <- heatmap %>%
+  mutate_at(vars(long, lat), as.numeric) %>%   # coordinates must be numeric
+  st_as_sf(
+    coords = c("long", "lat"),
+    agr = "constant",
+    crs = 4326,
+    stringsAsFactors = FALSE,
+    remove = TRUE
+  )
+
+point_in_county <- st_join(heat_sf, aoi_boundary_HARV, join = st_within)
+point_within_county <- point_in_county[!is.na(point_in_county$NAME),]
+point_within_county <- data.frame("heat"=point_within_county$heat,
+                                  "county"=point_within_county$NAME,
+                                  "geometry"=point_within_county$geometry)
+
+## write out the processed heatmap within counties
+write.csv(point_within_county, file = heat_point_within_county_csv_filename, row.names = FALSE)
+```
+
+The final step in handling these heat island data is to aggregate point-wise data into county-wise data and conduct feature engineering.
+```{r,include=FALSE}
+## Feature Engineering
+countywise_Heatmap <- point_within_county %>%
+  group_by(county) %>%
+  summarize(avg_heatmap = mean(heat,na.rm=TRUE),
+            var_heatmap = var(heat,na.rm=TRUE))
+
+## Write the processed data into RMDBS and store it as a csv
+write.csv(countywise_Heatmap, file = countywise_Heatmap_csv_filename, row.names = FALSE)
+# dbWriteTable(mysqlconnection, name="countywise_Heatmap", value=countywise_Heatmap, row.names = FALSE, overwrite=TRUE)
+```
+
+# 4. Model Fitting
+## 4.1 Regression Model for heat wave data and death-related data
+### 4.1.1. Preparation 
+Step 1: Load the data and the packages
+```{r}
+library(dplyr)
+library(tidyr)
+
+death <- read.csv("death.csv")
+elderly <- read.csv("cal_census_2011_to_2015.csv")
+HI_WBGT <- read.csv("countywise_HI_WBGT_2011_2015.csv")
+```
+
+Step 2: Join the data into one dataframe
+```{r}
+# data manipulation
+HI_WBGT$Year <- as.integer(HI_WBGT$Year)
+HI_WBGT$Month <- as.integer(HI_WBGT$Month)
+
+# join the HI_WBGT table and the death profile by year, month and county name
+heat_death <- HI_WBGT %>% inner_join( death, 
+                                      by=c("Year"="year","Month"="month","NAME"="county"))
+
+
+# join the processed table and the elderly information table by year and county name
+heat_death <- heat_death %>% left_join( elderly,
+                                        by=c("Year"="Year","NAME"="County"))
+
+# add columns to record the death rate
+heat_death <- heat_death %>% 
+  mutate( death_rate = death / total,
+    death_elder_rate = death / elderly )
+
+# remove the outliners
+heat_death <- heat_death[heat_death$death_elder_rate <= 0.5,]
+
+# Write the processed data into RMDBS and store it as a csv
+write.csv(heat_death, file = "heat_death_2011_2015.csv", row.names = FALSE)
+```
+
+### 4.1.2 Exploratory Data Analysis and Data Standardization
+```{r}
+# Plot for all variables
+par(mfrow=c(3,3))
+x_lab <- colnames(heat_death)
+for (i in c(4:9,11:ncol(heat_death))){
+  hist(heat_death[,i],
+       xlab = x_lab[i],main="",nclass=20)
+}
+```
+
+```{r}
+# relationship between features and death rate
+par(mfrow=c(2,2))
+for (i in 4:7){
+  plot(heat_death[,i],heat_death$death_rate,
+       xlab=x_lab[i],ylab="death_rate")
+}
+```
+
+```{r}
+# relationship between features and death rate in the old generation
+par(mfrow=c(2,2))
+for (i in 4:7){
+  plot(heat_death[,i],heat_death$death_elder_rate,
+       xlab=x_lab[i],ylab="death_elder_rate")
+}
+```
+
+```{r}
+standardize <- function(col){
+  sample_mean <- mean(col,na.rm=TRUE)
+  sd <- sqrt(var(col,na.rm = TRUE))
+  return((col-sample_mean)/sd)
+}
+
+standard_heat_death <- heat_death 
+for (i in 4:ncol(heat_death)){
+  standard_heat_death[,i] <- standardize(heat_death[,i])
+}
+```
+
+### 4.1.3 Construct relationship between different variables
+```{r}
+# relationship between the death rate and the intensity of heat wave 
+# (within county that have at least 1 heat waves in one month)
+m1 <- lm(death_rate ~ 
+                 avg_WBGT_max_monthly + 
+                 max_WBGT_max_monthly +
+                 duration_heat_wave_monthly + 
+                 avg_heat_waves_WBGT_max_monthly, data = standard_heat_death)
+summary(m1)
+```
+
+conclusion: within counties that have heat waves, counties with larger average WBGTmax and larger average intensity of heat waves tend to have less death rate, counties with larger maximum intensity of heat waves tend to have smaller death rate.
+
+```{r}
+# relationship between the death elder rate and the intensity of heat wave 
+# (within county that have at least 1 heat waves in one month)
+m2 <- lm(death_elder_rate ~ 
+                 avg_WBGT_max_monthly + 
+                 max_WBGT_max_monthly +
+                 duration_heat_wave_monthly + 
+                 avg_heat_waves_WBGT_max_monthly
+         , data = standard_heat_death)
+summary(m2)
+```
+
+conclusion: within counties that have heat waves, counties with larger maximum WBGTmax tend to have less death rate, counties with larger average intensity of heat waves tend to have larger death rate in old generation.
+
+```{r}
+# relationship between the death rate and the intensity of heat wave 
+# (including all the counties)
+m3 <- lm(death_rate ~ 
+                 avg_WBGT_max_monthly + 
+                 max_WBGT_max_monthly, data = standard_heat_death)
+summary(m3)
+```
+
+conclusion: for all counties, counties with larger average WBGTmax tend to have less death rate, counties with larger maximum WBGTmax tend to have less death rate.
+
+```{r}
+# relationship between the death elder rate and the intensity of heat wave 
+# (including all the counties)
+m4 <- lm(death_elder_rate ~ 
+                 avg_WBGT_max_monthly + 
+                 max_WBGT_max_monthly, data = standard_heat_death)
+summary(m4)
+```
+
+conclusion: for all counties, no significant relationship between death elder rate and the heat waves.
+
+```{r}
+# relationship between the elder proportion and the intensity of heat wave 
+# (within county that have at least 1 heat waves in one month)
+m5 <- lm(elder_proportion ~ 
+                 avg_WBGT_max_monthly + 
+                 max_WBGT_max_monthly +
+                 duration_heat_wave_monthly + 
+                 avg_heat_waves_WBGT_max_monthly, data = standard_heat_death)
+summary(m5)
+```
+
+conclusion: within counties that have heat waves, counties with longer heat waves tend to have lower elder proportion.
+
+```{r}
+# relationship between the total population and the intensity of heat wave 
+# (within county that have at least 1 heat waves in one month)
+m6 <- lm(total ~ 
+                 avg_WBGT_max_monthly + 
+                 max_WBGT_max_monthly +
+                 duration_heat_wave_monthly + 
+                 avg_heat_waves_WBGT_max_monthly, 
+         data = standard_heat_death)
+summary(m6)
+```
+
+conclusion: within counties that have heat waves, counties with larger average WBGTmax, larger average intensity of heat waves and longer duration of heat waves tends to have less death rate, counties with larger maximum intensity of heat waves tend to have less total population.
+
+## 4.2 Regression Model for heat wave data and death data of each cause of death
+### 4.2.1 Load data and extract useful data.
+
+```{r}
+# This function extracts the death number of every cause of death by month by county.
+disease <- function(dataset, year) {
+  dataset[is.na(dataset)]=0
+  set<-c()
+  county_name<-unique(dataset$County)
+  month<-unique(dataset$Month)
+  d = data.frame(matrix(nrow = 0,ncol = 15))
+  colnames(d)<-unique(dataset$Cause_Desc)
+  for (j in month) {
+    for (i in county_name) {
+      elderly_death<-dataset$Count[dataset$County==i&dataset$Year==year&dataset$Month==j
+                                   &dataset$Strata=="Total Population"]
+      
+      d = rbind(d,elderly_death)
+    }
+  }
+  df=data.frame(county=rep(county_name,12),
+                year=rep(year,12*length(county_name)),
+                month=rep(1:12,each=length(county_name)))
+  df=cbind(df,d)
+  colnames(df)<-c("county","year","month",unique(data1$Cause_Desc))
+  return(df)
+}
+```
+
+```{r}
+# Death number of year from 2011 to 2015
+d2011<-disease(data1,2011)
+d2012<-disease(data1,2012)
+d2013<-disease(data1,2013)
+d2014<-disease(data2,2014)
+d2015<-disease(data2,2015)
+disease<-rbind(d2011,d2012,d2013,d2014,d2015)
+```
+
+### 4.2.2 Data Analysis and Relationship between heat wave data and the death number of each cause of death
+```{r}
+# We merged the heat index table and the disease statitics table
+heat_index = read.csv('heat_death_2011_2015.csv')
+colnames(heat_index)[1:3]=c('year','month','county')
+merged = merge(heat_index, disease, by = c('year','month','county'))
+```
+
+```{r}
+# To reduce the variance and increase the accuracy, we deleted the county with a very small population
+table_big = merged[merged$total>100000,]
+table_big[is.na(table_big)]=0
+m1 = lm(death/`All causes (total)`~avg_WBGT_max_monthly+max_WBGT_max_monthly+duration_heat_wave_monthly+avg_heat_waves_WBGT_max_monthly,data = table_big)
+summary(m1)
+```
+
+This shows that the proportion of the elderly in death cases increases as the max_WBGT_max_monthly increases. However, the acg_WBGT_max_monthly, duration_heat_wave_monthly, and avg_heat_waves_WBGT_max_monthly will reduce the elderly proportion of death cases. The reason of this may be that the extreme hot weather will take a more severe damage to the health of the elderly. 
+
+```{r}
+#The respective analysis of causes of death
+table_b = table_big[,c(4:7,14:28)]
+df1 = data.frame(matrix(nrow=0,ncol=2))
+df2 = data.frame(matrix(nrow=0,ncol=2))
+for (i in colnames(table_b)[5:19]) {
+  m = lm(table_b[,i]/table_big$elderly~avg_WBGT_max_monthly+max_WBGT_max_monthly+
+           duration_heat_wave_monthly+avg_heat_waves_WBGT_max_monthly,data = table_b)
+  a = summary(m)$coefficients[3,c(1,4)]
+  df1 = rbind(df1,a)
+  b = summary(m)$coefficients[2,c(1,4)]
+  df2 = rbind(df2,b)
+}
+colnames(df1)<-c('max_WBGT_max_monthly', 'p-value')
+rownames(df1)<-colnames(table_b)[5:19]
+print(df1)
+colnames(df2)<-c('avg_WBGT_max_monthly', 'p-value')
+rownames(df2)<-colnames(table_b)[5:19]
+print(df2)
+```
+
+From the result of linear regression, we discovered that the max_WBGT_max_monthly value has significant positive influence on the death number of every cause of death. Other factors does not have significant positive influence on the death number. Since the max_WBGT_max_monthly can better present the occurrence of extreme hot weather, we can conclude that the extreme how weather greatly damages the health of the elderly.
+
+## 4.3 Regression Model for heat map data and death-related data
+### 4.3.1 Load data and extract useful data.
+
+```{r}
+# Input of data
+heat_map = read.csv('countywise_Heatmap.csv')
+death = read.csv('heat_death_2011_2015.csv')
+```
+
+The data contains the heatmap data of each california county. We have the average heatmap index and variance heatmap index. We intended to detect the heat island phenomenon by the average and variance of heatmap index.
+
+```{r}
+death_m=death[death$Year==2013&death$Month==7,]
+death_m = death_m[,c(3,8,9,10)]
+colnames(death_m)<-c("county","death","total","elderly")
+joined_table=merge(heat_map,death_m, by = "county")
+```
+
+Since the heatmap table contains data from July 20th to July 27th in 2013. We just find the death number of July 2013 to analysis the relationship between heatmap and death. Then we join the heatmap table and death table by the county.
+
+### 4.3.2 Exploratory analysis
+```{r}
+#The distribution of average heatmap index and variance heatmap index.
+par(mfrow=c(1,2))
+hist(joined_table$avg_heatmap)
+hist(joined_table$var_heatmap)
+```
+
+```{r}
+#The relationship between death proportion of the elderly and the average and the variance of heatmap index.
+m1=lm(death/elderly~avg_heatmap+var_heatmap,data = joined_table)
+summary(m1)
+```
+
+This shows the death proportion of the elderly has no significant relationship with the heat map index.
+```{r}
+#The relationship between the total population and the average and the variance of heatmap index
+m2=lm(total~avg_heatmap+var_heatmap,data = joined_table)
+summary(m2)
+```
+
+This shows that the total population tends to be larger when the heatmap index is higher. Again, the variance of heatmap index has no relationship with the total population. 
+
+```{r}
+#The relationship between the elderly proportion and the average and the variance of heatmap index.
+m3=lm(elderly/total~avg_heatmap+var_heatmap,data = joined_table)
+summary(m3)
+```
+
+This model shows that with the heatmap index increasing, the elderly proportion tends to decrease. This implies that the elderly tends not to live in a hot place. The variance of heatmap index also has negative effect on the elderly proportion. The variance of heatmap index indicates the change of heatmap index. Higher variance of heatmap may mean that there is a heat island (A heat island means there will be a place that has a abnormally higher temperature than the surrounding areas) As a result, it is possible that the heat island has negative influence on the health of the elderly, so the elderly tends not to live there. 
