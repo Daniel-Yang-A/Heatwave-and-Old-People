@@ -100,3 +100,193 @@ point_within_county <- map_to_county(aoi_boundary_shp_filename,
               lat_vec)
 
 point_within_county
+
+# regression
+## regression 1: heat wave data and death-related data
+library(dplyr)
+library(tidyr)
+
+death <- read.csv("../preprocessed/death.csv")
+elderly <- read.csv("../preprocessed/cal_census_2011_to_2015.csv")
+HI_WBGT <- read.csv("../preprocessed/countywise_HI_WBGT_2011_2015.csv")
+
+# data manipulation
+HI_WBGT$Year <- as.integer(HI_WBGT$Year)
+HI_WBGT$Month <- as.integer(HI_WBGT$Month)
+
+# join the HI_WBGT table and the death profile by year, month and county name
+heat_death <- HI_WBGT %>% inner_join( death, 
+                                      by=c("Year"="year","Month"="month","NAME"="county"))
+
+
+# join the processed table and the elderly information table by year and county name
+heat_death <- heat_death %>% left_join( elderly,
+                                        by=c("Year"="Year","NAME"="County"))
+
+# add columns to record the death rate
+heat_death <- heat_death %>% 
+  mutate( death_rate = death / total,
+          death_elder_rate = death / elderly )
+
+# remove the outliners
+heat_death <- heat_death[heat_death$death_elder_rate <= 0.5,]
+
+## Write the processed data into RMDBS and store it as a csv
+# write.csv(heat_death, file = "heat_death_2011_2015.csv", row.names = FALSE)
+
+standardize <- function(col){
+  sample_mean <- mean(col,na.rm=TRUE)
+  sd <- sqrt(var(col,na.rm = TRUE))
+  return((col-sample_mean)/sd)
+}
+
+standard_heat_death <- heat_death 
+for (i in 4:ncol(heat_death)){
+  standard_heat_death[,i] <- standardize(heat_death[,i])
+}
+
+# relationship between the death rate and the intensity of heat wave 
+# (within county that have at least 1 heat waves in one month)
+m1 <- lm(death_rate ~ 
+           avg_WBGT_max_monthly + 
+           max_WBGT_max_monthly +
+           duration_heat_wave_monthly + 
+           avg_heat_waves_WBGT_max_monthly, data = standard_heat_death)
+summary(m1)
+
+# relationship between the death elder rate and the intensity of heat wave 
+# (within county that have at least 1 heat waves in one month)
+m2 <- lm(death_elder_rate ~ 
+           avg_WBGT_max_monthly + 
+           max_WBGT_max_monthly +
+           duration_heat_wave_monthly + 
+           avg_heat_waves_WBGT_max_monthly
+         , data = standard_heat_death)
+summary(m2)
+
+# relationship between the death rate and the intensity of heat wave 
+# (including all the counties)
+m3 <- lm(death_rate ~ 
+           avg_WBGT_max_monthly + 
+           max_WBGT_max_monthly, data = standard_heat_death)
+summary(m3)
+
+# relationship between the death elder rate and the intensity of heat wave 
+# (including all the counties)
+m4 <- lm(death_elder_rate ~ 
+           avg_WBGT_max_monthly + 
+           max_WBGT_max_monthly, data = standard_heat_death)
+summary(m4)
+
+# relationship between the elder proportion and the intensity of heat wave 
+# (within county that have at least 1 heat waves in one month)
+m5 <- lm(elder_proportion ~ 
+           avg_WBGT_max_monthly + 
+           max_WBGT_max_monthly +
+           duration_heat_wave_monthly + 
+           avg_heat_waves_WBGT_max_monthly, data = standard_heat_death)
+summary(m5)
+
+# relationship between the total population and the intensity of heat wave 
+# (within county that have at least 1 heat waves in one month)
+m6 <- lm(total ~ 
+           avg_WBGT_max_monthly + 
+           max_WBGT_max_monthly +
+           duration_heat_wave_monthly + 
+           avg_heat_waves_WBGT_max_monthly, 
+         data = standard_heat_death)
+summary(m6)
+
+
+## regression 2: heat wave data and death data of each cause of death
+
+# This function extracts the death number of every cause of death by month by county.
+disease <- function(dataset, year) {
+  dataset[is.na(dataset)]=0
+  set<-c()
+  county_name<-unique(dataset$County)
+  month<-unique(dataset$Month)
+  d = data.frame(matrix(nrow = 0,ncol = 15))
+  colnames(d)<-unique(dataset$Cause_Desc)
+  for (j in month) {
+    for (i in county_name) {
+      elderly_death<-dataset$Count[dataset$County==i&dataset$Year==year&dataset$Month==j
+                                   &dataset$Strata=="Total Population"]
+      
+      d = rbind(d,elderly_death)
+    }
+  }
+  df=data.frame(county=rep(county_name,12),
+                year=rep(year,12*length(county_name)),
+                month=rep(1:12,each=length(county_name)))
+  df=cbind(df,d)
+  colnames(df)<-c("county","year","month",unique(data1$Cause_Desc))
+  return(df)
+}
+
+# Death number of year from 2011 to 2015
+d2011<-disease(data1,2011)
+d2012<-disease(data1,2012)
+d2013<-disease(data1,2013)
+d2014<-disease(data2,2014)
+d2015<-disease(data2,2015)
+disease<-rbind(d2011,d2012,d2013,d2014,d2015)
+
+# merged the heat index table and the disease statitics table
+heat_index = read.csv('../data/preprocessedheat_death_2011_2015.csv')
+colnames(heat_index)[1:3]=c('year','month','county')
+merged = merge(heat_index, disease, by = c('year','month','county'))
+
+# To reduce the variance and increase the accuracy, we deleted the county with a very small population
+table_big = merged[merged$total>100000,]
+table_big[is.na(table_big)]=0
+m1 = lm(death/`All causes (total)`~avg_WBGT_max_monthly+max_WBGT_max_monthly+duration_heat_wave_monthly+avg_heat_waves_WBGT_max_monthly,data = table_big)
+summary(m1)
+
+# The respective analysis of causes of death
+table_b = table_big[,c(4:7,14:28)]
+df1 = data.frame(matrix(nrow=0,ncol=2))
+df2 = data.frame(matrix(nrow=0,ncol=2))
+for (i in colnames(table_b)[5:19]) {
+  m = lm(table_b[,i]/table_big$elderly~avg_WBGT_max_monthly+max_WBGT_max_monthly+
+           duration_heat_wave_monthly+avg_heat_waves_WBGT_max_monthly,data = table_b)
+  a = summary(m)$coefficients[3,c(1,4)]
+  df1 = rbind(df1,a)
+  b = summary(m)$coefficients[2,c(1,4)]
+  df2 = rbind(df2,b)
+}
+colnames(df1)<-c('max_WBGT_max_monthly', 'p-value')
+rownames(df1)<-colnames(table_b)[5:19]
+print(df1)
+colnames(df2)<-c('avg_WBGT_max_monthly', 'p-value')
+rownames(df2)<-colnames(table_b)[5:19]
+print(df2)
+
+## regression 3: heat map data and death-related data
+# Input of data
+heat_map = read.csv('../data/preprocessed/countywise_Heatmap.csv')
+death = read.csv('../data/preprocessed/heat_death_2011_2015.csv')
+death_m=death[death$Year==2013&death$Month==7,]
+death_m = death_m[,c(3,8,9,10)]
+colnames(death_m)<-c("county","death","total","elderly")
+joined_table=merge(heat_map,death_m, by = "county")
+
+# The distribution of average heatmap index and variance heatmap index.
+par(mfrow=c(1,2))
+hist(joined_table$avg_heatmap)
+hist(joined_table$var_heatmap)
+
+# The relationship between death proportion of the elderly and the average and the variance of heatmap index.
+m1=lm(death/elderly~avg_heatmap+var_heatmap,data = joined_table)
+summary(m1)
+
+# The relationship between the total population and the average and the variance of heatmap index
+m2=lm(total~avg_heatmap+var_heatmap,data = joined_table)
+summary(m2)
+
+# The relationship between the elderly proportion and the average and the variance of heatmap index.
+m3=lm(elderly/total~avg_heatmap+var_heatmap,data = joined_table)
+summary(m3)
+
+
+
