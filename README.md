@@ -16,6 +16,16 @@ The repository contains:
    - Heat-related death data is collected from [California State: Death Profiles by County by Month, 1970-2020](https://data.chhs.ca.gov/dataset/death-profiles-by-county). This provides monthly mortality data in California counties. Thus, our analysis is all measured county-wise and monthly from 2011 to 2015 within California. 
    - Daily Station-wise temperature and humidity information is crawled from [Western Regional Climate Center (WRCC)](https://wrcc.dri.edu/cgi-bin/wea_monsum.pl?ca). The geometry (latitide and longtitude) information is then utilized to map the station into counties, the scope of each county is retrieved from [California Open Data Portal](https://data.ca.gov/dataset/california-counties). The following feature engineering is based on this processed county-wise data. ![Meteorological Monitoring Stations in California Counties](map_station_county.png)
 
+## Interactive Results
+
+To better stress and illustrate our data manipulation results, we build an interactive application so that user can see the overview of our datasets with preferred features. The sample picture are listed below.
+
+![](https://gitlab.umich.edu/506-heatwave-and-old-people/heatwave-and-old-people/-/raw/main/sample_result/app1.JPG)
+
+![](https://gitlab.umich.edu/506-heatwave-and-old-people/heatwave-and-old-people/-/raw/main/sample_result/app2.JPG)
+
+To use the application, one can install shiny package and then run /sample_results/app.R.
+
 ## Installation
 The following packages are required to run the case study notebook.
 
@@ -40,6 +50,7 @@ R:
 - tidyverse
 - RMySQL
 - dplyr
+- shiny
 
 ## Usage
 1. An general idea of how heat wave would impact elder generation
