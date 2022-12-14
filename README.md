@@ -24,7 +24,7 @@ To better stress and illustrate our data manipulation results, we build an inter
 
 ![](https://gitlab.umich.edu/506-heatwave-and-old-people/heatwave-and-old-people/-/raw/main/sample_result/app2.JPG)
 
-To use the application, one can install shiny package and then run /sample_result/app.R.
+To use the application, one can install shiny package and then run /result/app.R.
 
 ## Installation
 The following packages are required to run the case study notebook.
