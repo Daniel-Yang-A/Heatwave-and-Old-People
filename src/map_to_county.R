@@ -1,8 +1,11 @@
+# Input: aoi_boundary_shp_file, variable of interest, geometry information (long,lat)
+# Output: a mapping relationship between variable of interest and county
+# Function: Map the variable of interest into a polygen boundry of county
+# Author: Orginial Version (Yu Lin); Generalization (Yu Lin)
+
 library(dplyr)
 library(sf)
 library(tidyverse)
-# library(ggplot2)
-
 
 map_to_county <-
   function(aoi_boundary_shp_filename,
