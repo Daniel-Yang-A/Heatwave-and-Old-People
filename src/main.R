@@ -2,6 +2,7 @@ source("../src/HI_WBGT_cal.R")
 source("../src/month_summary.R")
 source("../src/station_to_county.R")
 source("../src/map_to_county.R")
+source("../src/gdn.R")
 
 ## user-defined input
 # list all the name of the station daily temperature and relative humidity files here.
@@ -58,6 +59,7 @@ code <- monitoring_station$code
 lat <- str_transform(monitoring_station$Latitude)
 long <-  -str_transform(monitoring_station$Longitude)
 
+aoi_boundary_shp_filename <- "../data/raw/CA_Counties_TIGER2016.shp"
 point_within_county <- map_to_county(aoi_boundary_shp_filename,
                                      code,
                                      long,
@@ -66,7 +68,6 @@ point_within_county <- map_to_county(aoi_boundary_shp_filename,
 
 # ----------------------------------------------------------------------
 # heat island
-aoi_boundary_shp_filename <- "../data/raw/CA_Counties_TIGER2016.shp"
 heat_txt_file <- "../data/raw/heat_map.txt"
 lat_txt_file  <- "../data/raw/lat_mat.txt"
 long_txt_file  <- "../data/raw/long_mat.txt"
@@ -199,6 +200,8 @@ summary(m6)
 
 
 ## regression 2: heat wave data and death data of each cause of death
+data1 = read.csv("../data/raw/2021-05-14_deaths_final_2009-2013_occurrence_county_month_sup.csv")
+data2 = read.csv("../data/raw/2021-11-29_deaths_final_2014-2018_occurrence_county_month_sup.csv")
 
 # This function extracts the death number of every cause of death by month by county.
 disease <- function(dataset, year) {
@@ -287,6 +290,3 @@ summary(m2)
 # The relationship between the elderly proportion and the average and the variance of heatmap index.
 m3=lm(elderly/total~avg_heatmap+var_heatmap,data = joined_table)
 summary(m3)
-
-
-
