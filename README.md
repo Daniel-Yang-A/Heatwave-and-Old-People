@@ -24,7 +24,7 @@ To better stress and illustrate our data manipulation results, we build an inter
 
 ![](https://gitlab.umich.edu/506-heatwave-and-old-people/heatwave-and-old-people/-/raw/main/sample_result/app2.JPG)
 
-To use the application, one can install shiny package and then run /sample_results/app.R.
+To use the application, one can install shiny package and then run /sample_result/app.R.
 
 ## Installation
 The following packages are required to run the case study notebook.
@@ -64,4 +64,5 @@ R:
 4. RDBMS construction: Yizhou Zhang
 5. Modeling and Data Analysis: all the team members
 6. Project and Gitlab Management: Yupeng Yang
-7. Output Report: all the team members
+7. Interactive Application: Yupeng Yang
+8. Output Report: all the team members
