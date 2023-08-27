@@ -71,10 +71,10 @@ The repository contains:
 ## Interactive Results
 To better stress and illustrate our data manipulation results, we build an interactive application so that user can see the overview of our datasets with preferred features. The sample picture are listed below.
 
-![](https://gitlab.umich.edu/506-heatwave-and-old-people/heatwave-and-old-people/-/raw/main/result/app_sample_result_1.JPG)
+![](result/app_sample_result_1.JPG)
 
 
-![](https://gitlab.umich.edu/506-heatwave-and-old-people/heatwave-and-old-people/-/raw/main/result/app_sample_result_2.JPG)
+![](result/app_sample_result_1.JPG)
 
 To use the application, one can install shiny package and then run /result/app.R.
 
