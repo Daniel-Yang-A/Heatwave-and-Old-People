@@ -74,7 +74,7 @@ To better stress and illustrate our data manipulation results, we build an inter
 ![](result/app_sample_result_1.JPG)
 
 
-![](result/app_sample_result_1.JPG)
+![](result/app_sample_result_2.JPG)
 
 To use the application, one can install shiny package and then run /result/app.R.
 
